@@ -24,6 +24,7 @@
   <!-- End Google Tag Manager -->
 
 </head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript>
@@ -34,7 +35,7 @@
   <!-- Layout principal-->
   <div class="container-fluid layout-container">
     <!-- Preguntas Frecuentes -->
-    <div class="modal" id="preguntas-frecuentes" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal" id="preguntas-frecuentes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -304,69 +305,48 @@
               </a>
             </div>
             <div class="card-body datos-contratante">
-              <div class="card card-block">
+              <div class="card card-block ">
                 <h4 class="pt-3 pb-2 subtitle">Datos para cotizar</h4>
                 <h6 class="card-subtitle description_input py-2">Por favor complete los siguientes datos</h6>
-              <div class="container-inputs">
-                <div class="row container-inputitem">
+                <div class="row mb-5">
                   <div class="col-lg-12">
                     <div class="has-float-label">
-                      <input type="text" class="form-control has-success" id="correoInput" aria-describedby="email-help" placeholder="jaded676@gmail.com"
+                      <input type="text" class="form-control form-control-success has-success" id="correoInput" aria-describedby="email-help" placeholder="jaded676@gmail.com"
                         required>
-                      <label class="col-form-label form-control-label">Correo</label>
+                      <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Correo</label>
                     </div>
                   </div>
                 </div>
-                <!-- <div class="d-flex justify-content-end input-success__correo">
+                <div class="d-flex justify-content-end input-success__correo">
                   <img src="./assets/img/input-success.svg" width="15" height="15" class="img-fluid" id="success-input-val__correo" alt="Responsive image">
                 </div>
                 <div class="d-flex justify-content-end input-error_correo">
                   <img src="./assets/img/input-error.svg" width="15" height="15" class="img-fluid" id="error-input-val__correo" alt="Responsive image">
-                </div> -->
-                <div class="row container-inputitem">
+                </div>
+                <div class="row my-5">
                   <div class="col-lg-12">
                     <div class="has-float-label">
-                      <input type="text" class="form-control has-success " id="telefonoInput" aria-describedby="telefono-help"
+                      <input type="text" class="form-control form-control-success has-success " id="telefonoInput" aria-describedby="email-help"
                         placeholder="+56 9435205403" required>
-                      <label class="col-form-label form-control-label">Teléfono</label>
+                      <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Teléfono</label>
                     </div>
                   </div>
                 </div>
-                <!-- <div class="d-flex justify-content-end input-success__telefono">
+                <div class="d-flex justify-content-end input-success__telefono">
                   <img src="./assets/img/input-success.svg" width="15" height="15" class="img-fluid" id="success-input-val__telefono" alt="Responsive image">
                 </div>
                 <div class="d-flex justify-content-end input-error__telefono">
                   <img src="./assets/img/input-error.svg" width="15" height="15" class="img-fluid" id="error-input-val__telefono" alt="Responsive image">
-                </div> -->
-                <!-- <div class="d-flex mt-5">
-                  <div class="col-lg-6 col-sm-12 container_edad">
+                </div>
+                <div class="d-flex mt-5">
+                  <div class="col-lg-6 container_edad">
                     <h4 class="pt-2 pb-3">Edad del menor conductor</h4>
                     <div class="slider-edad mt-4 ml-2" id="double-label-slider"></div>
                   </div>
                   <div class="col-lg-6 mx-4 mt-5 d-flex align-items-center">
-                    <div id="edadConductor" class="panel callout radius text-center info-slider"></div>
-                  </div>
-                </div> -->
-                <div class="container-inputitem">
-                  <div class="parametros-title">Edad del menor conductor
-                    <a href="" class="showTooltip">
-                      <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
-                      <span id="some-element">
-                        Un mayor daño puede ser fácilmente reparado en 30 días. Para facilitar tu movilidad, te recomendamos tomar este periodo
-                        de cobertura de un auto de reemplazo.
-                      </span>
-                    </a>
-                  </div>
-                <div class="row mt-2">
-                  <div class="col-lg-6 mt-2">
-                    <div class="slider-edad mt-4 ml-2" id="double-label-slider"></div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div id="edadConductor" class="panel callout radius text-center info-slider"></div>
+                    <p id="edadConductor" class="panel callout radius text-center info-slider"></p>
                   </div>
                 </div>
-              </div>
-              </div>
               </div>
             </div>
           </div>
@@ -385,7 +365,7 @@
           <h2 class="text-center">Beneficios de contratar con HDI</h2>
         </div>
         <!-- Conteiner Tab Beneficios - Que cubre -->
-        <div class="container tab-container">
+        <div class="container">
           <ul class="nav nav-pills my-5 justify-content-center nav-beneficios" id="pills-tab" role="tablist">
             <li class="nav-item">
               <a class="nav-link active text-uppercase" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
@@ -408,8 +388,8 @@
                           <img class="beneficios_icon" src="./assets/img/rapido-icon.svg" width="45" height="35" alt="Card image cap">
                         </div>
                         <div class="card-body">
-                          <div class="card-beneficios__title">Más rápido</div>
-                          <div class="card-text"></div>
+                          <p class="card-beneficios__title">Más rápido</p>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                     </div>
@@ -419,8 +399,8 @@
                           <img class="beneficios_icon" src="./assets/img/giftcard-icon.svg" width="45" height="35" alt="Card image cap">
                         </div>
                         <div class="card-body">
-                          <div class="card-beneficios__title">Gift Card</div>
-                          <div class="card-text"></div>
+                          <p class="card-beneficios__title">Gift Card</p>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                     </div>
@@ -432,8 +412,8 @@
                           <img class="beneficios_icon" src="./assets/img/instante-icon.svg" width="45" height="35" alt="Card image cap">
                         </div>
                         <div class="card-body">
-                          <div class="card-beneficios__title">Quedas asegurado al instante</div>
-                          <div class="card-text"></div>
+                          <p class="card-beneficios__title">Quedas asegurado al instante</p>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                     </div>
@@ -443,8 +423,8 @@
                           <img class="beneficios_icon" src="./assets/img/inspeccion-icon.svg" width="45" height="35" alt="Card image cap">
                         </div>
                         <div class="card-body">
-                          <div class="card-beneficios__title">Inspección a domicilio</div>
-                          <div class="card-text"></div>
+                          <p class="card-beneficios__title">Inspección a domicilio</p>
+                          <p class="card-text"></p>
                         </div>
                       </div>
                     </div>
