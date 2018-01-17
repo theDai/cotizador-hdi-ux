@@ -1,5 +1,5 @@
 AuthName "Restricted Area"
 AuthType Basic
-AuthUserFile https://cotizador-hdi-ux.herokuapp.com/.htpasswd
+AuthUserFile /var/www/cotizador-hdi-ux.herokuapp.com/.htpasswd
 AuthGroupFile /dev/null
 require valid-user
