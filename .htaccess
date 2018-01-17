@@ -1,4 +1,5 @@
+AuthName "Restricted Area"
 AuthType Basic
-AuthName "Zona Privada"
-AuthUserFile /rutaservidor/.htpasswd
-Require valid-user
+AuthUserFile https://cotizador-hdi-ux.herokuapp.com/.htpasswd
+AuthGroupFile /dev/null
+require valid-user
