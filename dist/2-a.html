@@ -197,7 +197,6 @@
             </li>
           </ul>
         </nav>
-
         <!--Alert-->
         <!-- <div class="container px-5 mt-2">
           <div class="alert alert-info alert-dismissible fade show" role="alert">
@@ -207,7 +206,6 @@
             <img src="./assets/img/check_white.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Notificaciones
           </div>
         </div> -->
-
         <!--Card - Ingresar datos del vehiculo -->
         <div class="container px-5 mt-4">
           <div class="card card-open__shadow d-flex" id="container-datos-vehiculo__sinpatente">
@@ -217,7 +215,7 @@
                 <img src="assets/img/open-icon.svg" width="8" height="8" class="img-fluid" alt="Responsive image">
               </a>
             </div>
-            <div class="card-body">
+            <div class="card-body datos-vehiculo__sinpatente">
               <div class="card card-block">
                 <h4 class="pt-3 pb-2 subtitle">Datos para cotizar</h4>
                 <h6 class="card-subtitle description_input py-3">Por favor completar los siguientes campos para realizar la cotización</h6>
@@ -270,8 +268,13 @@
                   </div>
                 </div>
               </div>
+              <div class="button-container__edicion d-flex justify-content-end">
+                <a href="#" class="card-link continuar text-uppercase mr-2" id="continuar">Continuar</a>
+                <img src="./assets/img/continuar-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image">
+              </div>
             </div>
           </div>
+            
           <!--Card - datos del contratante-->
           <div class="card card-open__shadow d-flex mt-4" id="container-datos-contratante__sinpatente">
             <div class="d-flex justify-content-between container-title">
@@ -280,33 +283,30 @@
                 <img src="assets/img/open-icon.svg" width="8" height="8" class="img-fluid" alt="Responsive image">
               </a>
             </div>
-            <div class="card-body">
+            <div class="card-body datos-contratante__sinpatente">
               <div class="card card-block">
                 <h4 class="pt-3 pb-2 subtitle">Datos para cotizar</h4>
                 <h6 class="card-subtitle description_input py-2">Por favor complete los siguientes datos</h6>
                 <div class="row">
                   <div class="col-lg-12">
                     <div class="form-group has-float-label has-success">
-                      <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                      <input type="text" class="form-control" id="correoInput" aria-describedby="email-help"
                         placeholder="jaded676@gmail.com" required>
-                      <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Correo</label>
-                      <span class="form-control-feedback"></span>
+                      <label class="col-form-label form-control-label">Correo</label>
                     </div>
                   </div>
                   <div class="col-lg-12">
                     <div class="form-group has-float-label has-success">
-                      <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                      <input type="text" class="form-control" id="telefonoInput" aria-describedby="telefono-help"
                         placeholder="+56 9435205403" required>
-                      <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Teléfono</label>
-                      <span class="form-control-feedback"></span>
+                      <label class="col-form-label form-control-label">Teléfono</label>
                     </div>
                   </div>
                   <div class="col-lg-12">
                     <div class="form-group has-float-label has-success">
-                      <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                      <input type="text" class="form-control" id="rutInput" aria-describedby="rut-help"
                         placeholder="+56 9435205403" required>
-                      <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Rut</label>
-                      <span class="form-control-feedback"></span>
+                      <label class="col-form-label form-control-label">Rut</label>
                     </div>
                   </div>
                 </div>

@@ -33,7 +33,7 @@ gulp.task("minifyScripts", ["concatScripts"], function() {
   return gulp
     .src("assets/js/main.js")
     .pipe(uglify())
-    .pipe(rename("main.min.js"))
+//    .pipe(rename("main.min.js"))
     .pipe(gulp.dest("dist/assets/js"));
 });
 
@@ -52,7 +52,7 @@ gulp.task("minifyCss", ["compileSass"], function() {
   return gulp
     .src("assets/css/main.css")
     .pipe(cssmin())
-    .pipe(rename("main.min.css"))
+  //  .pipe(rename("main.min.css"))
     .pipe(gulp.dest("dist/assets/css"));
 });
 
@@ -73,17 +73,17 @@ gulp.task("clean", function() {
   del(["dist", "assets/css/main.css*", "assets/js/main*.js*"]);
 });
 
-gulp.task("renameSources", function() {
-  return gulp
-    .src("index.html")
-    .pipe(
-      htmlreplace({
-        js: "assets/js/main.min.js",
-        css: "assets/css/main.min.css"
-      })
-    )
-    .pipe(gulp.dest("dist/"));
-});
+// gulp.task("renameSources", function() {
+//   return gulp
+//     .src("index.html")
+//     .pipe(
+//       htmlreplace({
+//         js: "assets/js/main.min.js",
+//         css: "assets/css/main.min.css"
+//       })
+//     )
+//     .pipe(gulp.dest("dist/"));
+// });
 
 gulp.task("build", ["minifyScripts", "minifyCss"], function() {
   return gulp
@@ -103,5 +103,14 @@ gulp.task("serve", ["watchFiles"], function() {
 });
 
 gulp.task("default", ["clean", "build"], function() {
-  gulp.start("renameSources");
+//  gulp.start("renameSources");
 });
+
+// SHAMEEEEEEEEE!!!!!
+
+// gulp.task("copy", function() {
+//   gulp
+//     .src("assets/css/**/*")
+//     .pipe(gulp.dest("dist/assets/css/"));
+// });
+
