@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="This is a boilerplate for a Bootstrap 4.0 (beta) project">
+    <meta name="keywords" content="HTML, CSS, JS, Sass, JavaScript, framework, bootstrap, front-end, frontend, web development">
+    <title>responsive</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- build:css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.css"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+    <!-- endbuild -->
+
+    <script>
+      var $r = $('input[type="range"]');
+      var $ruler = $('<div class="rangeslider__ruler" />');
+
+      // Initialize
+      $r.rangeslider({
+        polyfill: false,
+        onInit: function() {
+          $ruler[0].innerHTML = getRulerRange(this.min, this.max, this.step);
+          this.$range.prepend($ruler);}
+      });
+
+      function getRulerRange(min, max, step) {
+        var range = '';
+        var i = 0;
+
+        while (i <= max) {
+          range += i + ' ';
+          i = i + step;
+        }
+        return range;
+      }
+
+      </script>
+  </head>
+  <body>
+    <section class="container-fluid layout_primary">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 container_left-half">
+          <!-- <div class=""> -->
+            <nav class="navbar sticky-top navbar-light bg-faded nav_left">
+              <a class="logo" href="#">
+                <img src="./assets/img/logo_HDI.png" width="30" height="30" alt="">
+              </a>
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Cotiza</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Planes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Pago</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="left-half">
+              <div class="card cardopen">
+                <div class="card-body">
+                  <h5 class="card-title card_title__open pb-4">Elige el plan</h5>
+                  <h5 class="card-title card_title__open pb-4">Tipo de pago</h5>
+                  <h6 class="card-subtitle description_input">Por favor escoja el tipo de pago</h6>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                      Pago automático PAT/PAC.
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                      Aviso de vencimiento
+                    </label>
+                  </div>
+                  <div class="container_parametros">
+                    <div class="container_parametros_accion">
+                      <h5 class="card-title card_title__open pb-4">Ajuste los parametros</h5>
+                      <!-- <button type="button" class="btn btn-primary btn-sm">Small button</button> -->
+                        <!-- <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                          Link with href
+                        </a> -->
+                        <div class="">
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                          accion
+                        </button>
+                      </p>
+                      <div class="collapse" id="collapseExample">
+                        <div class="card">
+                          Anim pariatur cliche reprehenderit
+                          Anim pariatur cliche reprehenderit
+                          Anim pariatur cliche reprehenderit
+                          Anim pariatur cliche reprehenderit
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <!-- <div class="container_parametros_tarifas">
+                      <h7>Auto de reemplazo</h7>
+                      <input type="range" min="0" max="4" step="0.5">
+                      <h7>Responsabilidad Civil</h7>
+                      <input type="range" min="0" max="4" step="0.5">
+                      <h7>Deducible</h7>
+                      <input type="range" min="0" max="4" step="0.5">
+                      </div> -->
+                    </div>
+                  <div class="container_grilla-planes">
+                    <h5 class="card-title card_title__open pb-4">Desea ver comparación de tárifas</h5>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+                <!-- <div class="container_buttons">
+                  <button type="button" class="">Volver</button>
+                  <button type="button" class="button_primary">Contratar</button>
+              </div> -->
+            <!-- </div> -->
+          </div>
+        </div>
+          <!-- <button type="button" class="btn2">abrir</button>
+          <button type="button" class="btn1">Continuar</button> -->
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="container_right-half">
+            <h2>Planes</h2>
+            <div class="container_planes">
+            <div class="card" style="width: 20rem;">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+            <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+      <footer class="footer">
+        <p>HDI Seguros - Todos los derechos reservados</p>
+        <p>Preguntas Frecuentes</p>
+        <p>Términos y Condiciones</p>
+        <div class="necesitas-ayuda_telefonica">
+
+
+        </div>
+        <div class="necesitas-ayuda_chat">
+
+
+        </div>
+
+      </footer>
+
+    <!-- build:js -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <!-- endbuild -->
+  </body>
+</html>

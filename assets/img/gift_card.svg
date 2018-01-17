@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="287px" height="95px" viewBox="0 0 287 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 20</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="228" height="35"></rect>
+        <filter x="-21.9%" y="-114.3%" width="143.9%" height="385.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Look-&amp;-Feel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="6-copy-7" transform="translate(-1154.000000, -164.000000)">
+            <g id="Group-20" transform="translate(1184.000000, 184.000000)">
+                <g id="Rectangle-14">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#208AFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <text id="Incluye-GiftCard-$15" font-family="OpenSans, Open Sans" font-size="15" font-weight="normal" line-spacing="18" letter-spacing="0.576923192" fill="#FFFFFF">
+                    <tspan x="22" y="25.3149414">Incluye GiftCard</tspan>
+                    <tspan x="141.504209" y="25" font-family="OpenSans-Bold, Open Sans" font-weight="bold"> $15.000</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
