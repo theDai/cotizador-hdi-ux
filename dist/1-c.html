@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="This is a boilerplate for a Bootstrap 4.0 (beta) project">
+  <meta name="keywords" content="HTML, CSS, JS, Sass, JavaScript, framework, bootstrap, front-end, frontend, web development">
+  <title>HDI Maqueta</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/6-HDI/font-HDI/webfontkit-20171211-152350/hdi-font.css">
+
+  <!-- Google Tag Manager -->
+  <!-- <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MVK4LN');</script> -->
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVK4LN" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Layout principal-->
+  <div class="container-fluid layout-container">
+    <!-- Preguntas Frecuentes -->
+    <div class="modal" id="preguntas-frecuentes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Preguntas Frecuentes</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="exampleAccordion" data-children=".item">
+              <div class="item">
+                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" role="button"
+                  aria-expanded="false" aria-controls="exampleAccordion1">
+                  ¿Puedo contratar el seguro por Internet para mi auto nuevo a pesar de no tener patente aún?
+                </a>
+                <div id="exampleAccordion1" class="collapse pt-2" role="tabpanel">
+                  <p class="mb-3">
+                    Sí, puede contratar un seguro cuando se trate de un vehículo nuevo y todavía no se haya obtenido la patente. Solamente debe
+                    elegir la opción "Sin patente" en el paso 2, en la sección “Datos del Vehículo”. En estos casos, deberá
+                    subir al sistema la imagen de la factura o guía de despacho al momento de contratar el seguro en hdi.cl
+                    o magallanes.cl, o bien enviar una copia de la factura o guía de despacho en forma posterior a la contratación,
+                    a nombre de facturas48horas@hdi.cl. La factura sólo será válida para efectos del seguro, mientras no
+                    hayan transcurrido más de 48 hrs. entre la compra del auto y la contratación del seguro y siempre que
+                    esta se recepcione conforme en la compañía, dentro de las siguientes 24 horas desde la contratación en
+                    línea del seguro. De no enviar la factura a tiempo, deberá inspeccionar su vehículo en los centros de
+                    inspección de la Compañía, la cual debe ser coordinada a través del teléfono 6006006010 o concurriendo
+                    directamente a uno de nuestros centros de inspección.
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" role="button"
+                  aria-expanded="false" aria-controls="exampleAccordion2">
+                  ¿Qué información me solicitan para poder contratar el seguro en línea?
+                </a>
+                <div id="exampleAccordion2" class="collapse pt-2" role="tabpanel">
+                  <p class="mb-3">
+                    Para contratar el seguro automotriz en línea, se solicitan los siguientes datos: Datos del propietario y del asegurado (Rut,
+                    nombres, dirección, teléfonos, correo electrónico), datos del vehículo (Tipo, marca, modelo, año, patente,
+                    Nº motor y Chasis,), edad de los conductores, datos de la inspección (a domicilio o en sucursales - ambos
+                    sin costo) y por último datos del medio de pago (número de cta. cte. o TC).
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion3" role="button"
+                  aria-expanded="false" aria-controls="exampleAccordion2">
+                  ¿Un auto usado queda asegurado de inmediato al contratar el seguro en hdi.cl o magallanes.cl
+                </a>
+                <div id="exampleAccordion3" class="collapse pt-2" role="tabpanel">
+                  <p class="mb-3">
+                    Una vez contratado el seguro en hdi.cl o magallanes.cl, el vehículo usado está cubierto inmediatamente contra daños propios,
+                    pero con un deducible adicional transitorio hasta la aprobación de la inspección por parte de la compañía:
+                    Será exclusiva responsabilidad del asegurado realizar la inspección del vehículo en cualquier centro
+                    habilitado para estos efectos por la compañía. Sin perjuicio del deducible estipulado en cada una de
+                    las coberturas contratadas, se aplicará, además, en todo y cada siniestro un deducible de equivalente
+                    al 10% de la pérdida con un mínimo UF30 y quedará excluida la cobertura de robo hurto y uso no autorizado,
+                    al igual que el robo de los accesorios del vehículo asegurado. Sólo una vez inspeccionado y aprobada
+                    la inspección por parte de la compañía, regirá el deducible pactado para cada cobertura, quedando excluidos
+                    de cobertura los daños constatados al momento de la inspección.
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion4" role="button"
+                  aria-expanded="false" aria-controls="exampleAccordion2">
+                  ¿Cómo se concreta la inspección del vehículo? </a>
+                <div id="exampleAccordion4" class="collapse pt-2" role="tabpanel">
+                  <p class="mb-3">
+                    Se debe llevar el vehículo limpio, a un centro de inspección HDI Seguros Magallanes o bien se debe coordinar un inspector
+                    a domicilio, ambos sin costo para el asegurado.
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion5" role="button"
+                  aria-expanded="false" aria-controls="exampleAccordion2">
+                  ¿El seguro cubre si el vehículo es conducido por otras personas además del asegurado?</a>
+                <div id="exampleAccordion5" class="collapse pt-2" role="tabpanel">
+                  <p class="mb-3">
+                    Sí, el seguro cubre a cualquier persona que tenga autorización para conducir el vehículo, tenga licencia de conducir competente,
+                    y cumpla además con el mínimo de edad establecido en la póliza si esta fue contratada con restricción
+                    en la edad de los conductores.
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion6" role="button"
+                  aria-expanded="false" aria-controls="exampleAccordion2">
+                  Si estoy en proceso de comprarme un auto usado que está a nombre de otra persona ¿Desde qué momento puedo contratar el seguro?
+                  ¿Qué pasa si el vehículo tiene un seguro a nombre de otra persona?</a>
+                <div id="exampleAccordion6" class="collapse pt-2" role="tabpanel">
+                  <p class="mb-3">
+                    Usted puede contratar su seguro desde el momento que se concreta la transferencia del vehículo. Si el antiguo dueño no ha
+                    comunicado a su compañía la transferencia del vehículo, el otro seguro también seguirá vigente, pero
+                    en caso de siniestro sólo se podrá hacer efectivo uno de los dos seguros. Es importante dar aviso a la
+                    compañía al momento de vender un vehículo, para que el seguro no siga vigente.
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion7" role="button"
+                  aria-expanded="false" aria-controls="exampleAccordion2">
+                  ¿Cómo puedo pagar el seguro?</a>
+                <div id="exampleAccordion7" class="collapse pt-2" role="tabpanel">
+                  <p class="mb-3">
+                    Usted puede elegir la alternativa que más le acomode para pagar: • Al contado en una sola cuota a través de WebPay Plus,
+                    con su tarjeta de crédito o débito. • En 12 Cuotas con cargo automático en Cuenta Corriente o Tarjeta
+                    de Crédito PAC/PAT • A través de Cupones de Pago enviados a su Domicilio y/o email Se le solicitará el
+                    pago online la primera cuota (cuota 1 de 12) del seguro a través del sistema WebPay o Servipag.com. Luego,
+                    usted podrá elegir la forma que estime conveniente para el pago de las siguientes 11 cuotas restantes.
+                    Es decir, para las 11 cuotas restantes usted, podrá suscribir PAC/PAT o bien cupones de pago.
+                  </p>
+                </div>
+              </div>
+              <div class="item">
+                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion8" role="button"
+                  aria-expanded="false" aria-controls="exampleAccordion2">
+                  ¿Qué es lo primero que debo hacer en caso de siniestro?</a>
+                <div id="exampleAccordion8" class="collapse pt-2" role="tabpanel">
+                  <p class="mb-3">
+                    En caso de siniestro de daños al vehículo asegurado o a terceros, el asegurado o conductor debe dejar constancia inmediata
+                    de los hechos en la unidad policial más cercana y tomar las providencias del caso para el debido resguardo
+                    del vehículo y sus accesorios. En caso de robo o hurto del vehículo, el asegurado debe denunciar el hecho
+                    en la unidad policial más cercana al lugar donde haya sucedido, inmediatamente de haber tenido conocimiento
+                    del robo o hurto. Posteriormente, el asegurado o conductor debe efectuar la denuncia del siniestro en
+                    la compañía dentro de diez días para el caso de siniestro de daños propios o a terceros, y para el caso
+                    de robo, este aviso a la compañía debe ser inmediato.
+                  </p>
+                </div>
+              </div>
+            </div>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal detalle planes-->
+    <div class="modal fade modal-info bd-example-modal-sm" id="detalle-plan__resumen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Plan Seleccionado</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Informacion Plan</p>
+            <ul>
+              <li>Calculados a la UF de hoy:$ 26.806.</li>
+              <li>Exclusividad de Taller de Marca.</li>
+              <li>Deducible Inteligente.</li>
+            </ul>
+          </div>
+          <div class="modal-footer modal-info__footer">
+            <button type="button" class="btn button-aceptar" data-dismiss="modal">Entendido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Conteiner izquierdo -->
+      <div class="col-lg-6 left-container">
+        <!-- Nav principal -->
+        <a class="navbar-brand" href="https://www.hdi.cl/">
+          <img src="./assets/img/logo_HDI.png" width="50" height="40" alt="Cotiza tu seguro automotriz online" class="d-inline-block align-top">
+        </a>
+        <nav class="navbar navbar-expand-lg sticky-top nav-principal justify-content-center">
+          <ul class="nav">
+            <li class="nav-item nav-link active-completado" href="">
+              <img src="./assets/img/paso-completado.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Cotiza
+              <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item nav-link active-completado" href="#">
+              <img src="./assets/img/paso-completado.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Elige
+            </li>
+            <li class="nav-item nav-link active" href="#">
+              <img src="./assets/img/3.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Contrata
+            </li>
+          </ul>
+        </nav>
+        <!--Container - seleccion de medios de pagos-->
+        <div class="seleccion-pagos px-5 mt-4">
+          <div class="card card-open__shadow d-flex" id="seleccion-pago">
+            <div class="d-flex justify-content-between container-title">
+              <h3 class="card-title card-title_open">3.1 Medios de pago</h3>
+              <a class="btn editar" id="editar-mediospago">
+                <img src="assets/img/open-icon.svg" width="12" height="12" class="img-fluid" alt="Responsive image">
+              </a>
+            </div>
+            <div class="card-body seleccion-pago">
+              <!--Card - seleccion de medios de pagos - pagar-->
+              <h6 class="card-subtitle description_input my-3">Por favor escoja el tipo de inspección.</h6>
+              <div class="d-flex justify-content-between">
+                <div class="mediodepago-container pt-3">
+                  <!--Card - Seleccion medios de pago-->
+                  <fieldset class="form-group">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked onclick="show3()">Pago automático PAT.
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2" onclick="show4()">Pago automático PAC.
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2" onclick="show5()">Pago Contado (Descuento 25%).
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="row montoprimera-cuota">
+                  <div class="col-lg-12 patente_container">
+                    <div id="quotaDynamicText">Monto de la 1era cuota</div>
+                    <span>$</span>
+                    <span id="dynamicText">
+                      39343
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- Pago automatico PAT -->
+              <div class="row hide" id="pat">
+                <div class="col-lg-12">
+                  <label id="img_category_label" class="field" for="img_category" data-value="">
+                    <span>Banco</span>
+                    <div id="img_category" class="psuedo_select" name="img_category">
+                      <span class="selected"></span>
+                      <ul id="img_category_options" class="options">
+                        <li class="option" data-value="commercial">Commercial</li>
+                        <li class="option" data-value="residential">Residential</li>
+                      </ul>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group has-float-label has-success">
+                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                      placeholder="xxxxxx" required>
+                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Número de Tarjeta</label>
+                    <span class="form-control-feedback"></span>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group has-float-label has-success">
+                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                      placeholder="xxxxxx" required>
+                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Fecha de expiración</label>
+                    <span class="form-control-feedback"></span>
+                  </div>
+                </div>
+                <div class="container d-flex justify-content-between">
+                  <div class="d-flex terminos-condiciones">
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="aceptar">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Acepto los términos y condiciones</span>
+                    </label>
+                  </div>
+                  <!-- <a href="#" class="badge" data-toggle="modal" data-target="#exampleModalLong">Leer más</a> -->
+                  <a href="./assets/img/terminos_condiciones.pdf" class="badge" download>Leer más</a>
+
+                </div>
+
+              </div>
+              <!-- Pago automatico PAC -->
+              <div class="row hide" id="pac">
+                <div class="col-lg-12">
+                  <label id="img_category_label" class="field" for="img_category" data-value="">
+                    <span>Banco</span>
+                    <div id="img_category" class="psuedo_select" name="img_category">
+                      <span class="selected"></span>
+                      <ul id="img_category_options" class="options">
+                        <li class="option" data-value="commercial">Commercial</li>
+                        <li class="option" data-value="residential">Residential</li>
+                      </ul>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group has-float-label has-success">
+                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                      placeholder="xxxxxx" required>
+                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Número de Tarjeta</label>
+                    <span class="form-control-feedback"></span>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group has-float-label has-success">
+                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                      placeholder="xxxxxx" required>
+                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Fecha de expiración</label>
+                    <span class="form-control-feedback"></span>
+                  </div>
+                </div>
+                <div class="container d-flex justify-content-between">
+                  <div class="d-flex terminos-condiciones">
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Acepto los términos y condiciones</span>
+                    </label>
+                  </div>
+                  <!-- <a href="#" class="badge" data-toggle="modal" data-target="#exampleModalLong">Leer más</a> -->
+                  <a href="./assets/img/terminos_condiciones.pdf" class="badge" download>Leer más</a>
+
+                </div>
+                <!-- <div class="modal fade modal-terminos" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                  aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Términos y Condiciones</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla, felis a porttitor posuere,
+                          erat est blandit lorem, a cursus enim sem sed urna. Morbi non luctus sem. In hac habitasse platea
+                          dictumst. Vestibulum venenatis sapien purus, vitae tincidunt leo iaculis a. Duis risus tellus,
+                          molestie vel mauris et, vestibulum faucibus mi. Integer eu vulputate dolor. In hac habitasse platea
+                          dictumst. Praesent molestie, purus sit amet porta iaculis, nisl nisi tempus velit, id lacinia augue
+                          nisi in justo. Praesent aliquet in nulla a eleifend. Cras efficitur mi auctor augue malesuada interdum.
+                          Curabitur risus augue, pulvinar nec est sodales, blandit gravida magna. Vestibulum metus quam,
+                          consequat ornare neque sed, euismod hendrerit ligula. Nulla molestie dolor mauris, eget feugiat
+                          tortor vulputate vel. Sed metus nulla, fringilla et nisi non, ornare iaculis nibh. Nullam tellus
+                          libero, ullamcorper at sem in, vehicula commodo diam. Pellentesque finibus quam sit amet sollicitudin
+                          malesuada. Sed blandit rhoncus ipsum, a faucibus lorem maximus at. Ut auctor purus vitae ligula
+                          blandit, eget hendrerit libero hendrerit. Ut euismod rhoncus urna, pharetra viverra quam varius
+                          vel. Vestibulum feugiat dolor turpis, nec luctus enim feugiat in. Etiam rhoncus metus metus, a
+                          finibus nibh vehicula sit amet. Fusce sollicitudin efficitur convallis. In nec suscipit dui. Aliquam
+                          pellentesque nec diam ut vulputate. Donec sit amet consectetur sem, at imperdiet diam. Nunc cursus
+                          tempus ultrices. Aenean accumsan quam gravida ligula facilisis convallis eu id odio. Nam convallis
+                          mollis metus, et pharetra augue vehicula sed. Sed quis dolor enim. Morbi sit amet fringilla felis.
+                          Nulla eget egestas mi. Maecenas consectetur turpis non viverra mollis. Nulla facilisi. Pellentesque
+                          velit justo, maximus vel finibus vitae, pretium ac urna. Vivamus ut sodales mauris. Integer pretium
+                          erat eget est ultrices posuere. Suspendisse potenti.</p>
+                      </div>
+                      <div class="modal-footer modal-info__footer">
+                        <button type="button" class="btn button-aceptar" data-dismiss="modal">Entendido</button>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+              <div class="row hide" id="pc">
+                <div class="col-lg-12">
+                  <label id="img_category_label" class="field" for="img_category" data-value="">
+                    <span>Banco</span>
+                    <div id="img_category" class="psuedo_select" name="img_category">
+                      <span class="selected"></span>
+                      <ul id="img_category_options" class="options">
+                        <li class="option" data-value="commercial">Commercial</li>
+                        <li class="option" data-value="residential">Residential</li>
+                      </ul>
+                    </div>
+                  </label>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group has-float-label has-success">
+                    <label id="img_category_label" class="field" for="img_category" data-value="">
+                      <span>Sucursal</span>
+                      <div id="img_category" class="psuedo_select" name="img_category">
+                        <span class="selected"></span>
+                        <ul id="img_category_options" class="options">
+                          <li class="option" data-value="commercial">Commercial</li>
+                          <li class="option" data-value="residential">Residential</li>
+                        </ul>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group has-float-label has-success">
+                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                      placeholder="xxxxxx" required>
+                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Número de cuenta</label>
+                    <span class="form-control-feedback"></span>
+                  </div>
+                </div>
+                <div class="container d-flex justify-content-between">
+                  <div class="d-flex terminos-condiciones">
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="aceptar-terminos">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Acepto los términos y condiciones</span>
+                    </label>
+                  </div>
+                  <a href="./assets/img/terminos_condiciones.pdf" class="badge" download>Leer más</a>
+
+                </div>
+                <!-- <div class="modal fade modal-terminos" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                  aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Términos y Condiciones</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla, felis a porttitor posuere,
+                          erat est blandit lorem, a cursus enim sem sed urna. Morbi non luctus sem. In hac habitasse platea
+                          dictumst. Vestibulum venenatis sapien purus, vitae tincidunt leo iaculis a. Duis risus tellus,
+                          molestie vel mauris et, vestibulum faucibus mi. Integer eu vulputate dolor. In hac habitasse platea
+                          dictumst. Praesent molestie, purus sit amet porta iaculis, nisl nisi tempus velit, id lacinia augue
+                          nisi in justo. Praesent aliquet in nulla a eleifend. Cras efficitur mi auctor augue malesuada interdum.
+                          Curabitur risus augue, pulvinar nec est sodales, blandit gravida magna. Vestibulum metus quam,
+                          consequat ornare neque sed, euismod hendrerit ligula. Nulla molestie dolor mauris, eget feugiat
+                          tortor vulputate vel. Sed metus nulla, fringilla et nisi non, ornare iaculis nibh. Nullam tellus
+                          libero, ullamcorper at sem in, vehicula commodo diam. Pellentesque finibus quam sit amet sollicitudin
+                          malesuada. Sed blandit rhoncus ipsum, a faucibus lorem maximus at. Ut auctor purus vitae ligula
+                          blandit, eget hendrerit libero hendrerit. Ut euismod rhoncus urna, pharetra viverra quam varius
+                          vel. Vestibulum feugiat dolor turpis, nec luctus enim feugiat in. Etiam rhoncus metus metus, a
+                          finibus nibh vehicula sit amet. Fusce sollicitudin efficitur convallis. In nec suscipit dui. Aliquam
+                          pellentesque nec diam ut vulputate. Donec sit amet consectetur sem, at imperdiet diam. Nunc cursus
+                          tempus ultrices. Aenean accumsan quam gravida ligula facilisis convallis eu id odio. Nam convallis
+                          mollis metus, et pharetra augue vehicula sed. Sed quis dolor enim. Morbi sit amet fringilla felis.
+                          Nulla eget egestas mi. Maecenas consectetur turpis non viverra mollis. Nulla facilisi. Pellentesque
+                          velit justo, maximus vel finibus vitae, pretium ac urna. Vivamus ut sodales mauris. Integer pretium
+                          erat eget est ultrices posuere. Suspendisse potenti.</p>
+                      </div>
+                      <div class="modal-footer modal-info__footer">
+                        <button type="button" class="btn button-aceptar" data-dismiss="modal">Entendido</button>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Container - agregar más productos-->
+        <div class="container px-5 mt-3">
+          <div class="card card-open__shadow d-flex" id="agregarProductos">
+            <div class="d-flex justify-content-between container-title">
+              <h3 class="card-title card-title_open">3.2 Agregar más productos</h3>
+              <a class="btn editar" id="editar-agregar">
+                <img src="assets/img/open-icon.svg" width="12" height="12" class="img-fluid" alt="Responsive image">
+              </a>
+            </div>
+            <div class="card-body agregar-productos">
+              <h6 class="card-subtitle description_input py-2">Por favor escoja el tipo de inspección</h6>
+              <div class="d-flex justify-content-between pt-3">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="SOAPCheckbox">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">SOAP</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="row montoprimera-cuota">
+                  <div class="col-lg-12 patente_container">
+                    <div>Monto de la 1era cuota</div>
+                    <span>$</span>
+                    <span id="dynamicValueText">
+                      39343
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Container - botones principales-->
+        <div class="container d-flex justify-content-between mt-4 px-5">
+          <a href="1-b.html" class="button_back">
+            <img src="./assets/img/back_icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Volver</a>
+          <a href="exito.html" class="button-primary">Pagar</a>
+        </div>
+      </div>
+      <div class="col-lg-6 right-container">
+        <!-- Conteiner derecho -->
+        <div class="container">
+          <div class="container">
+            <!-- Conteiner titulo secundario -->
+            <h2 class="text-center mt-4">Resumen del plan seleccionado</h2>
+          </div>
+          <div class="card card-resumen">
+            <!-- Conteiner card-resumen -->
+            <div class="ribbon ribbon__extra ">Incluye giftcard $15.000</div>
+            <div class="card-body d-flex align-items-center justify-content-between pago-container">
+              <div>
+                <div class="card-title__resumen">Pago Automático PAT / PAC </div>
+                <div class="card-subtitle mt-3">12 cuotas</div>
+                <div class="card-text">1.76 UF - IVA incluido</div>
+              </div>
+              <span class="precio">$
+                <span id="rightDynamicText">
+                  39343</span>
+              </span>
+            </div>
+            <div class="d-flex justify-content-end pr-5 m-3">
+              <a href="#" class="card-link ver-mas__resumen" data-toggle="modal" data-target="#detalle-plan__resumen">ver detalle</a>
+            </div>
+          </div>
+          <div class="card card-resumen_info ">
+            <div class="card-body pt-4">
+              <p class="card-title ">Prima Anual de 17.58 ó ($468.859 IVA incluido)</p>
+              <p class="card-subtitle mb-2 text-muted ">Valores calculados a la UF de hoy 23-10-2017: $26.670</p>
+            </div>
+          </div>
+          <div class="card card-seguro_incluye ">
+            <div class="auto_reemplazo ">
+              <img src="./assets/img/auto_icon.svg " width="35 " height="35 " class="img-fluid " alt="Responsive image ">
+              <p>Auto Reemplazo</p>
+              <p>15 Días</p>
+            </div>
+            <div class="respon_civil ">
+              <img src="./assets/img/responsabilidad-gris-icon.svg " width="35 " height="35 " class="img-fluid " alt="Responsive image ">
+              <p>Responsabilidad Civil</p>
+              <p>UF 500</p>
+            </div>
+            <div class="deducible ">
+              <img src="./assets/img/deducible_icon.svg " width="35 " height="35 " class="img-fluid " alt="Responsive image ">
+              <p>Deducible</p>
+              <p>UF 10</p>
+            </div>
+            <div class="taller_marca ">
+              <img src="./assets/img/taller_icon.svg " width="35 " height="35 " class="img-fluid " alt="Responsive image ">
+              <p>Taller de Marca</p>
+              <p>check</p>
+            </div>
+          </div>
+          <div class="row mt-3 ">
+            <div class="col-lg-12 seguro-incluye_info mt-2 ">
+              <!-- Conteiner Información (Seguro incluye) -->
+              <!-- <ul>
+                  <li>El seguro que usted ha seleccionado es de 12 cuotas de U.F 1,55.</li>
+                  <li>Calculados a la UF de hoy: $26.670.</li>
+                  <li>Exclusividad de taller de marca.</li>
+                  <li>Deducible inteligente.</li>
+                  <li>Conozca otros beneficios del seguro.
+                    <a href="#" class="ver-mas" data-toggle="modal" data-target="#exampleModalLong">Leer más</a>
+                  </li>
+              </ul> -->
+            </div>
+          </div>
+        </div>
+        <!-- Footer condiciones -->
+        <div class="col-lg-12 footer-condiciones">
+          <div class="d-flex justify-content-between pt-2" id="info-condiciones">
+            <div class="align-items-left">
+              <img src="./assets/img/condiciones_icon.svg" width="25" height="25" class="img-fluid" alt="Responsive image">
+              <span>Información</span>
+            </div>
+            <div class="align-items-right">
+              <a class="ver_detalle--buttom" id="ver-detalle">ver detalle
+                <img src="./assets/img/ver-mas.svg" width="10" height="10" class="img-fluid ml-2 mr-2" alt="Responsive image">
+              </a>
+            </div>
+          </div>
+          <div class="inactiveCondiciones" id="condiciones">
+            <ul>
+              <li>Sólo válida para vehículos de uso particular.</li>
+              <li>Los datos o antecedentes ingresados tanto del vehículo como del propietario son de exclusiva responsabilidad
+                del solicitante y debe concordar con los que se registran en Registro Nacional de Vehículos Motorizados,
+                los cuales puede obtener del padrón o certificado de dominio del vehículo. Cualquier error o inexactitudes
+                de información será exclusiva responsabilidad del solicitante, liberando a la compañía de toda responsabilidad.</li>
+              <li>La información presentada es sólo un resumen de las principales características del Seguro Automotriz. Las
+                coberturas, condiciones y exclusiones se rigen según lo dispuesto en las Condiciones Generales depositadas
+                en la SVS bajo el código POL120140295 y POL120140303.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer ">
+    <!-- Footer -->
+    <div class="d-flex footer-content">
+      <div class="col-lg-4">HDI Seguros - Todos los derechos reservados</div>
+      <div class="col-lg-4">
+        <a data-toggle="modal" data-target="#preguntas-frecuentes">Preguntas Frecuentes</a>
+      </div>
+      <!-- <div class="col-lg-4 ">Términos y Condiciones</div> -->
+      <div class="col-lg-2 necesitas-ayuda_telefonica ">
+        <img src="./assets/img/ayuda-telefonica__white.svg" width="20 " height="20 " class="img-fluid " alt="Responsive image ">
+        <div>600 600 610</div>
+      </div>
+      <div class="col-lg-2 necesitas-ayuda_chat ">
+        <img src="./assets/img/message-white-icon.svg" width="20" height="20" class="img-fluid " alt="Responsive image ">
+        <div>¿Necesitas ayuda?</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="This is a boilerplate for a Bootstrap 4.0 (beta) project">
+    <meta name="keywords" content="HTML, CSS, JS, Sass, JavaScript, framework, bootstrap, front-end, frontend, web development">
+    <title>HDI Maqueta</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/6-HDI/font-HDI/webfontkit-20171211-152350/hdi-font.css">
+  </head>
+<body>
+<div class="container-fluid layout-container">
+  <div class="row">
+    <div class="col-lg-6 left-container"> <!-- Conteiner izquierdo -->
+      <nav class="navbar navbar-expand-lg sticky-top justify-content-center nav-principal">
+        <a class="navbar-brand" href="https://www.hdi.cl/"><img src="./assets/img/logo_HDI.png" width="50" height="40" alt="" class="d-inline-block align-top"></a>
+        <ul class="nav justify-content-center">
+          <li class="nav-item nav-link active" href="#">Cotiza<span class="sr-only">(current)</span></li>
+          <li class="nav-item nav-link disabled" href="#">Planes</li>
+          <li class="nav-item nav-link disabled" href="#">Pago</li>
+        </ul>
+      </nav> <!-- Nav principal -->
+      <div class="container px-5 mt-2"> <!--mensaje-->
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <img src="./assets/img/check_white.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Notificaciones
+        </div>
+      </div>
+      <div class="container seleccion-pagos px-5 mt-2"> <!--Container - seleccion de medios de pagos-->
+        <div class="card card-open d-flex">
+          <div class="card-body card-seleccion__planes"> <!--Card - seleccion de medios de pagos xz-->
+            <div class="d-flex justify-content-between">
+            <h3 class="card-title card-title_open">Datos del vehículo</h3>
+              <button class="btn btn1" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <img src="assets/img/check.svg" alt=""> Editar
+              </button>
+            </div>
+              <div class="collapse" id="collapseExample">
+              <div class="card card-block">
+              <h4 class="pt-2">Datos para cotizar</h4>
+              <h6 class="card-subtitle description_input py-2">Por favor complete los siguientes datos para realizar la cotización</h6>
+              <div class="mediodepago_container"><!--Card - Seleccion medios de pago-->
+              </div>
+              <form class="formulario has-success" id="">
+                <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group has-float-label has-success">
+                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help" placeholder="xxxxxx" required>
+                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Banco</label>
+                    <span class="form-control-feedback"></span>
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <div class="form-group has-float-label has-success">
+                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help" placeholder="xxxxxx" required>
+                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Número de Tarjeta</label>
+                    <span class="form-control-feedback"></span>
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <div class="form-group has-float-label has-success">
+                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help" placeholder="xxxxxx" required>
+                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Fecha de expiración</label>
+                    <span class="form-control-feedback"></span>
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <!-- <label id="img_category_label"class="field"for="img_category"data-value="">
+                    <span>Category</span>
+                   <div id="img_category"class="psuedo_select"name="img_category">
+                     <span class="selected"></span>
+                     <ul id="img_category_options"class="options">
+                       <li class="option"data-value="commercial">Commercial</li>
+                       <li class="option"data-value="residential">Residential</li>
+                     </ul>
+                   </div>
+                  </label> -->
+                </div>
+
+              </div>
+              </form>
+            </div>
+            <!-- <div class="row">
+              <div class="col-lg-12 seleccion-planes">
+                <button type="buttom" class="btn2">Editar</button>
+                <button type="buttom" class="btn btn1" id="datos" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Continuar</button>
+              </div>
+            </div> -->
+            </div>
+            <!-- <div class="row">
+              <div class="col-lg-12">
+                <button class="btn btn1" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  Continuar
+                </button>
+
+            </div>
+          </div> -->
+          </div>
+          <!-- <div class="seleccion-planes d-flex justify-content-between">
+            <a href="#" class="card-link editar">Editar</a>
+            <a href="#" class="card-link continuar">Continuar</a>
+          </div> -->
+        </div>
+      </div>
+      <div class="container d-flex justify-content-between mt-3"> <!--Container - botones principales-->
+        <button class="volver">
+          <img src="./assets/img/back_icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image">
+          <a href="#" class="button_back">Volver</a>
+        </button>
+          <button type="button" class="button_primary">Cotizar</button>
+      </div>
+    </div>
+    <div class="col-lg-6 right-container"> <!-- Conteiner derecho -->
+      <div id="mySidenav" class="sidenav">
+        <a class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="d-flex">
+          <div class=" d-flex align-items-start">
+          <img src="./assets/img/infomodal_icon.svg" width="120" class="img-fluid" alt="Responsive image">
+          </div>
+          <div class="container">
+            <p class="modal-title text-uppercase">¡Aprovecha Ahora!</p>
+            <p class="modal-text pt-1">Paga al contado y tendrá un 15% de descuento adicional</p>
+          </div>
+        </div>
+          <div class="d-flex justify-content-end mr-2">
+
+            <a href="#">pagar al contado</a>
+            <img src="./assets/img/ir_icon.svg" width="25" class="img-fluid" alt="Responsive image">
+          </div>
+      </div>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+      <div class="container"> <!-- Conteiner titulo secundario -->
+        <h2 class="text-center mt-4">Las Mejores Tarifas para ti</h2>
+      </div>
+        <div class="container mt-4">
+        <div class="row"> <!-- Conteiner Planes Sugeridos -->
+          <!-- <div class="col-lg-4">
+            <div class="card card-planes">
+              <div class="card-header__planes text-center py-2">2da más vendida</div>
+                <div class="card-block text-center py-2">
+                  <div class="card-block__title">Pago Automático PAT/PAC</div>
+                  <div class="card-text card-subtitle card-block__subtitle pt-2">1 cuota</div>
+                  <div class="card-subtitle card-planes__precio">$260.406</div>
+                  <div class="card-gift py-1">giftcard $15.000</div>
+                </div>
+                <div class="list text-center">
+                  <ul class="text-center list-parametros">
+                    <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Auto reemplazo<p class="card-text card-textplanes__textdinamicos">15</p></li>
+                    <li class="text-capitalize d-flex justify-content-between flex-row align-items-center text-left list-parametros__item">Responsabilidad civil<p class="card-text card-textplanes__textdinamicos">3000</p></li>
+                    <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Deducible<p class="card-text card-textplanes__textdinamicos">5 UF</p></li>
+                    <li class="d-flex justify-content-center flex-row align-items-center list-parametros__item"><a href="#" class="card-link">ver detalle</a></li>
+                  </ul>
+                </div>
+              <div class="text-center">
+                <a href="#" class="btn buttom_secundary text-uppercase font-weight-bold">Contratar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card card-planes">
+              <div class="card-header__planes text-center py-2">2da más vendida</div>
+                <div class="card-block text-center py-2">
+                  <div class="card-block__title">Pago Automático PAT/PAC</div>
+                  <div class="card-text card-subtitle card-block__subtitle pt-2">1 cuota</div>
+                  <div class="card-subtitle card-planes__precio">$260.406</div>
+                  <div class="card-gift py-1">giftcard $15.000</div>
+                </div>
+                <div class="list text-center">
+                  <ul class="text-center list-parametros">
+                    <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Auto reemplazo<p class="card-text card-textplanes__textdinamicos">15</p></li>
+                    <li class="text-capitalize d-flex justify-content-between flex-row align-items-center text-left list-parametros__item">Responsabilidad civil<p class="card-text card-textplanes__textdinamicos">3000</p></li>
+                    <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Deducible<p class="card-text card-textplanes__textdinamicos">5 UF</p></li>
+                    <li class="d-flex justify-content-center flex-row align-items-center list-parametros__item"><a href="#" class="card-link">ver detalle</a></li>
+                  </ul>
+                </div>
+              <div class="text-center">
+                <a href="#" class="btn buttom_secundary text-uppercase font-weight-bold">Contratar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card card-planes">
+              <div class="card-header__planes text-center py-2">2da más vendida</div>
+                <div class="card-block text-center py-2">
+                  <div class="card-block__title">Pago Automático PAT/PAC</div>
+                  <div class="card-text card-subtitle card-block__subtitle pt-2">1 cuota</div>
+                  <div class="card-subtitle card-planes__precio">$260.406</div>
+                  <div class="card-gift py-1">giftcard $15.000</div>
+                </div>
+                <div class="list text-center">
+                  <ul class="text-center list-parametros">
+                    <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Auto reemplazo<p class="card-text card-textplanes__textdinamicos">15</p></li>
+                    <li class="text-capitalize d-flex justify-content-between flex-row align-items-center text-left list-parametros__item">Responsabilidad civil<p class="card-text card-textplanes__textdinamicos">3000</p></li>
+                    <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Deducible<p class="card-text card-textplanes__textdinamicos">5 UF</p></li>
+                    <li class="d-flex justify-content-center flex-row align-items-center list-parametros__item"><a href="#" class="card-link">ver detalle</a></li>
+                  </ul>
+                </div>
+              <div class="text-center">
+                <a href="#" class="btn buttom_secundary text-uppercase font-weight-bold">Contratar</a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <div class="row mt-3">
+          <!-- <div class="col-lg-12 seguro-incluye_info mt-2">
+            <ul>
+              <li>El seguro que usted ha seleccionado es de 12 cuotas de U.F 1,55.</li>
+              <li>Esto es 12 cuotas de $ 41.406 IVA incluido.</li>
+              <li>Equivalente a un valor Anual de UF 18,60 (ó $496.062 IVA incluido)</li>
+              <li>Calculados a la UF de hoy:$ 26.670.</li>
+              <li>Deducible Inteligente.</li>
+              <li>Conozca otros beneficios del seguro.<a href="#" class="badge" data-toggle="modal" data-target="#exampleModalLong">Leer más</a></li>
+            </ul>
+          </div> -->
+        </div> <!-- Conteiner Planes Sugeridos --> <!-- Conteiner Información (Seguro incluye) -->
+      </div>
+      <div class="col-lg-12 footer-condiciones">
+        <div class="d-flex justify-content-between mt-2">
+          <div class="d-flex align-items-center">
+            <img src="./assets/img/condiciones_icon.svg" width="25" height="30" class="img-fluid" alt="Responsive image">
+            <div class="ml-2">Condiciones</div>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="">ver detalle</div>
+            <button class="ver_detalle--buttom" type="button">
+              <img src="./assets/img/cerrado_icon.svg" width="20" height="20" class="img-fluid ml-2 mr-2" alt="Responsive image">
+            </button>
+          </div>
+        </div>
+      </div> <!-- Footer condiciones -->
+    </div>
+  </div>
+</div>
+<footer class="footer"> <!-- Footer -->
+  <div class="d-flex">
+    <div class="col-lg-2">HDI Seguros - S.A</div>
+    <div class="col-lg-2">Preguntas Frecuentes</div>
+    <div class="col-lg-4">Términos y Condiciones</div>
+    <div class="col-lg-2 necesitas-ayuda_telefonica">
+      <img src="./assets/img/telefono_icon.svg" width="25" height="25" class="img-fluid" alt="Responsive image">
+      <div>600 600 610</div>
+    </div>
+    <div class="col-lg-2 necesitas-ayuda_chat">
+      <img src="./assets/img/message_icon.svg" width="25" height="25" class="img-fluid" alt="Responsive image">
+      <div>¿Necesitas ayuda?</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

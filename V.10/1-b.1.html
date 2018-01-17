@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="This is a boilerplate for a Bootstrap 4.0 (beta) project">
+    <meta name="keywords" content="HTML, CSS, JS, Sass, JavaScript, framework, bootstrap, front-end, frontend, web development">
+    <title>HDI Maqueta</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/6-HDI/font-HDI/webfontkit-20171211-152350/hdi-font.css">
+</head>
+
+<body>
+    <div class="container-fluid layout-container">
+        <div class="row">
+            <div class="col-lg-6 left-container">
+                <!-- Conteiner izquierdo -->
+                <nav class="navbar navbar-expand-lg sticky-top justify-content-center nav-principal">
+                    <a class="navbar-brand" href="https://www.hdi.cl/">
+                        <img src="./assets/img/logo_HDI.png" width="50" height="40" alt="" class="d-inline-block align-top">
+                    </a>
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item nav-link disabled" href="#">Cotiza
+                            <span class="sr-only">(current)</span>
+                        </li>
+                        <li class="nav-item nav-link active" href="#">Planes</li>
+                        <li class="nav-item nav-link disabled" href="#">Pago</li>
+                    </ul>
+                </nav>
+                <!-- Nav principal -->
+                <div class="container px-5 mt-2">
+                    <!--mensaje-->
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="./assets/img/informacion-blanco-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> ¿Conoce que es deducible y responsabilidad civil?
+                        <a href="#" class="alert-link ml-2"> Leer más</a>
+                    </div>
+                </div>
+                <div class="container px-5 mt-2">
+                    <!--Container - datos personales-->
+                    <div class="card card-open__shadow d-flex">
+                        <div class="card-body">
+                            <!--Card - seleccion de medios de pagos xz-->
+                            <div class="d-flex justify-content-between">
+                                <h3 class="card-title card-title_open">Elige el plan</h3>
+                                <!-- <button class="btn btn1" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <img src="assets/img/check.svg" alt=""> Editar
+              </button> -->
+                            </div>
+                            <div class="card card-block">
+                                <h4 class="pt-2">Tipo de pago</h4>
+                                <h6 class="card-subtitle description_input py-2">Por favor complete los datos del contratante</h6>
+                                <div class="tipodepago_container my-1">
+                                    <!--Card - Seleccion tipo de pago-->
+                                    <fieldset class="form-group">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>Pago automático PAT/PAC.
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">Aviso de vencimiento.
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <h4>Ajusta los paramétros</h4>
+                                <div class="row mt-2 mb-4 d-flex justify-content-around">
+                                    <!--Card - Seleccion parametros-->
+                                    <div class="col-lg-5">
+                                        <h7 class="mr-3">Auto reemplazo</h7>
+                                        <a href="" id="show">
+                                            <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
+                                            <span id="some-element">
+                                                Un mayor daño puede ser fácilmente reparado en 30 días. Para facilitar tu movilidad, te recomendamos tomar este periodo
+                                                de cobertura de un auto de reemplazo.
+                                            </span>
+                                        </a>
+                                        <h6 class="my-3" id="autoreemplazo"></h6>
+                                        <div class="slider" id="double-label-slider"></div>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <h7 class="mr-3">Responsabilidad Civil</h7>
+                                        <a href="" id="show">
+                                            <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
+                                            <span id="some-element">
+                                                Una cobertura de 1.000 UF de Responsabilidad Civil cubre los daños más frecuentes causados en los accidentes automovilísticos.
+                                                Sin embargo, puede no ser suficiente si el siniestro genera pérdida total
+                                                en el otro vehículo involucrado.
+                                            </span>
+                                        </a>
+                                        <h6 class="my-3" id="responsabilidad-civil"></h6>
+                                        <div class="slider2" id="double-label-slider"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 mb-4">
+                                    <h7 class="mr-3">Deducible en UF</h7>
+                                    <a href="" id="show">
+                                        <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
+                                        <span id="some-element">
+                                            Un mayor daño puede ser fácilmente reparado en 30 días. Para facilitar tu movilidad, te recomendamos tomar este periodo
+                                            de cobertura de un auto de reemplazo.
+                                        </span>
+                                    </a>
+                                    <h6 class="my-3" id="deduciblesUF"></h6>
+                                    <div class="slider3" id="double-label-slider"></div>
+                                </div>
+                                <div class="row">
+                                    <!--Card - grilla de precios-->
+                                    <div class="col-lg-12">
+                                        <div class="planesgrilla-container d-flex justify-content-between">
+                                            <h4>Desea ver comparación de tárifas</h4>
+                                            <label class="switch">
+                                                <input type="checkbox" class="ver-tarifas">
+                                                <span class="slider-switch round" id="switch"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 d-flex justify-content-center">
+                                    <table class="table table-bordered table-responsive" id="table-prices">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">UF 10</th>
+                                                <th scope="col">UF 5</th>
+                                                <th scope="col">UF 3</th>
+                                                <th scope="col">Sin deducible</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">PAT/PAC</th>
+                                                <td>$33.783</td>
+                                                <td>$39.072</td>
+                                                <td>$41.406</td>
+                                                <td>$43.389</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Aviso de vencimiento</th>
+                                                <td>$35.805</td>
+                                                <td>$41.406</td>
+                                                <td>$41.140</td>
+                                                <td>$43.768</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Pago de contado</th>
+                                                <td>$260.407</td>
+                                                <td>$261.268</td>
+                                                <td>$522.474</td>
+                                                <td>$622.267</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container completar-datos__vehiculo px-5 mt-3">
+                    <!--Container - completar datos del vehículo-->
+                    <div class="card card-open__shadow d-flex">
+                        <div class="card-body completar-datos__vehículo">
+                            <h3 class="card-title card-title_open">Completar datos del vehículo</h3>
+                            <div class="d-flex justify-content-between pt-3 info-nuevo">
+                                <h4>¿Cuando se considera un auto nuevo?</h4>
+                                <a href="#" class="ver-mas" data-toggle="modal" data-target="#exampleModalLong">Leer más</a>
+                            </div>
+                            <h4 class="pt-2">Datos del vehículo resultado de la patente</h4>
+                            <div class="row py-2 patente_container">
+                                <!--Container - Resumen datos de patente-->
+                                <div class="col-lg-4 marca_container">
+                                    <div class="patente_title">Marca</div>
+                                    <div>Seat</div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="patente_title">Modelo</div>
+                                    <div>Leon</div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="patente_title">Año</div>
+                                    <div>2016</div>
+                                </div>
+                            </div>
+                            <div class="row patente_container">
+                                <div class="col-lg-4">
+                                    <div class="patente_title">Tipo de vehículo</div>
+                                    <div>Sedán</div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="patente_title">Número de motor</div>
+                                    <div>xxxx</div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="patente_title">Patente</div>
+                                    <div>FF DD 33</div>
+                                </div>
+                            </div>
+                            <!--Container - Resumen datos de patente-->
+                            <form class="formulario has-success" id="">
+                                <!--Formulario - Completar datos del vehículo-->
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group has-float-label has-success">
+                                            <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                                                placeholder="xxxxxx" required>
+                                            <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Número de chasis</label>
+                                            <span class="form-control-feedback"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="container completar-datos__direccion px-5 mt-3">
+                    <!--Container - completar datos de direccion-->
+                    <div class="card card-open__shadow d-flex">
+                        <div class="card-body completar-datos__vehículo">
+                            <h3 class="card-title card-title_open">Completar datos de dirección</h3>
+                            <h6 class="py-2">Por favor complete los siguientes datos</h6>
+                            <form class="formulario has-success" id="">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <label id="img_category_label" class="field" for="img_category" data-value="">
+                                            <span>Comuna</span>
+                                            <div id="img_category" class="psuedo_select" name="img_category">
+                                                <span class="selected"></span>
+                                                <ul id="img_category_options" class="options">
+                                                    <li class="option" data-value="commercial">Commercial</li>
+                                                    <li class="option" data-value="residential">Residential</li>
+                                                </ul>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group has-float-label has-success">
+                                            <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                                                placeholder="xxxxxx" required>
+                                            <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Calle</label>
+                                            <span class="form-control-feedback"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group has-float-label has-success">
+                                            <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                                                placeholder="xxxxxx" required>
+                                            <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Número</label>
+                                            <span class="form-control-feedback"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-lg-offset-6">
+                                        <div class="form-group has-float-label has-success">
+                                            <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                                                placeholder="xxxxxx" required>
+                                            <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Departamentp o Número de casa</label>
+                                            <span class="form-control-feedback"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="container inspeccion-vehiculo px-5 mt-3">
+                    <!--Container - inspeccion del vehículo-->
+                    <div class="card card-open__shadow d-flex">
+                        <div class="card-body completar-datos__vehículo">
+                            <h3 class="card-title card-title_open">Inspección del vehículo</h3>
+                            <h6 class="py-2">Por favor complete los siguientes datos</h6>
+                            <div class="row inspeccion-vehiculo mt-3">
+                                <div class="col-lg-5">
+                                    <div class="d-flex flex-colunm align-items-center">
+                                        <img src="./assets/img/inspeccioncompania_icon.svg" width="35" height="35" class="img-fluid" alt="Responsive image">
+                                        <div class="completar-datos__vehículo">Centro de inspección compañia</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="d-flex flex-colunm align-items-center inspeccion-vehiculo__domicilio">
+                                        <a href="1-b.1.html">
+                                            <img src="./assets/img/inspeccion-domicilio_icon.svg" width="35" height="35" class="img-fluid" alt="Responsive image">
+                                            <h7 class="pl-1">Inspección a Domicilio</h7>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="d-flex flex-colunm align-items-center inspeccion-vehiculo__autoinspeccion">
+                                        <a href="1-b.2.html">
+                                            <img src="./assets/img/autoinspeccion_icon.svg" width="25" height="35" class="img-fluid" alt="Responsive image">
+                                            <h7 class="pl-1">Autoinspección</h7>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            </form>
+                            <div class="row pt-4 pb-2">
+                                <div class="col-lg-12">
+                                    <div class="patente_description pb-3">
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="">¿Los datos de inspección es igual a la de su domicilio?</div>
+                                            <a href="1-b.1.1.html">
+                                                <img src="./assets/img/editar.svg" width="25" height="25" class="img-fluid" alt="Responsive image">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row patente_container pb-2">
+                                <div class="col-lg-4">
+                                    <div class="patente_title">Dirección</div>
+                                    <div>Las Condes 142, Santiago</div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="patente_title">Teléfono de contacto</div>
+                                    <div>+56 9 45820603</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container d-flex justify-content-between mt-3 px-5">
+                    <!--Container - botones principales-->
+                    <a href="1-a.html" class="button_back">
+                        <img src="./assets/img/back_icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image">Volver</a>
+                    <a href="1-c.html" class="button-primary">Contratar</a>
+                </div>
+            </div>
+            <div class="col-lg-6 right-container">
+                <!-- Conteiner derecho -->
+                <div class="container">
+                    <!-- Conteiner titulo secundario -->
+                    <h2 class="text-center mt-4">Las Mejores Tarifas para ti</h2>
+                </div>
+                <div class="alert alert-success alert-info__exitoso py-3 my-3" role="alert">
+                    <div class="d-flex">
+                        <h4 class="alert-heading mr-2">
+                            <img src="./assets/img/email-enviado-icon.svg" width="35" height="35" class="img-fluid" alt="Responsive image"> Listo!
+                        </h4>
+                        <div>Hemos enviado la cotización a su correo personal.</div>
+                    </div>
+
+                </div>
+                <div class="container mt-4">
+                    <div class="row mx-4">
+                        <!-- Conteiner Planes Sugeridos -->
+                        <div class="col-lg-4 planes">
+                            <div class="card card-planes">
+                                <div class="card-header__planes text-center py-2">2da más vendida</div>
+                                <div class="card-block text-center py-2">
+                                    <div class="card-block__title">Pago automático</div>
+                                    <div class="card-block__title">PAT/PAC</div>
+                                    <div class="card-text card-subtitle card-block__subtitle pt-2">1 cuota</div>
+                                    <div class="card-subtitle card-planes__precio">$260.406</div>
+                                    <div class="card-gift py-1">giftcard $15.000</div>
+                                </div>
+                                <div class="list text-center">
+                                    <ul class="text-center list-parametros">
+                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Auto reemplazo
+                                            <p class="card-text card-textplanes__textdinamicos">15</p>
+                                        </li>
+                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center text-left list-parametros__item">Responsabilidad civil
+                                            <p class="card-text card-textplanes__textdinamicos">3000</p>
+                                        </li>
+                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Deducible
+                                            <p class="card-text card-textplanes__textdinamicos">5 UF</p>
+                                        </li>
+                                        <li class="d-flex justify-content-center flex-row align-items-center list-parametros__item">
+                                            <a href="#" class="card-link" data-toggle="modal" data-target="#exampleModalLong">ver detalle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="modal fade modal-info" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle">Otros beneficios</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <ul>
+                                                    <li>
+                                                        <p>Reposición a Nuevo por pérdida total (antes de 1 año de antiguedad
+                                                            del vehículo).</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Denuncia de Siniestro por teléfono o internet.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Garantía de reparación de por vida: mientras permanezca asegurado
+                                                            continuamente en la compañia</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Asistencia en Ruta al vehículo 24/7 (grúa, batería, neumático, fallas
+                                                            eléctricas, combustible, entre otros).</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Asistencia legal.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="modal-footer modal-info__footer">
+                                                <button type="button" class="btn button-aceptar" data-dismiss="modal">Entendido</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <a href="#" class="btn button-secundary text-uppercase font-weight-bold">Contratar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 planes">
+                            <div class="card card-planes">
+                                <div class="card-header__planes text-center py-2">1era más vendida</div>
+                                <div class="card-block text-center py-2">
+                                    <div class="card-block__title">Pago automático</div>
+                                    <div class="card-block__title">PAT/PAC</div>
+                                    <div class="card-text card-subtitle card-block__subtitle pt-2">1 cuota</div>
+                                    <div class="card-subtitle card-planes__precio">$260.406</div>
+                                    <div class="card-gift py-1">giftcard $15.000</div>
+                                </div>
+                                <div class="list text-center">
+                                    <ul class="text-center list-parametros">
+                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Auto reemplazo
+                                            <p class="card-text card-textplanes__textdinamicos">15</p>
+                                        </li>
+                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center text-left list-parametros__item">Responsabilidad civil
+                                            <p class="card-text card-textplanes__textdinamicos">3000</p>
+                                        </li>
+                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Deducible
+                                            <p class="card-text card-textplanes__textdinamicos">5 UF</p>
+                                        </li>
+                                        <li class="d-flex justify-content-center flex-row align-items-center list-parametros__item">
+                                            <a href="#" class="card-link">ver detalle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="text-center">
+                                    <a href="#" class="btn button-secundary text-uppercase font-weight-bold">Contratar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 planes">
+                            <div class="card card-planes">
+                                <div class="card-header__planes text-center py-2">3era más vendida</div>
+                                <div class="card-block text-center py-2">
+                                    <div class="card-block__title">Pago automático</div>
+                                    <div class="card-block__title">PAT/PAC</div>
+                                    <div class="card-text card-subtitle card-block__subtitle pt-2">1 cuota</div>
+                                    <div class="card-subtitle card-planes__precio">$260.406</div>
+                                    <div class="card-gift py-1">giftcard $15.000</div>
+                                </div>
+                                <div class="list text-center">
+                                    <ul class="text-center list-parametros">
+                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Auto reemplazo
+                                            <p class="card-text card-textplanes__textdinamicos">15</p>
+                                        </li>
+                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center text-left list-parametros__item">Responsabilidad civil
+                                            <p class="card-text card-textplanes__textdinamicos">3000</p>
+                                        </li>
+                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Deducible
+                                            <p class="card-text card-textplanes__textdinamicos">5 UF</p>
+                                        </li>
+                                        <li class="d-flex justify-content-center flex-row align-items-center list-parametros__item">
+                                            <a href="#" class="card-link">ver detalle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="text-center">
+                                    <a href="#" class="btn button-secundary text-uppercase font-weight-bold">Contratar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-12 seguro-incluye_info mt-2">
+                            <ul>
+                                <li>El seguro que usted ha seleccionado es de 12 cuotas de U.F 1,55.</li>
+                                <li>Esto es 12 cuotas de $ 41.406 IVA incluido.</li>
+                                <li>Equivalente a un valor Anual de UF 18,60 (ó $496.062 IVA incluido)</li>
+                                <li>Calculados a la UF de hoy:$ 26.670.</li>
+                                <!-- <li>Deducible Inteligente.</li> -->
+                                <li>Conozca otros beneficios del seguro.
+                                    <a href="#" class="ver-mas" data-toggle="modal" data-target="#exampleModalLong">Leer más</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Conteiner Planes Sugeridos -->
+                    <!-- Conteiner Información (Seguro incluye) -->
+                </div>
+                <div class="col-lg-12 footer-condiciones">
+                    <div class="d-flex justify-content-between mt-2">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/img/condiciones_icon.svg" width="25" height="25" class="img-fluid" alt="Responsive image">
+                            <div class="ml-2">Condiciones</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="">ver detalle</div>
+                            <a class="ver_detalle--buttom">
+                                <img src="./assets/img/cerrado_icon.svg" width="8" height="8" class="img-fluid ml-2 mr-2" alt="Responsive image">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Footer condiciones -->
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <!-- Footer -->
+        <div class="d-flex">
+            <div class="col-lg-2">HDI Seguros - S.A</div>
+            <div class="col-lg-2">Preguntas Frecuentes</div>
+            <div class="col-lg-4">Términos y Condiciones</div>
+            <div class="col-lg-2 necesitas-ayuda_telefonica">
+                <img src="./assets/img/ayuda-telefonica__white.svg" width="25" height="25" class="img-fluid" alt="Responsive image">
+                <div>600 600 610</div>
+            </div>
+            <div class="col-lg-2 necesitas-ayuda_chat">
+                <img src="./assets/img/message-white-icon.svg" width="25" height="25" class="img-fluid" alt="Responsive image">
+                <div>¿Necesitas ayuda?</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

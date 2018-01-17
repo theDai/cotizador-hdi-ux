@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="This is a boilerplate for a Bootstrap 4.0 (beta) project">
+    <meta name="keywords" content="HTML, CSS, JS, Sass, JavaScript, framework, bootstrap, front-end, frontend, web development">
+    <title>HDI</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/6-HDI/font-HDI/webfontkit-20171211-152350/hdi-font.css">
+
+    <!-- Google Tag Manager -->
+    <!-- <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MVK4LN');</script> -->
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVK4LN" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Layout principal-->
+    <div class="container-fluid layout-container">
+        <div class="row">
+            <!-- Conteiner izquierdo -->
+            <div class="col-lg-6 left-container">
+                <a class="navbar-brand" href="https://www.hdi.cl/">
+                    <img src="./assets/img/logo_HDI.png" width="50" height="40" alt="Cotiza tu seguro automotriz online" class="d-inline-block align-top">
+                </a>
+                <!-- Nav principal -->
+                <nav class="navbar navbar-expand-lg sticky-top nav-principal justify-content-center">
+                    <ul class="nav">
+                        <li class="nav-item nav-link active" href="#">
+                            <img src="./assets/img/1.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Cotiza
+                            <span class="sr-only">(current)</span>
+                        </li>
+                        <li class="nav-item nav-link disabled" href="#">
+                            <img src="./assets/img/2-desactivado.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Elige
+                        </li>
+                        <li class="nav-item nav-link disabled" href="#">
+                            <img src="./assets/img/3-desactivado.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Contrata
+                        </li>
+                    </ul>
+                </nav>
+                <!--Alert: Validación de patente-->
+                <div class="container px-5 mt-4">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="./assets/img/success-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Su patente ha sido validada
+                    </div>
+                </div>
+                <!--Container - Confirmar datos de la patente -->
+                <div class="container px-5 mt-4">
+                    <div class="card card-open__shadow d-flex" id="container-datos-vehiculo">
+                        <!--Card - confirmar datos de la patente -->
+                        <div class="d-flex justify-content-between container-title">
+                            <h3 class="card-title card-title_open">1.1 Confirmar datos de la patente</h3>
+                            <a class="btn editar" id="editar">
+                                <img src="assets/img/open-icon.svg" width="8" height="8" class="img-fluid" alt="Responsive image">
+                            </a>
+                        </div>
+                        <div class="card-body datos-vehiculo">
+                            <div class="card card-block ">
+                                <h4 class="pt-3 pb-2 subtitle">Datos del vehículo</h4>
+                                <h6 class="card-subtitle description_input py-3">Por favor validar si los datos resultado de la patente están correctos</h6>
+                                <div class="patente_container pt-3 pb-4">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="patente_description__editar pb-3">
+                                                <div class="form-group has-float-label">
+                                                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                                                        placeholder="FF DD 33" required>
+                                                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">patente</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-2">
+                                        <div class="col-lg-3 col-sm-2">
+                                            <div class="marca_container">
+                                                <div class="patente_title">Marca</div>
+                                                <div class="">chevrolet</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-2">
+                                            <div class="modelo_container">
+                                                <div class="patente_title">Modelo</div>
+                                                <div class="">corsa</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-2">
+                                            <div class="ano_container">
+                                                <div class="patente_title">Año</div>
+                                                <div class="">2016</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-2">
+                                            <div class="tipo_container">
+                                                <div class="patente_title">Tipo</div>
+                                                <div class="">sedán</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pt-2">
+                                        <div class="col-lg-3 col-sm-2">
+                                            <div class="nombres_container">
+                                                <div class="patente_title">Nombres</div>
+                                                <div class="">Maria Elena</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-2">
+                                            <div class="apellidop_container">
+                                                <div class="patente_title">Apellido Paterno</div>
+                                                <div class="">Rodriguez</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-2">
+                                            <div class="apellidom_container">
+                                                <div class="patente_title">Apellido Materno</div>
+                                                <div class="">Barra</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-2">
+                                            <div class="rutdueno_container">
+                                                <div class="patente_title">Rut del dueño</div>
+                                                <div class="">15.342.242-1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="button-container__edicion d-flex justify-content-end">
+                                        <a href="#" class="card-link continuar text-uppercase mr-2" id="continuar">Continuar</a>
+                                        <img src="./assets/img/continuar-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--Card - datos del contratante-->
+                    <div class="card card-open__shadow d-flex mt-4" id="container-datos-contratante">
+                        <div class="d-flex justify-content-between container-title">
+                            <h3 class="card-title card-title_open">1.2 Confirmar datos del contratante</h3>
+                            <a class="btn editar" id="editar">
+                                <img src="assets/img/open-icon.svg" width="8" height="8" class="img-fluid" alt="Responsive image">
+                            </a>
+                        </div>
+                        <div class="card-body datos-contratante">
+                            <div class="card card-block ">
+                                <h4 class="pt-3 pb-2 subtitle">Datos para cotizar</h4>
+                                <h6 class="card-subtitle description_input py-2">Por favor complete los siguientes datos</h6>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group has-float-label">
+                                            <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                                                placeholder="jaded676@gmail.com" required>
+                                            <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Correo</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group has-float-label has-success">
+                                            <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                                                placeholder="+56 9435205403" required>
+                                            <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Teléfono</label>
+                                            <span class="form-control-feedback"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex mt-4">
+                                    <div class="col-lg-6 container_edad">
+                                        <h4 class="pt-2 pb-3">Edad del menor conductor</h4>
+                                        <div class="slider-edad mt-4 ml-2" id="double-label-slider"></div>
+                                    </div>
+                                    <div class="col-lg-6 mx-4 mt-5 d-flex align-items-center">
+                                        <p id="edadConductor" class="panel callout radius text-center"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Container - botones principales-->
+                <div class="container d-flex justify-content-between mt-4 px-5">
+                    <a href="home-a.html" class="button_back">
+                        <img src="./assets/img/back_icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Volver</a>
+                    <a href="1-b.html" class="button-primary">Cotizar</a>
+                </div>
+            </div>
+            <!-- Conteiner derecho -->
+            <div class="col-lg-6 right-container">
+                <!-- Conteiner titulo secundario -->
+                <div class="container mt-5">
+                    <h2 class="text-center">Beneficios de contratar con HDI</h2>
+                </div>
+                <!-- Conteiner Tab Beneficios - Que cubre -->
+                <div class="container">
+                    <ul class="nav nav-pills my-5 justify-content-center nav-beneficios" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active text-uppercase" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
+                                aria-selected="true">Beneficios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">Que cubre</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content container" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <div class="d-flex justify-content-center">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <!-- Conteiner Beneficios-->
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="card card-beneficios">
+                                                <div class="col-lg-3 offset-md-9 container-beneficios">
+                                                    <img class="beneficios_icon" src="./assets/img/rapido-icon.svg" width="45" height="35" alt="Card image cap">
+                                                </div>
+                                                <div class="card-body">
+                                                    <p class="card-beneficios__title">Más rápido</p>
+                                                    <p class="card-text"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card card-beneficios">
+                                                <div class="col-lg-3 offset-md-9 container-beneficios">
+                                                    <img class="beneficios_icon" src="./assets/img/giftcard-icon.svg" width="45" height="35" alt="Card image cap">
+                                                </div>
+                                                <div class="card-body">
+                                                    <p class="card-beneficios__title">Gift Card</p>
+                                                    <p class="card-text"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-6">
+                                            <div class="card card-beneficios">
+                                                <div class="col-lg-3 offset-md-9 container-beneficios">
+                                                    <img class="beneficios_icon" src="./assets/img/instante-icon.svg" width="45" height="35" alt="Card image cap">
+                                                </div>
+                                                <div class="card-body">
+                                                    <p class="card-beneficios__title">Quedas asegurado al instante</p>
+                                                    <p class="card-text"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card card-beneficios">
+                                                <div class="col-lg-3 offset-md-9 container-beneficios">
+                                                    <img class="beneficios_icon" src="./assets/img/inspeccion-icon.svg" width="45" height="35" alt="Card image cap">
+                                                </div>
+                                                <div class="card-body">
+                                                    <p class="card-beneficios__title">Inspección a domicilio</p>
+                                                    <p class="card-text"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Conteiner Que cubre -->
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <div class="tab-pane fade show active tab-quecubre" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                <div class="col-lg-12">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active nav-link__active" data-toggle="tab" href="#home" role="tab">¿Qué cubre?</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link nav-link__noactive" data-toggle="tab" href="#profile" role="tab">¿Qué no cubre?</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link nav-link__noactive" data-toggle="tab" href="#messages" role="tab">Asistencia al vehículo</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link nav-link__noactive" data-toggle="tab" href="#settings" role="tab">Formas de pago</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="col-lg-12 mt-3 tab-pane active seguro-incluye_info" id="home" role="tabpanel">
+                                        <p>Coberturas:</p>
+                                        <ul>
+                                            <li>Daños al Vehículo</li>
+                                            <li>Responsabilidad Civil Daño Emergente</li>
+                                            <li>Robo de Accesorios</li>
+                                            <li>Actos Maliciosos</li>
+                                            <li>Daños por Huelga y Terrorismo</li>
+                                            <li>Riesgos de la Naturaleza, Granizo y Sismo</li>
+                                            <li>Asistencia al Vehículo</li>
+                                            <li>Aumento monto asegurado por Responsabilidad Civil Daño Emergente</li>
+                                            <li>Responsabilidad Civil por: Daño Moral y Lucro Cesante</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-12 mt-3 tab-pane seguro-incluye_info" id="profile" role="tabpanel">
+                                        <p>Exclusiones:</p>
+                                        <ul>
+                                            <li>Daños producidos a neumáticos y cámaras a no ser que provengan de un accidente,
+                                                por deterioro, desgaste o desperfectos mecánicos.</li>
+                                            <li>Daños por atravesar agua, río, arena, playa de mar, lago o terreno no destinado
+                                                para el tránsito de vehículos a motor, salvo que sean trayecto obligado en
+                                                camino público o para llegar a destino (obra).
+                                            </li>
+                                            <li>Daños por causa de guerra, reacción nuclear, invasión, hechos que las leyes castigan
+                                                como delito contra la seguridad interior del estado.</li>
+                                            <li>Daños a puentes, carreteras, viaductos y a todo lo que pueda existir bajo los
+                                                mismos debido al peso del vehículo.</li>
+                                            <li>Daños a los bienes de las personas que dependan del asegurado.</li>
+                                            <li>Daños producidos cuando el vehículo sea conducido por una persona bajo la influencia
+                                                de cualquier droga o alcohol.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-12 mt-3 tab-pane seguro-incluye_info" id="messages" role="tabpanel">
+                                        <p>Asistencias al vehículo</p>
+                                        <ul>
+                                            <li>Servicio de Remolque.</li>
+                                            <li>Estadía y desplazamiento del asegurado y sus acompañantes.</li>
+                                            <li>Transporte, depósito y custodia del vehículo reparado y recuperado.</li>
+                                            <li>Transporte de acompañantes en caso de lesiones por accidente de tránsito del
+                                                vehículo.
+                                            </li>
+                                            <li>Localización y envío de piezas de recambio.</li>
+                                            <li>Auto de reemplazo.</li>
+                                            <li>Auxilio ante pannes de mecánica ligera.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-12 mt-3 tab-pane seguro-incluye_info" id="settings" role="tabpanel">
+                                        <p>Formas de pago</p>
+                                        <p>Puede elegir pagar:</p>
+                                        <ul>
+                                            <li>Al contado en una sola cuota.</li>
+                                            <li>En Cuotas Vía Pago automático con descuento desde su Tarjeta de Crédito PAT.</li>
+                                            <li>A través de Cupones de Pago enviados a su Domicilio y/o email.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer condiciones -->
+            <!-- <div class="col-lg-12 footer-condiciones">
+          
+          <div class="d-flex justify-content-between mt-2">
+            <div class="d-flex align-items-center">
+              <img src="./assets/img/condiciones_icon.svg" width="25" height="30" class="img-fluid" alt="Responsive image">
+              <div class="ml-2">Condiciones</div>
+            </div>
+            <div class="d-flex align-items-center">
+              <div class="">ver detalle</div>
+              <a class="ver-detalle--button" id="ver-detalle">
+                <img src="./assets/img/cerrado_icon.svg" width="8" height="8" class="img-fluid ml-2 mr-2" alt="Responsive image">
+              </a>
+            </div>
+            <div id="condiciones">
+              <p>
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica,
+                craft beer labore wes anderson cred nesciunt sapiente ea proident. Anim pariatur cliche reprehenderit, enim
+                eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes
+                anderson cred nesciunt sapiente ea proident.
+              </p>
+            </div>
+          </div>
+        </div> -->
+        </div>
+    </div>
+    </div>
+
+    <footer class="footer">
+        <!-- Footer -->
+        <div class="d-flex">
+            <div class="col-lg-4">HDI Seguros - Todos los derechos reservados</div>
+            <div class="col-lg-4">Preguntas Frecuentes</div>
+            <!-- <div class="col-lg-4">Términos y Condiciones</div> -->
+            <div class="col-lg-2 necesitas-ayuda_telefonica">
+                <img src="./assets/img/ayuda-telefonica__white.svg" width="20" height="20" class="img-fluid" alt="Responsive image">
+                <div>600 600 610</div>
+            </div>
+            <div class="col-lg-2 necesitas-ayuda_chat">
+                <img src="./assets/img/message-white-icon.svg" width="20" height="20" class="img-fluid" alt="Responsive image">
+                <div>¿Necesitas ayuda?</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

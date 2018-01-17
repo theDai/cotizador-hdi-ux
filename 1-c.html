@@ -234,7 +234,7 @@
             </div>
             <div class="card-body seleccion-pago">
               <!--Card - seleccion de medios de pagos - pagar-->
-              <h6 class="card-subtitle description_input my-3">Por favor escoja el tipo de inspección.</h6>
+              <h6 class="card-subtitle description_input my-3">Por favor escoja el tipo de medio de pago.</h6>
               <div class="d-flex justify-content-between">
                 <div class="mediodepago-container pt-3">
                   <!--Card - Seleccion medios de pago-->
@@ -274,26 +274,24 @@
                     <div id="img_category" class="psuedo_select" name="img_category">
                       <span class="selected"></span>
                       <ul id="img_category_options" class="options">
-                        <li class="option" data-value="commercial">Commercial</li>
-                        <li class="option" data-value="residential">Residential</li>
+                        <li class="option" data-value="commercial">Santander</li>
+                        <li class="option" data-value="residential">Banco de Chile</li>
                       </ul>
                     </div>
                   </label>
                 </div>
                 <div class="col-lg-12">
-                  <div class="form-group has-float-label has-success">
-                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                  <div class="form-group has-float-label">
+                    <input type="text" class="form-control" id="numTarjetaPAT-input" aria-describedby="tarjeta-help"
                       placeholder="xxxxxx" required>
-                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Número de Tarjeta</label>
-                    <span class="form-control-feedback"></span>
+                    <label class="col-form-label form-control-label">Número de Tarjeta</label>
                   </div>
                 </div>
                 <div class="col-lg-12">
-                  <div class="form-group has-float-label has-success">
-                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                  <div class="form-group has-float-label">
+                    <input type="text" class="form-control" id="fechaPATInput" aria-describedby="fecha-help"
                       placeholder="xxxxxx" required>
-                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Fecha de expiración</label>
-                    <span class="form-control-feedback"></span>
+                    <label class="col-form-label form-control-label">Fecha de expiración</label>
                   </div>
                 </div>
                 <div class="container d-flex justify-content-between">
@@ -306,9 +304,7 @@
                   </div>
                   <!-- <a href="#" class="badge" data-toggle="modal" data-target="#exampleModalLong">Leer más</a> -->
                   <a href="./assets/img/terminos_condiciones.pdf" class="badge" download>Leer más</a>
-
                 </div>
-
               </div>
               <!-- Pago automatico PAC -->
               <div class="row hide" id="pac">
@@ -318,25 +314,25 @@
                     <div id="img_category" class="psuedo_select" name="img_category">
                       <span class="selected"></span>
                       <ul id="img_category_options" class="options">
-                        <li class="option" data-value="commercial">Commercial</li>
-                        <li class="option" data-value="residential">Residential</li>
+                        <li class="option" data-value="commercial">Santander</li>
+                        <li class="option" data-value="residential">Banco de Chile</li>
                       </ul>
                     </div>
                   </label>
                 </div>
                 <div class="col-lg-12">
-                  <div class="form-group has-float-label has-success">
-                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                  <div class="form-group has-float-label">
+                    <input type="text" class="form-control" id="numTarjetaPAC-input" aria-describedby="tarjeta-help"
                       placeholder="xxxxxx" required>
-                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Número de Tarjeta</label>
+                    <label class="col-form-label form-control-label">Número de Tarjeta</label>
                     <span class="form-control-feedback"></span>
                   </div>
                 </div>
                 <div class="col-lg-12">
-                  <div class="form-group has-float-label has-success">
-                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                  <div class="form-group has-float-label">
+                    <input type="text" class="form-control" id="fechaPACInput" aria-describedby="fecha-help"
                       placeholder="xxxxxx" required>
-                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Fecha de expiración</label>
+                    <label class="col-form-label form-control-label">Fecha de expiración</label>
                     <span class="form-control-feedback"></span>
                   </div>
                 </div>
@@ -348,48 +344,8 @@
                       <span class="custom-control-description">Acepto los términos y condiciones</span>
                     </label>
                   </div>
-                  <!-- <a href="#" class="badge" data-toggle="modal" data-target="#exampleModalLong">Leer más</a> -->
                   <a href="./assets/img/terminos_condiciones.pdf" class="badge" download>Leer más</a>
-
                 </div>
-                <!-- <div class="modal fade modal-terminos" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-                  aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Términos y Condiciones</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla, felis a porttitor posuere,
-                          erat est blandit lorem, a cursus enim sem sed urna. Morbi non luctus sem. In hac habitasse platea
-                          dictumst. Vestibulum venenatis sapien purus, vitae tincidunt leo iaculis a. Duis risus tellus,
-                          molestie vel mauris et, vestibulum faucibus mi. Integer eu vulputate dolor. In hac habitasse platea
-                          dictumst. Praesent molestie, purus sit amet porta iaculis, nisl nisi tempus velit, id lacinia augue
-                          nisi in justo. Praesent aliquet in nulla a eleifend. Cras efficitur mi auctor augue malesuada interdum.
-                          Curabitur risus augue, pulvinar nec est sodales, blandit gravida magna. Vestibulum metus quam,
-                          consequat ornare neque sed, euismod hendrerit ligula. Nulla molestie dolor mauris, eget feugiat
-                          tortor vulputate vel. Sed metus nulla, fringilla et nisi non, ornare iaculis nibh. Nullam tellus
-                          libero, ullamcorper at sem in, vehicula commodo diam. Pellentesque finibus quam sit amet sollicitudin
-                          malesuada. Sed blandit rhoncus ipsum, a faucibus lorem maximus at. Ut auctor purus vitae ligula
-                          blandit, eget hendrerit libero hendrerit. Ut euismod rhoncus urna, pharetra viverra quam varius
-                          vel. Vestibulum feugiat dolor turpis, nec luctus enim feugiat in. Etiam rhoncus metus metus, a
-                          finibus nibh vehicula sit amet. Fusce sollicitudin efficitur convallis. In nec suscipit dui. Aliquam
-                          pellentesque nec diam ut vulputate. Donec sit amet consectetur sem, at imperdiet diam. Nunc cursus
-                          tempus ultrices. Aenean accumsan quam gravida ligula facilisis convallis eu id odio. Nam convallis
-                          mollis metus, et pharetra augue vehicula sed. Sed quis dolor enim. Morbi sit amet fringilla felis.
-                          Nulla eget egestas mi. Maecenas consectetur turpis non viverra mollis. Nulla facilisi. Pellentesque
-                          velit justo, maximus vel finibus vitae, pretium ac urna. Vivamus ut sodales mauris. Integer pretium
-                          erat eget est ultrices posuere. Suspendisse potenti.</p>
-                      </div>
-                      <div class="modal-footer modal-info__footer">
-                        <button type="button" class="btn button-aceptar" data-dismiss="modal">Entendido</button>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
               </div>
               <div class="row hide" id="pc">
                 <div class="col-lg-12">
@@ -398,8 +354,8 @@
                     <div id="img_category" class="psuedo_select" name="img_category">
                       <span class="selected"></span>
                       <ul id="img_category_options" class="options">
-                        <li class="option" data-value="commercial">Commercial</li>
-                        <li class="option" data-value="residential">Residential</li>
+                        <li class="option" data-value="commercial">Santander</li>
+                        <li class="option" data-value="residential">Banco de Chile</li>
                       </ul>
                     </div>
                   </label>
@@ -411,19 +367,18 @@
                       <div id="img_category" class="psuedo_select" name="img_category">
                         <span class="selected"></span>
                         <ul id="img_category_options" class="options">
-                          <li class="option" data-value="commercial">Commercial</li>
-                          <li class="option" data-value="residential">Residential</li>
+                          <li class="option" data-value="commercial">Providencia</li>
+                          <li class="option" data-value="residential">Las Condes</li>
                         </ul>
                       </div>
                     </label>
                   </div>
                 </div>
                 <div class="col-lg-12">
-                  <div class="form-group has-float-label has-success">
-                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                  <div class="form-group has-float-label">
+                    <input type="text" class="form-control" id="numCuenta-input" aria-describedby="cuenta-help"
                       placeholder="xxxxxx" required>
-                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Número de cuenta</label>
-                    <span class="form-control-feedback"></span>
+                    <label class="col-form-label form-control-label">Número de cuenta</label>
                   </div>
                 </div>
                 <div class="container d-flex justify-content-between">
@@ -437,44 +392,6 @@
                   <a href="./assets/img/terminos_condiciones.pdf" class="badge" download>Leer más</a>
 
                 </div>
-                <!-- <div class="modal fade modal-terminos" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-                  aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Términos y Condiciones</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fringilla, felis a porttitor posuere,
-                          erat est blandit lorem, a cursus enim sem sed urna. Morbi non luctus sem. In hac habitasse platea
-                          dictumst. Vestibulum venenatis sapien purus, vitae tincidunt leo iaculis a. Duis risus tellus,
-                          molestie vel mauris et, vestibulum faucibus mi. Integer eu vulputate dolor. In hac habitasse platea
-                          dictumst. Praesent molestie, purus sit amet porta iaculis, nisl nisi tempus velit, id lacinia augue
-                          nisi in justo. Praesent aliquet in nulla a eleifend. Cras efficitur mi auctor augue malesuada interdum.
-                          Curabitur risus augue, pulvinar nec est sodales, blandit gravida magna. Vestibulum metus quam,
-                          consequat ornare neque sed, euismod hendrerit ligula. Nulla molestie dolor mauris, eget feugiat
-                          tortor vulputate vel. Sed metus nulla, fringilla et nisi non, ornare iaculis nibh. Nullam tellus
-                          libero, ullamcorper at sem in, vehicula commodo diam. Pellentesque finibus quam sit amet sollicitudin
-                          malesuada. Sed blandit rhoncus ipsum, a faucibus lorem maximus at. Ut auctor purus vitae ligula
-                          blandit, eget hendrerit libero hendrerit. Ut euismod rhoncus urna, pharetra viverra quam varius
-                          vel. Vestibulum feugiat dolor turpis, nec luctus enim feugiat in. Etiam rhoncus metus metus, a
-                          finibus nibh vehicula sit amet. Fusce sollicitudin efficitur convallis. In nec suscipit dui. Aliquam
-                          pellentesque nec diam ut vulputate. Donec sit amet consectetur sem, at imperdiet diam. Nunc cursus
-                          tempus ultrices. Aenean accumsan quam gravida ligula facilisis convallis eu id odio. Nam convallis
-                          mollis metus, et pharetra augue vehicula sed. Sed quis dolor enim. Morbi sit amet fringilla felis.
-                          Nulla eget egestas mi. Maecenas consectetur turpis non viverra mollis. Nulla facilisi. Pellentesque
-                          velit justo, maximus vel finibus vitae, pretium ac urna. Vivamus ut sodales mauris. Integer pretium
-                          erat eget est ultrices posuere. Suspendisse potenti.</p>
-                      </div>
-                      <div class="modal-footer modal-info__footer">
-                        <button type="button" class="btn button-aceptar" data-dismiss="modal">Entendido</button>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
               </div>
             </div>
           </div>
@@ -489,7 +406,7 @@
               </a>
             </div>
             <div class="card-body agregar-productos">
-              <h6 class="card-subtitle description_input py-2">Por favor escoja el tipo de inspección</h6>
+              <h6 class="card-subtitle description_input py-2">Por favor seleccione el producto si desea contratarlo.</h6>
               <div class="d-flex justify-content-between pt-3">
                 <div class="row">
                   <div class="col-lg-12">

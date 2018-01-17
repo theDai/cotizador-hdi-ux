@@ -403,7 +403,7 @@
                     <div class="slider" id="double-label-slider"></div>
                   </div>
                   <div class="col-lg-6">
-                    <p class="my-3 text-center info-slider" id="autoreemplazo"></p>
+                    <div class="my-3 text-center info-slider" id="autoreemplazo"></div>
                   </div>
                 </div>
                 <div class="pt-2">
@@ -422,7 +422,7 @@
                     <div class="slider2" id="double-label-slider"></div>
                   </div>
                   <div class="col-lg-6">
-                    <p class="my-3 text-center info-slider" id="responsabilidad-civil"></p>
+                    <div class="my-3 text-center info-slider" id="responsabilidad-civil"></div>
                   </div>
                 </div>
                 <div class="pt-2">
@@ -441,7 +441,7 @@
                     <div class="slider3" id="double-label-slider"></div>
                   </div>
                   <div class="col-lg-6">
-                    <p class="my-3 text-center info-slider" id="deduciblesUF"></p>
+                    <div class="my-3 text-center info-slider" id="deduciblesUF"></div>
                   </div>
                 </div>
                 <!--Card - grilla de precios-->
@@ -533,7 +533,7 @@
             <div class="card-body completar-datos__vehículo">
               <div class="mt-2">
                 <div class="d-flex pt-3 info-nuevo align-items-center">
-                  <img src="./assets/img/info-default-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
+                  <img src="./assets/img/info-default-icon.svg" width="15" height="15" class="img-fluid" id="info" alt="Responsive image">
                   <div class="pl-1 pr-2">¿Cuando se considera un auto nuevo?</div>
                   <a href="#" class="ver-mas" id="ver-vehiculo-nuevo__info">Leer más</a>
                 </div>
@@ -588,23 +588,16 @@
                 <div class="col-lg-12">
                   <div class="has-float-label">
                     <input type="text" class="form-control" id="numChasis" aria-describedby="numero-chasis" placeholder="xxxxxx" required>
-                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Número de chasis</label>
+                    <label class="col-form-label form-control-label">Número de chasis</label>
                   </div>
-                  <!-- <div class="col-lg-1 offset-lg-11 input-success">
-                    <img src="./assets/img/input-success.svg" width="15" height="15" class="img-fluid" id="success-input-val__chasis" alt="Responsive image">
-                  </div> -->
-                  <!-- <div class="col-lg-1 offset-lg-11 input-error">
-                    <img src="./assets/img/input-error.svg" width="15" height="15" class="img-fluid" id="error-input-val__chasis" alt="Responsive image">
-                    <span class="form-control-feedback">Por favor verifque los datos ingresados</span>
-                  </div> -->
                 </div>
               </div>
-              <div class="d-flex justify-content-end input-success">
+              <!-- <div class="d-flex justify-content-end input-success">
                 <img src="./assets/img/input-success.svg" width="15" height="15" class="img-fluid" id="success-input-val__chasis" alt="Responsive image">
               </div>
               <div class="d-flex justify-content-end input-error">
                 <img src="./assets/img/input-error.svg" width="15" height="15" class="img-fluid" id="error-input-val__chasis" alt="Responsive image">
-              </div>
+              </div> -->
               <!--Container - continuar -->
               <div class="continuar-datosvehiculos__patente d-flex justify-content-end">
                 <a href="#" class="card-link continuar text-uppercase mr-2" id="continuar_completar-datos-vehiculo">Continuar</a>
@@ -640,29 +633,26 @@
               </div>
               <div class="row">
                 <div class="col-lg-6">
-                  <div class="form-group has-float-label has-success">
-                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                  <div class="form-group has-float-label">
+                    <input type="text" class="form-control" id="calleInput" aria-describedby="calle-help"
                       placeholder="xxxxxx" required>
-                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Calle</label>
-                    <span class="form-control-feedback"></span>
+                    <label class="col-form-label form-control-label">Calle</label>
                   </div>
                 </div>
                 <div class="col-lg-6">
-                  <div class="form-group has-float-label has-success">
-                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                  <div class="form-group has-float-label">
+                    <input type="text" class="form-control" id="numeroInput" aria-describedby="numero-help"
                       placeholder="xxxxxx" required>
-                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Número</label>
-                    <span class="form-control-feedback"></span>
+                    <label class="col-form-label form-control-label">Número</label>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-lg-6 col-lg-offset-6">
-                  <div class="form-group has-float-label has-success">
-                    <input type="text" class="form-control form-control-success has-success " id="inputHorizontalSuccess" aria-describedby="email-help"
+                  <div class="form-group has-float-label">
+                    <input type="text" class="form-control" id="departamentoInput" aria-describedby="departamento-help"
                       placeholder="xxxxxx" required>
-                    <label for="inputHorizontalSuccess" class="col-form-label form-control-label">Departamento o Número de casa</label>
-                    <span class="form-control-feedback"></span>
+                    <label class="col-form-label form-control-label">Departamento o Número de casa</label>
                   </div>
                 </div>
               </div>
@@ -792,11 +782,11 @@
                   </div>
                 </div>
                 <div class="row patente_container py-2">
-                  <div class="col-lg-4">
+                  <div class="col-lg-6">
                     <div class="patente_title">Dirección</div>
                     <div>Las Condes 142, Santiago</div>
                   </div>
-                  <div class="col-lg-4">
+                  <div class="col-lg-6">
                     <div class="patente_title">Teléfono de contacto</div>
                     <div>+56 9 45820603</div>
                   </div>
@@ -813,8 +803,8 @@
             </div>
           </div>
         </div>
+        <!--Container - botones principales-->
         <div class="container d-flex justify-content-between mt-4 px-5">
-          <!--Container - botones principales-->
           <a href="1-a.html" class="button_back">
             <img src="./assets/img/back_icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Volver</a>
           <a href="1-c.html" class="button-primary">Contratar</a>
