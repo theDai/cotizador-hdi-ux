@@ -4,7 +4,17 @@
 
 $font-family: hdi-gerling_sansregular;
 $font-family-title-h1: hdi-gerling_sansbold;
-$font-nav: hdi-gerling_sansregular;
+$font-family-title-h2: hdi-gerling_sansbold;
+$font-family-title-h3: hdi-gerling_sansbold;
+$font-family-title-h4: hdi-gerling_sansbold;
+$font-family-h5: hdi-gerling_sansregular;
+$font-family-h6: hdi-gerling_sansregular;
+
+$font-family-navbar: hdi-gerling_sansbold;
+$font-family-alert: hdi-gerling_sansbold;
+$font-modal-info: hdi-gerling_sansregular;
+
+$font-family-carousell: hdi-gerling_sansregular;
 $font-card: hdi-gerling_sansregular;
 $font-cardtitle: hdi-gerling_sansbold;
 $font-cardsubtitle: hdi-gerling_sansregular;
@@ -13,15 +23,35 @@ $font-card-text: hdi-gerling_sansregular;
 $font-resume: hdi-gerling_sansregular;
 $font-buttom-primary: hdi-gerling_sansbold;
 $font-form-control: hdi-gerling_sansregular;
-$font-modal-info: hdi-gerling_sansregular;
+
 $font-footer: hdi-gerling_sansregular;
 $font-modal: hdi-gerling_sanslight;
 $font-modal-title: hdi-gerling_sansregular;
 
-/* Color background */
+/* Color */
 
-$background-color--left: #f9f9f9;
-$background-color--right: #f9f9f9;
+$font-color-title-h1: #009c33;
+$font-color-title-h2: #000000;
+$font-color-title-h3: #353535;
+$font-color-title-h4: #525c65;
+$font-color-h5: #000000;
+$font-color-h6: #525c65;
+
+$background-color-left: #f9f9f9;
+$background-color-right: #f9f9f9;
+$background-color-modal-header: #f9fafc;
+$background-color-modal-body: #f9fafc;
+
+$font-color-navbar-active: #000000;
+$font-color-navbar-completado: #009c33;
+$font-color-navbar-disable: #dee1e8;
+$font-color-modalsidenav: #ffffff;
+$font-color-modal: #646d82;
+$font-color-modal-buttonaceptar: #848484;
+$alert-success-color: #15c26b;
+$alert-info-color: #208aff;
+
+$color-sidenav: #000000;
 $color-card-beneficios: rgba(158, 158, 158, 0.08);
 $color-card-close: rgba(249, 249, 249, 0.9);
 $color-card-open: rgba(255, 255, 255, 1);
@@ -30,6 +60,7 @@ $color-card-planes: #009c33;
 $color-font-buttonplanes-contratar: #000000;
 
 /* Color font */
+
 $color-font: #2c2a3c;
 $color-font-title-h1: #2c2a3c;
 $color-cardtitle-close: #9b9b9b;
@@ -47,6 +78,14 @@ $color-footer: rgba(0, 0, 0, 100);
 $color-footer-condiciones: rgba(0, 0, 0, 0.7);
 $color-font-footer-condiciones: #ffffff;
 
+/* Size font */
+$font-size-title-h1: 3.8em;
+$font-size-title-h2: 1.5em;
+$font-size-title-h3: 1.3em;
+$font-size-title-h4: 1.2em;
+$font-size-h5: 1.2em;
+$font-size-h6: 1em;
+
 *:focus {
   outline: none;
 }
@@ -60,55 +99,56 @@ html {
   font-family: "hdi-gerling_sansregular";
 }
 
-/* H1 H2 H3 H4 H5
+/* H1 H2 H3 H4 H5 H6
 -------------------------------------------------- */
 
 h1 {
   font-family: $font-family-title-h1;
-  font-size: 3.8em;
+  color: $font-color-title-h1;
+  font-size: $font-size-title-h1;
   letter-spacing: -0.03em;
-  color: #009c33;
   line-height: 1.12em;
   margin-top: 1.5em;
 }
 
 h2 {
-  font-family: hdi-gerling_sansbold;
-  font-size: 1.5em;
+  font-family: $font-family-title-h2;
+  color: $font-color-title-h2;
+  font-size: $font-size-title-h2;
   letter-spacing: 0em;
 }
 
 h3 {
-  font-family: $font-cardtitle;
-  font-size: 1.3em;
+  font-family: $font-family-title-h3;
+  color: $font-color-title-h3;
+  font-size: $font-size-title-h3;
   letter-spacing: 0.04em;
   color: $color-cardtitle-open;
 }
 
 h4 {
-  font-size: 1.2em;
+  font-family: $font-family-title-h4;
+  color: $font-color-title-h4;
+  font-size: $font-size-title-h4;
   letter-spacing: 0.04em;
-  // font-family: $font-cardsubtitle;
-  font-family: "hdi-gerling_sansbold";
-  color: $color-cardsubtitle;
 }
 
 h5 {
-  font-size: 1.2em;
-  font-family: hdi-gerling_sansregular;
-  color: $color-card-textoayuda;
+  font-family: $font-family-h5;
+  color: $font-color-h5;
+  font-size: $font-size-h5;
   letter-spacing: 0.04em;
 }
 
 h6 {
-  font-size: 1em;
-  font-family: $font-card-text;
-  color: $color-card-textoayuda;
+  font-family: $font-family-h6;
+  color: $font-color-h6;
+  font-size: $font-size-h6;
   letter-spacing: 0.04em;
   line-height: 1.5em;
 }
 
-/* Layout Container
+/* Layout Principal 
 -------------------------------------------------- */
 
 .layout-container {
@@ -116,14 +156,14 @@ h6 {
   padding: 0;
   overflow: hidden;
   .left-container {
-    background: $background-color--left;
+    background: $background-color-left;
     height: 100vh;
     padding: 0 0 60px 0;
     overflow: scroll;
     z-index: 3;
   }
   .right-container {
-    background: $background-color--right;
+    background: $background-color-right;
     box-shadow: inset 13px 0px 58px -7px #e0e5f0, 5px 5px 5px 1px #dddddd;
     -webkit-box-shadow: inset 13px 0px 58px -7px #e0e5f0,
       5px 5px 5px 1px #dddddd;
@@ -137,9 +177,9 @@ h6 {
 -------------------------------------------------- */
 
 hr {
+  background-color: rgba(219, 226, 232, 0.8);
   width: 70%;
   height: 1px;
-  background-color: rgba(219, 226, 232, 0.8);
   border: none;
   margin: 15px 0;
 }
@@ -160,18 +200,18 @@ hr {
 }
 
 .referencia-home {
-  font-size: 1.2em;
   font-family: hdi-gerling_sansregular;
-  letter-spacing: 0.02em;
   color: #848484;
+  font-size: 1.2em;
+  letter-spacing: 0.02em;
   margin-top: 2.5em;
 }
 
 .button-home {
-  background-size: 100% 100%;
+  font-family: $font-buttom-primary;
   color: #fff;
   font-size: 0.9em;
-  font-family: $font-buttom-primary;
+  background-size: 100% 100%;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2.4px;
@@ -193,7 +233,6 @@ hr {
     font-weight: 700;
     padding: 20px 40px;
     background-clip: text;
-    // text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: solid 2px #ffffff;
@@ -213,8 +252,6 @@ hr {
   transition: all 0.2s linear;
   background: #ffffff;
   box-shadow: 8px 10px 20px 0px rgba(46, 61, 73, 0.15);
-
-  // border-color: #d1d6db;
   border: 1.5px solid #dadada;
 
   &:hover {
@@ -227,7 +264,6 @@ hr {
     font-weight: 700;
     padding: 20px 40px;
     background-clip: text;
-    text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: solid 2px #ffffff;
@@ -263,18 +299,18 @@ hr {
 }
 
 .referencia-exito {
-  font-size: 1.5em;
   font-family: $font-family-title-h1;
+  color: $font-color-title-h1;
+  font-size: 1.5em;
   letter-spacing: 0.02em;
-  color: #009c33;
   margin-top: 3.5em;
 }
 
 .exito-title {
   font-family: $font-family-title-h1;
+  color: $font-color-title-h1;
   font-size: 3.2em;
   letter-spacing: -0.03em;
-  color: #009c33;
   line-height: 1.12em;
   margin-top: 2.5em;
   width: 72%;
@@ -296,17 +332,17 @@ hr {
   opacity: 80%;
 }
 .carousel-item {
-  font-family: "hdi-gerling_sansregular";
+  font-family: $font-family-carousell;
   font-size: 1em;
 }
 
 .carousel-control-prev {
-  left: -4em;
+  // left: -4em;
   display: none;
 }
 
 .carousel-control-next {
-  right: -4em;
+  // right: -4em;
   display: none;
 }
 
@@ -319,11 +355,11 @@ hr {
 }
 
 .carousel-title {
-  margin-bottom: 7%;
+  font-family: "hdi-gerling_sansregular";
   color: #ffffff;
   font-size: 1.5em;
+  margin-bottom: 7%;
   letter-spacing: 0.04em;
-  font-family: "hdi-gerling_sansregular";
 }
 
 .carousel-text {
@@ -440,27 +476,51 @@ hr {
 -------------------------------------------------- */
 /* Alert */
 
-.alert.alert-success.alert-info__exitoso {
-  background: #2c2a3c;
-  font-family: hdi-gerling_sanslight;
-  letter-spacing: 0.03em;
-  font-size: 1.1em;
-  color: #9b9b9b;
-  border-radius: 0;
-  border: none;
-  h4.alert-heading {
-    color: #ffffff;
-    font-family: hdi-gerling_sansbold;
-    letter-spacing: 0.03em;
-    font-size: 1em;
-  }
+.alert {
+  margin-bottom: 0em;
 }
 
-.alert-info .alert-link {
+.alert-info {
+  font-family: $font-family-alert;
+  background-color: $alert-info-color;
+  letter-spacing: 0.04em;
   color: #ffffff;
-  font-family: "hdi-gerling_sansregular";
-  font-size: 0.8em;
 }
+
+.alert-success {
+  font-family: $font-family-alert;
+  color: #ffffff;
+  background: $alert-success-color;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.08);
+  letter-spacing: 0.04em;
+  border-top-color: #fefefe;
+  border-left-color: #fefefe;
+  border-right-color: #fefefe;
+  // border-bottom: solid 3px #15c26b;
+  // border-color: #fefefe;
+}
+
+// .alert.alert-success.alert-info__exitoso {
+//   background: #2c2a3c;
+//   font-family: hdi-gerling_sanslight;
+//   letter-spacing: 0.03em;
+//   font-size: 1.1em;
+//   color: #9b9b9b;
+//   border-radius: 0;
+//   border: none;
+//   h4.alert-heading {
+//     color: #ffffff;
+//     font-family: hdi-gerling_sansbold;
+//     letter-spacing: 0.03em;
+//     font-size: 1em;
+//   }
+// }
+
+// .alert-info .alert-link {
+//   color: #ffffff;
+//   font-family: "hdi-gerling_sansregular";
+//   font-size: 0.8em;
+// }
 
 .alert-info__adicional {
   color: #848484;
@@ -473,64 +533,40 @@ hr {
 -------------------------------------------------- */
 
 .sidenav {
-  //height: 30%;
+  background-color: $color-sidenav;
   width: 400px;
   display: block;
   position: fixed;
   z-index: 2;
   top: 25%;
   left: 0%;
-  background-color: #000000;
   overflow-x: hidden;
   transition: 1s;
   padding-top: 60px;
   padding-bottom: 30px;
-  color: #fff;
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
-  // font-family: $font-modal;
-  // letter-spacing: 0.03em;
-  // font-size: 1.3em;
-}
-
-.sideNav_open {
-  left: 50%;
-  transition: 1s;
-
-  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.4);
-  // font-family: $font-modal;
-  // letter-spacing: 0.03em;
-  // font-size: 1.3em;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 0.9em;
-  color: #ffffff;
-  display: block;
-  transition: 0.3s;
-}
-
-.modal-title {
-  font-family: $font-modal-title;
-  letter-spacing: 0.02em;
-  font-size: 1.3em;
-  color: #000000;
+  color: #fff;
 }
 
 .modal-title_slide {
   font-family: $font-modal-title;
   letter-spacing: 0.02em;
   font-size: 1.3em;
-  color: #ffffff;
+  color: $font-color-modalsidenav;
 }
 
 .modal-text {
   font-family: $font-modal;
   letter-spacing: 0.04em;
   font-size: 1.1em;
-  color: #ffffff;
+  color: $font-color-modalsidenav;
+}
+
+.sideNav_open {
+  left: 50%;
+  transition: 1s;
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.4);
 }
 
 .sidenav a:hover {
@@ -543,50 +579,67 @@ hr {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  color: #ffffff;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-}
+// .sidenav a {
+//   padding: 8px 8px 8px 32px;
+//   text-decoration: none;
+//   font-size: 0.9em;
+//   color: #ffffff;
+//   display: block;
+//   transition: 0.3s;
+// }
 
-.modal-info {
-  font-family: $font-modal-info;
-  font-size: 0.9em;
-  color: #848484;
-}
+// .modal-title {
+//   font-family: $font-modal-title;
+//   letter-spacing: 0.02em;
+//   font-size: 1.3em;
+//   color: #000000;
+// }
 
-.modal-terminos {
-  font-family: $font-modal-info;
-  font-size: 0.8em;
-  color: #848484;
-}
+// @media screen and (max-height: 450px) {
+//   .sidenav {
+//     padding-top: 15px;
+//   }
+//   .sidenav a {
+//     font-size: 18px;
+//   }
+// }
 
-.modal-footer {
-  font-family: $font-modal-info;
-  font-size: 0.1em;
-  color: #848484;
-}
+// .modal-info {
+//   font-family: $font-modal-info;
+//   font-size: 0.9em;
+//   color: #848484;
+// }
+
+// .modal-terminos {
+//   font-family: $font-modal-info;
+//   font-size: 0.8em;
+//   color: #848484;
+// }
+
+// .modal-footer {
+//   font-family: $font-modal-info;
+//   font-size: 0.1em;
+//   color: #848484;
+// }
 
 /* Modal Infomacion
 -------------------------------------------------- */
 
 .modal-header {
-  background: #f9fafc;
+  background: $background-color-modal-header;
   border-bottom: none;
 }
 
 .modal-body {
-  background: #ffffff;
-  color: #646d82;
+  background: $background-color-modal-body;
+  font-family: $font-modal-info;
+  color: $font-color-modal;
   line-height: 1.8em;
   font-size: 0.9em;
   letter-spacing: 0.03em;
-  font-family: $font-modal-info;
   padding-top: 2em;
   padding-bottom: 1em;
   padding-left: 2em;
@@ -595,7 +648,7 @@ hr {
 
 .button-aceptar {
   border-style: none;
-  color: #848484;
+  color: $font-color-modal-buttonaceptar;
   border: 0;
 }
 .button-aceptar:active {
@@ -616,8 +669,6 @@ a.ver-mas {
   color: #006eff;
 }
 a.ver-mas:active {
-  font-family: $font-modal-info;
-  font-size: 0.8em;
   color: #848484;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(251, 251, 252, 0);
   box-shadow: 0 0 0 0.2rem rgba(251, 251, 252, 0);
@@ -656,52 +707,52 @@ a.preguntas-frecuentes-title:hover {
 /* Menu de navegacion principal
 -------------------------------------------------- */
 
+.navbar-brand {
+  margin-top: 1.3em;
+  margin-left: 2.5em;
+}
+
 .nav-principal {
   background-color: #f9fafc;
   box-shadow: 0px 15px 35px -15px rgba(134, 142, 150, 0.6);
   .nav-item {
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    font-family: $font-nav;
+    font-family: $font-family-navbar;
   }
   .nav-link {
     font-size: 1em;
-    color: $color-nav-active;
+    color: $font-color-navbar-active;
     padding: 0.5em 2.5em;
   }
 }
 
-.navbar-brand {
-  margin-top: 1.3em;
-  margin-left: 2.5em;
+li.nav-item.nav-link.active-completado {
+  // color: #787878;
+  color: $font-color-navbar-completado;
 }
-li.nav-item.nav-link.active {
-  font-family: hdi-gerling_sansbold;
-}
-li.nav-item.nav-link.disabled.listo {
-  color: #009c33;
-}
+
 li.nav-item.nav-link.disabled {
-  color: $color-nav-disable;
+  color: $font-color-navbar-disable;
 }
 
-.navbar-inner {
-  text-align: center;
-}
+// .navbar-inner {
+//   text-align: center;
+// }
 
-.logo {
-  position: relative;
-  z-index: 1;
-}
+// .logo {
+//   position: relative;
+//   z-index: 1;
+// }
 
-i.material-icons {
-  color: #009c33;
-  line-height: inherit;
-}
+// i.material-icons {
+//   color: #009c33;
+//   line-height: inherit;
+// }
 
-a.navbar-atras {
-  color: #848484;
-}
+// a.navbar-atras {
+//   color: #848484;
+// }
 
 /* 1-a
 -------------------------------------------------- */
@@ -721,7 +772,6 @@ a.editar-patente {
   color: #9b9b9b;
   border-bottom: 1px solid #dbe2e8;
   font-size: 0.9em;
-  
 }
 
 .patente_description__editar {
@@ -748,30 +798,18 @@ a.editar-patente {
   background: #fafafa;
 }
 
-li.nav-item.nav-link.active-completado {
-  color: #787878;
-}
-
 .brand-container {
   margin-left: 3em;
   margin-top: 1.5em;
 }
 
-a#continuar {
+.continuar {
   color: #fb6f2e;
   font-size: 0.8em;
   letter-spacing: 0.04em;
   font-family: "hdi-gerling_sansregular";
 }
-
-a#continuar_completar-datos-vehiculo {
-  color: #fb6f2e;
-  font-size: 0.8em;
-  letter-spacing: 0.04em;
-  font-family: "hdi-gerling_sansregular";
-}
-
-a#continuar-datos-direccion__planes {
+.continuar:hover {
   color: #fb6f2e;
   font-size: 0.8em;
   letter-spacing: 0.04em;
@@ -803,7 +841,7 @@ ul#pills-tab {
 }
 
 .continuar-datosvehiculos__patente {
-  margin-top: 9em;
+  // margin-top: 9em;
   padding: 1em;
 }
 
@@ -824,7 +862,6 @@ ul#pills-tab {
 .seleccionar-inspeccion__sinpatente {
   display: none;
 }
-
 
 /* Card
 -------------------------------------------------- */
@@ -870,7 +907,6 @@ ul#pills-tab {
 
 h4.subtitle {
   border-bottom: 1px solid rgba(0, 156, 51, 0.3);
- 
 }
 
 .parametros-title {
@@ -887,7 +923,6 @@ h4.subtitle {
 }
 .container-inputitem {
   padding-top: 2em;
-  
 }
 
 #success-input-val__chasis {
@@ -1709,28 +1744,6 @@ h4.card-title {
 /* Card planes
 -------------------------------------------------- */
 
-.alert-info {
-  background-color: #208aff;
-  color: #ffffff;
-}
-
-.alert {
-  margin-bottom: 0em;
-}
-
-.alert-success {
-  background: #15c26b;
-  color: #ffffff;
-  // border-bottom: solid 3px #15c26b;
-  // border-color: #fefefe;
-  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.08);
-  font-family: "hdi-gerling_sansbold";
-  letter-spacing: 0.04em;
-  border-top-color: #fefefe;
-  border-left-color: #fefefe;
-  border-right-color: #fefefe;
-}
-
 .seleccion-planes {
   color: #848484;
   font-family: "hdi-gerling_sansregular";
@@ -1777,7 +1790,6 @@ h3.card-title.card-title_open {
 .title-layout-container {
   margin-top: 3em;
 }
-
 
 .input-success {
   margin-top: -54px;
@@ -2094,6 +2106,9 @@ a.inspeccion-vehiculo__autoinspeccion:active {
 
 .agregar-productos {
   display: none;
+}
+.pasos-links:hover {
+  text-decoration: none;
 }
 
 /* Resumen Patente

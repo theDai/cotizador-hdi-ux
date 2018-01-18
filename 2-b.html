@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="This is a boilerplate for a Bootstrap 4.0 (beta) project">
-    <meta name="keywords" content="HTML, CSS, JS, Sass, JavaScript, framework, bootstrap, front-end, frontend, web development">
-    <title>HDI Maqueta</title>
+    <meta name="description" content="Cotice y Contrate su Seguro Automotriz con las mejores coberturas y la mejor asistencia. Infórmate sobre nuestras coberturas y contrata tu seguro online">
+    <meta name="keywords" content="Cotice y Contrate su Seguro Automotriz con las mejores coberturas y la mejor asistencia. Infórmate sobre nuestras coberturas y contrata tu seguro online">
+    <title>Cotice y Contrate su Seguro Automotriz</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="assets/css/6-HDI/font-HDI/webfontkit-20171211-152350/hdi-font.css">
@@ -146,14 +146,14 @@
                     <img src="./assets/img/notificacion-correo.svg" width="100" class="img-fluid" alt="Responsive image">
                 </div>
                 <div class="container px-4">
-                    <p class="modal-title_slide text-uppercase">¡Listo!</p>
-                    <p class="modal-text pt-3">Hemos enviado la cotización a su correo</p>
+                    <p class="modal-title_slide text-uppercase">Cotización enviada</p>
+                    <p class="modal-text pt-3">Hemos enviado su cotización a su email</p>
                 </div>
             </div>
             <!-- <div class="d-flex justify-content-end align-items-center mr-3">
-        <a href="#">pagar al contado</a>
-        <img src="./assets/img/ir_icon.svg" width="13" class="img-fluid" alt="Responsive image">
-      </div> -->
+                  <a href="#">pagar al contado</a>
+                  <img src="./assets/img/ir_icon.svg" width="13" class="img-fluid" alt="Responsive image">
+                </div> -->
         </div>
         <!-- Preguntas Frecuentes -->
         <div class="modal" id="preguntas-frecuentes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -315,10 +315,12 @@
                 </a>
                 <nav class="navbar navbar-expand-lg sticky-top nav-principal justify-content-center">
                     <ul class="nav">
-                        <li class="nav-item nav-link active-completado" href="#">
-                            <img src="./assets/img/paso-completado.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Cotiza
-                            <span class="sr-only">(current)</span>
-                        </li>
+                        <a class="pasos-links" href="2-a.html">
+                            <li class="nav-item nav-link active-completado" href="#">
+                                <img src="./assets/img/paso-completado.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Cotiza
+                                <span class="sr-only">(current)</span>
+                            </li>
+                        </a>
                         <li class="nav-item nav-link active" href="#">
                             <img src="./assets/img/2.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Elige
                         </li>
@@ -353,22 +355,22 @@
                                 <!--Seleccion tipo de pago-->
                                 <div class="tipodepago_container pt-3 pb-2">
                                     <fieldset class="form-group">
-                                        <div class="form-check">
+                                        <div class="form-check radio">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>Pago automático PAT/PAC.
+                                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked onclick="changePAC()">Pago automático PAT/PAC.
                                             </label>
                                         </div>
-                                        <div class="form-check">
+                                        <div class="form-check radio">
                                             <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">Aviso de vencimiento.
+                                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2" onclick="changeAvisovencimiento()">Aviso de vencimiento.
                                             </label>
                                         </div>
                                     </fieldset>
                                 </div>
                                 <h4 class="pt-3 pb-2 subtitle">Ajusta los paramétros</h4>
-                                <div class="pt-3">
+                                <div class="pt-4">
                                     <div class="parametros-title">Auto reemplazo
-                                        <a href="" id="show">
+                                        <a href="" class="showTooltip">
                                             <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
                                             <span id="some-element">
                                                 Un mayor daño puede ser fácilmente reparado en 30 días. Para facilitar tu movilidad, te recomendamos tomar este periodo
@@ -377,8 +379,8 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="row mt-2 mb-4">
-                                    <div class="col-lg-6">
+                                <div class="row mt-2 mb-5">
+                                    <div class="col-lg-6 mt-2">
                                         <div class="slider" id="double-label-slider"></div>
                                     </div>
                                     <div class="col-lg-6">
@@ -387,7 +389,7 @@
                                 </div>
                                 <div class="pt-2">
                                     <div class="parametros-title">Responsabilidad Civil
-                                        <a href="" id="show">
+                                        <a href="" class="showTooltip">
                                             <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
                                             <span id="some-element">
                                                 Una cobertura de 1.000 UF de Responsabilidad Civil cubre los daños más frecuentes causados en los accidentes automovilísticos.
@@ -397,8 +399,8 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="row mt-2 mb-4">
-                                    <div class="col-lg-6">
+                                <div class="row mt-2 mb-5">
+                                    <div class="col-lg-6 mt-2">
                                         <div class="slider2" id="double-label-slider"></div>
                                     </div>
                                     <div class="col-lg-6">
@@ -407,7 +409,7 @@
                                 </div>
                                 <div class="pt-2">
                                     <div class="parametros-title">Deducible en UF
-                                        <a href="" id="show">
+                                        <a href="" class="showTooltip">
                                             <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
                                             <span id="some-element">
                                                 Un mayor daño puede ser fácilmente reparado en 30 días. Para facilitar tu movilidad, te recomendamos tomar este periodo
@@ -450,7 +452,6 @@
                                         <tbody>
                                             <tr>
                                                 <th scope="row">PAT/PAC</th>
-
                                                 <td class="showTooltiptable" id="firstRow1">$33.783
                                                     <span class="tooltips-table">
                                                         Coincide con nuestra 2da sugerencia
@@ -518,9 +519,25 @@
                                     <div>Sedán</div>
                                 </div>
                             </div>
-                            <h6 class="card-subtitle description_input py-3">Por favor escoja si su auto es nuevo o usado</h6>
                             <!--Card - Seleccion tipo de auto-->
-                            <div class="tipodeauto_container my-1">
+                            <div class="mt-3">
+                                <div class="d-flex pt-3 info-nuevo align-items-center">
+                                    <img src="./assets/img/info-default-icon.svg" width="15" height="15" class="img-fluid" id="info" alt="Responsive image">
+                                    <div class="pl-1 pr-2">¿Cuando se considera un auto nuevo?</div>
+                                    <a href="#" class="ver-mas" id="ver-vehiculo-nuevo__info">Leer más</a>
+                                </div>
+                                <div class="verinfo-nuevo mt-2" id="vehiculo-nuevo__info">
+                                    <p>Una vez contratado el seguro, será exclusiva responsabilidad del asegurado realizar la
+                                        inspección del vehículo dentro de un plazo máximo de 10 días, en cualquier centro
+                                        habilitado para estos efectos de la compañia. En conformidad a las condiciones generales
+                                        de la póliza, podrá poner término anticipado al contrato, en caso que la inspección
+                                        sea rechazada por la compañia por no cumplir con los requerimientos de asegurabilidad
+                                        del bien aseguradoo cuando la inspección no se realice dentro del plazo otorgado.</p>
+                                </div>
+                            </div>
+                            <h6 class="card-subtitle description_input mt-2 mb-2">Por favor escoja si su auto es nuevo o usado.</h6>
+
+                            <div class="tipodeauto_container mt-1">
                                 <fieldset class="form-group">
                                     <div class="form-check">
                                         <label class="form-check-label">
@@ -536,87 +553,81 @@
                                 </fieldset>
                             </div>
                             <!--Formulario - Completar datos del vehículo-->
-                            <div class="row hide pt-2" id="usado">
-                                <div class="col-lg-12">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="patenteInput" aria-describedby="email-help"
-                                            placeholder="xxxxxx" required>
-                                        <label class="col-form-label form-control-label">Patente</label>
-                                        <span class="form-control-feedback"></span>
+                            <div class="container-inputs">
+                                <div class="row hide" id="usado">
+                                    <div class="col-lg-12 container-inputitem">
+                                        <div class="form-group has-float-label">
+                                            <input type="text" class="form-control" id="patenteInput" aria-describedby="email-help" placeholder="xxxxxx" required>
+                                            <label class="col-form-label form-control-label">Patente</label>
+                                            <span class="form-control-feedback"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 container-inputitem">
+                                        <div class="form-group has-float-label">
+                                            <input type="text" class="form-control" id="nummotorInput" aria-describedby="email-help" placeholder="xxxxxx" required>
+                                            <label class="col-form-label form-control-label">Número de Motor</label>
+                                            <span class="form-control-feedback"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 container-inputitem">
+                                        <div class="form-group has-float-label">
+                                            <input type="text" class="form-control" id="numChasis" aria-describedby="chasis-help" placeholder="xxxxxx" required>
+                                            <label class="col-form-label form-control-label">Número de Chasis</label>
+                                            <span class="form-control-feedback"></span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-12 pt-2">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="nummotorInput" aria-describedby="email-help"
-                                            placeholder="xxxxxx" required>
-                                        <label class="col-form-label form-control-label">Número de Motor</label>
-                                        <span class="form-control-feedback"></span>
+                                <div class="row hide" id="nuevo">
+                                    <div class="col-lg-12 container-inputitem ">
+                                        <div class="form-group has-float-label">
+                                            <input type="text" class="form-control" id="nummotornuevoInput" aria-describedby="motot-help" placeholder="xxxxxx" required>
+                                            <label class="col-form-label form-control-label">Número de Motor</label>
+                                            <span class="form-control-feedback"></span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-12 pt-2">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="numChasis" aria-describedby="chasis-help"
-                                            placeholder="xxxxxx" required>
-                                        <label class="col-form-label form-control-label">Número de Chasis</label>
-                                        <span class="form-control-feedback"></span>
+                                    <div class="col-lg-12 container-inputitem ">
+                                        <div class="form-group has-float-label">
+                                            <input type="text" class="form-control" id="numChasisnuevo" aria-describedby="chasis-help" placeholder="xxxxxx" required>
+                                            <label class="col-form-label form-control-label">Número de Chasis</label>
+                                            <span class="form-control-feedback"></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row hide pt-2" id="nuevo">
-                                <div class="col-lg-12 pt-2">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="nummotornuevoInput" aria-describedby="motot-help"
-                                            placeholder="xxxxxx" required>
-                                        <label class="col-form-label form-control-label">Número de Motor</label>
-                                        <span class="form-control-feedback"></span>
+                                    <div class="col-lg-12 container-inputitem ">
+                                        <div class="form-group has-float-label">
+                                            <input type="text" class="form-control" id="numFacturaInput" aria-describedby="factura-help" placeholder="xxxxxx" required>
+                                            <label class="col-form-label form-control-label">Número de Fáctura</label>
+                                            <span class="form-control-feedback"></span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-12 pt-2">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="numChasisnuevo" aria-describedby="chasis-help"
-                                            placeholder="xxxxxx" required>
-                                        <label class="col-form-label form-control-label">Número de Chasis</label>
-                                        <span class="form-control-feedback"></span>
+                                    <div class="col-lg-12 container-inputitem ">
+                                        <div class="form-group has-float-label">
+                                            <input type="text" class="form-control" id="fechafacturaInput" aria-describedby="fechafactura-help" placeholder="xxxxxx"
+                                                required>
+                                            <label class="col-form-label form-control-label">Fecha de Factura</label>
+                                            <span class="form-control-feedback"></span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-12 pt-2">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="numFacturaInput" aria-describedby="factura-help"
-                                            placeholder="xxxxxx" required>
-                                        <label class="col-form-label form-control-label">Número de Fáctura</label>
-                                        <span class="form-control-feedback"></span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 pt-2">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="fechafacturaInput" aria-describedby="fechafactura-help"
-                                            placeholder="xxxxxx" required>
-                                        <label class="col-form-label form-control-label">Fecha de Factura</label>
-                                        <span class="form-control-feedback"></span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 d-flex pt-3">
-                                    <div class="pr-2">
-                                        <h6 class="card-subtitle description_input py-2">Adjuntar la factura o número de despacho</h6>
-                                    </div>
-                                    <div class="">
-                                        <input type="file" name="file-3[]" id="file-3" class="inputfile inputfile-3" data-multiple-caption="{count} files selected"
-                                            multiple />
-                                        <label for="file-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
-                                                <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
-                                                />
-                                            </svg>
-                                            <!-- <img src="./assets/img/adjuntar_icon.svg" width="35" height="35" class="img-fluid" alt="Responsive image"> -->
-                                            <span></span>
-                                        </label>
+                                    <div class="col-lg-12 d-flex container-inputitem">
+                                        <div class="pr-2">
+                                            <h6 class="card-subtitle description_input py-2">Adjuntar la factura o número de despacho</h6>
+                                        </div>
+                                        <div class="">
+                                            <input type="file" name="file-3[]" id="file-3" class="inputfile inputfile-3" data-multiple-caption="{count} files selected"
+                                                multiple />
+                                            <label for="file-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                                                    <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"
+                                                    />
+                                                </svg>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="continuar-datosvehiculos__patente d-flex justify-content-end">
                                 <a href="#" class="card-link continuar text-uppercase mr-2" id="continuar_completar-datos-vehiculo__sinpatente">Continuar</a>
                                 <img src="./assets/img/continuar-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image">
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -647,58 +658,56 @@
                                 </div>
                             </div>
                             <h6 class="pt-3 pb-2">Por favor complete los siguientes datos</h6>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="apematernoduenoInput" aria-describedby="apellido-help"
-                                            placeholder="xxxxxx" required>
-                                        <label class="col-form-label form-control-label">Apellido Materno</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="correoduenoInput" aria-describedby="email-help"
-                                            placeholder="irrazabal" required>
-                                        <label class="col-form-label form-control-label">Correo</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <label id="img_category_label" class="field" for="img_category" data-value="">
-                                        <span>Comuna</span>
-                                        <div id="img_category" class="psuedo_select" name="img_category">
-                                            <span class="selected"></span>
-                                            <ul id="img_category_options" class="options">
-                                                <li class="option" data-value="commercial">Providencia</li>
-                                                <li class="option" data-value="residential">Santiago</li>
-                                            </ul>
+                            <div class="container-inputs">
+                                <div class="row">
+                                    <div class="col-lg-12 container-inputitem">
+                                        <div class="form-group has-float-label">
+                                            <input type="text" class="form-control" id="apematernoduenoInput" aria-describedby="apellido-help" placeholder="xxxxxx" required>
+                                            <label class="col-form-label form-control-label">Apellido Materno</label>
                                         </div>
-                                    </label>
-                                </div>
-                                <div class="col-lg-6 pt-2">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="calleduenoInput" aria-describedby="calle-help"
-                                            placeholder="San Francisco" required>
-                                        <label class="col-form-label form-control-label">Calle</label>
                                     </div>
-                                </div>
-                                <div class="col-lg-6 pt-2">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="numduenoInput" aria-describedby="numero-help"
-                                            placeholder="270" required>
-                                        <label class="col-form-label form-control-label">Número</label>
+                                    <div class="col-lg-12 container-inputitem">
+                                        <div class="form-group has-float-label">
+                                            <input type="text" class="form-control" id="correoduenoInput" aria-describedby="email-help" placeholder="irrazabal" required>
+                                            <label class="col-form-label form-control-label">Correo</label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6 col-lg-offset-6 pt-2">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="departamentoduenoInput" aria-describedby="departamento-help"
-                                            placeholder="xxxxxx" required>
-                                        <label class="col-form-label form-control-label">Departamento o Número de casa</label>
+                                    <div class="col-lg-12 container-inputitem">
+                                        <label id="img_category_label" class="field" for="img_category" data-value="">
+                                            <span>Comuna</span>
+                                            <div id="img_category" class="psuedo_select" name="img_category">
+                                                <span class="selected"></span>
+                                                <ul id="img_category_options" class="options">
+                                                    <li class="option" data-value="commercial">Providencia</li>
+                                                    <li class="option" data-value="residential">Santiago</li>
+                                                </ul>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-6 container-inputitem">
+                                        <div class="form-group has-float-label">
+                                            <input type="text" class="form-control" id="calleduenoInput" aria-describedby="calle-help" placeholder="San Francisco" required>
+                                            <label class="col-form-label form-control-label">Calle</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 container-inputitem">
+                                        <div class="form-group has-float-label">
+                                            <input type="text" class="form-control" id="numduenoInput" aria-describedby="numero-help" placeholder="270" required>
+                                            <label class="col-form-label form-control-label">Número</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-lg-offset-6 container-inputitem">
+                                        <div class="form-group has-float-label">
+                                            <input type="text" class="form-control" id="departamentoduenoInput" aria-describedby="departamento-help" placeholder="xxxxxx"
+                                                required>
+                                            <label class="col-form-label form-control-label">Departamento o Número de casa</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <h4 class="pt-3 pb-2 subtitle">Datos del contratante</h4>
                             <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-lg-12 container-inputitem">
                                     <label id="img_category_label" class="field" for="img_category" data-value="">
                                         <span>Comuna</span>
                                         <div id="img_category" class="psuedo_select" name="img_category">
@@ -710,32 +719,31 @@
                                         </div>
                                     </label>
                                 </div>
-                                <div class="col-lg-6 pt-2">
+                                <div class="col-lg-6 container-inputitem">
                                     <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="callecontratanteInput" aria-describedby="calle-help"
-                                            placeholder="San Isidro" required>
+                                        <input type="text" class="form-control" id="callecontratanteInput" aria-describedby="calle-help" placeholder="San Isidro"
+                                            required>
                                         <label class="col-form-label form-control-label">Calle</label>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 pt-2">
+                                <div class="col-lg-6 container-inputitem">
                                     <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="numcontratanteInput" aria-describedby="numero-help"
-                                            placeholder="xxxxxx" required>
+                                        <input type="text" class="form-control" id="numcontratanteInput" aria-describedby="numero-help" placeholder="xxxxxx" required>
                                         <label class="col-form-label form-control-label">Número</label>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-lg-offset-6 pt-2">
+                                <div class="col-lg-6 col-lg-offset-6 container-inputitem">
                                     <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="departamentocontratanteInput" aria-describedby="departamento-help"
-                                            placeholder="xxxxxx" required>
+                                        <input type="text" class="form-control" id="departamentocontratanteInput" aria-describedby="departamento-help" placeholder="xxxxxx"
+                                            required>
                                         <label class="col-form-label form-control-label">Departamento o Número de casa</label>
                                     </div>
                                 </div>
                             </div>
                             <!--Container - continuar -->
                             <div class="button-container__edicion d-flex justify-content-end mt-2">
-                            <a href="#" class="card-link continuar text-uppercase mr-2" id="continuar-datos-personales__sinpatente">Continuar</a>
-                            <img src="./assets/img/continuar-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image">
+                                <a href="#" class="card-link continuar text-uppercase mr-2" id="continuar-datos-personales__sinpatente">Continuar</a>
+                                <img src="./assets/img/continuar-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image">
                             </div>
                         </div>
                     </div>
@@ -743,32 +751,32 @@
                 <!--Container - inspeccion del vehículo-->
                 <div class="container inspeccion-vehiculo px-5 mt-3">
                     <div class="card card-open__shadow d-flex" id="seleccionar-inspeccion__sinpatente">
-                      <div class="d-flex justify-content-between container-title">
-                        <h3 class="card-title card-title_open">2.4 Inspección del vehículo</h3>
-                        <a class="btn editar" id="editar-inspeccion__planes">
-                          <img src="assets/img/open-icon.svg" width="12" height="12" class="img-fluid" alt="Responsive image">
-                        </a>
-                      </div>
-                      <div class="card-body seleccionar-inspeccion__sinpatente">
-                        <h6 class="pt-3 pb-2">Por favor complete los siguientes datos</h6>
-                        <fieldset class="form-group pt-3">
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked onclick="show6()">Centro de inspección compañia.
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2" onclick="show7()">Inspección a domicilio.
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2" onclick="show8()">Autoinspección.
-                            </label>
-                          </div>
-                        </fieldset>
-                        <!-- <div class="row inspeccion-vehiculo mt-3">
+                        <div class="d-flex justify-content-between container-title">
+                            <h3 class="card-title card-title_open">2.4 Inspección del vehículo</h3>
+                            <a class="btn editar" id="editar-inspeccion__planes">
+                                <img src="assets/img/open-icon.svg" width="8" height="8" class="img-fluid" alt="Responsive image">
+                            </a>
+                        </div>
+                        <div class="card-body seleccionar-inspeccion__sinpatente">
+                            <h6 class="pt-3 pb-2">Por favor complete los siguientes datos</h6>
+                            <fieldset class="form-group">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked onclick="show6()">Centro de inspección compañia.
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2" onclick="show7()">Inspección a domicilio.
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2" onclick="show8()">Autoinspección.
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <!-- <div class="row inspeccion-vehiculo mt-3">
                           <div class="col-lg-5">
                             <div class="d-flex flex-colunm align-items-center">
                               <img src="./assets/img/inspeccioncompania_icon.svg" width="35" height="35" class="img-fluid" alt="Responsive image">
@@ -792,93 +800,92 @@
                             </div>
                           </div>
                         </div> -->
-                        <div class="hide" id="centro-compania">
-                          <div class="row">
-                            <div class="col-lg-12">
-                              <label id="img_category_label" class="field firstSelect" for="img_category" data-value="">
-                                <span>Comuna</span>
-                                <div id="img_category" class="psuedo_select" name="img_category">
-                                  <span class="selected"></span>
-                                  <ul id="img_category_options" class="options">
-                                    <li class="option" data-value="commercial">Providencia</li>
-                                    <li class="option" data-value="residential">Santiago</li>
-                                  </ul>
+                            <div class="hide" id="centro-compania">
+                                <div class="row">
+                                    <div class="col-lg-12 container-inputitem">
+                                        <label id="img_category_label" class="field firstSelect" for="img_category" data-value="">
+                                            <span>Comuna</span>
+                                            <div id="img_category" class="psuedo_select" name="img_category">
+                                                <span class="selected"></span>
+                                                <ul id="img_category_options" class="options">
+                                                    <li class="option" data-value="commercial">Providencia</li>
+                                                    <li class="option" data-value="residential">Santiago</li>
+                                                </ul>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-12 container-inputitem">
+                                        <label id="img_category_label" class="field secondSelect" for="img_category" data-value="">
+                                            <span>Sucursal</span>
+                                            <div id="img_category" class="psuedo_select" name="img_category">
+                                                <span class="selected"></span>
+                                                <ul id="img_category_options" class="options">
+                                                    <li class="option" data-value="commercial">Providencia</li>
+                                                    <li class="option" data-value="residential">Santiago</li>
+                                                </ul>
+                                            </div>
+                                        </label>
+                                    </div>
                                 </div>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-lg-12">
-                              <label id="img_category_label" class="field secondSelect" for="img_category" data-value="">
-                                <span>Sucursal</span>
-                                <div id="img_category" class="psuedo_select" name="img_category">
-                                  <span class="selected"></span>
-                                  <ul id="img_category_options" class="options">
-                                    <li class="option" data-value="commercial">Providencia</li>
-                                    <li class="option" data-value="residential">Santiago</li>
-                                  </ul>
+
+                                <h6 class="py-2">Los datos de contacto para la inspección serian:</h6>
+                                <div class="row patente_container pb-2">
+                                    <div class="col-lg-6">
+                                        <div class="patente_title">Dirección</div>
+                                        <div>Maipón</div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="patente_title">Teléfono de contacto</div>
+                                        <div>483 42222658</div>
+                                    </div>
                                 </div>
-                              </label>
-                            </div>
-                          </div>
-                          <h6 class="py-2">Los datos de contacto para la inspección serian:</h6>
-                          <div class="row patente_container pb-2">
-                            <div class="col-lg-6">
-                              <div class="patente_title">Dirección</div>
-                              <div>Maipón</div>
-                            </div>
-                            <div class="col-lg-6">
-                              <div class="patente_title">Teléfono de contacto</div>
-                              <div>483 42222658</div>
-                            </div>
-                          </div>
-                          <div class="row patente_container">
-                            <div class="col-lg-6 col-lg-offset-6">
-                              <div class="patente_title">Horarios</div>
-                              <div>Lunes-Jueves 08:30-13:30 14:30 -18:30 </div>
-                              <div>Lunes-Viernes 08:30-13:30 14:30 -16:00 </div>
-                            </div>
-                            <div class="col-lg-6 col-lg-offset-6">
-                              <div class="patente_title">Correo</div>
-                              <div>daniela.pinto@hdi.cl</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="hide" id="inspeccion-domicilio">
-                          <div class="row pt-4 pb-2">
-                            <div class="col-lg-12">
-                              <div class="patente_description pb-3">
-                                <div class="d-flex justify-content-between align-items-center">
-                                  <div class="">¿Los datos de inspección es igual a la de su domicilio?</div>
-                                  <a href="" class="editar-patente">
-                                    <img src="./assets/img/editar.svg" width="25" height="25" class="img-fluid" alt="Responsive image"> Editar
-                                  </a>
+                                <div class="row patente_container">
+                                    <div class="col-lg-6 col-lg-offset-6">
+                                        <div class="patente_title">Horarios</div>
+                                        <div>Lunes-Jueves 08:30-13:30 14:30 -18:30 </div>
+                                        <div>Lunes-Viernes 08:30-13:30 14:30 -16:00 </div>
+                                    </div>
+                                    <div class="col-lg-6 col-lg-offset-6">
+                                        <div class="patente_title">Correo</div>
+                                        <div>daniela.pinto@hdi.cl</div>
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                          </div>
-                          <div class="row patente_container py-2">
-                            <div class="col-lg-6">
-                              <div class="patente_title">Dirección</div>
-                              <div>Las Condes 142, Santiago</div>
+                            <div class="hide" id="inspeccion-domicilio">
+                                <div class="row pt-4 pb-2">
+                                    <div class="col-lg-12">
+                                        <div class="patente_description pb-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="">¿Los datos de inspección es igual a la de su domicilio?</div>
+                                                <a href="" class="editar-patente">
+                                                    <img src="./assets/img/editar.svg" width="25" height="25" class="img-fluid" alt="Responsive image"> Editar
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row patente_container py-2">
+                                    <div class="col-lg-6">
+                                        <div class="patente_title">Dirección</div>
+                                        <div>Las Condes 142, Santiago</div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="patente_title">Teléfono de contacto</div>
+                                        <div>+56 9 45820603</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-lg-6">
-                              <div class="patente_title">Teléfono de contacto</div>
-                              <div>+56 9 45820603</div>
+                            <div class="hide" id="autoInspeccion">
+                                <p>Le enviaremos los pasos a seguir por email.</p>
                             </div>
-                          </div>
-                        </div>
-                        <div class="hide" id="autoInspeccion">
-                          <p>Le enviaremos los pasos a seguir por email.</p>
-                        </div>
-                        <!--Container - continuar -->
-                        <!-- <div class="button-container__edicion d-flex justify-content-end mt-2">
+                            <!--Container - continuar -->
+                            <!-- <div class="button-container__edicion d-flex justify-content-end mt-2">
                           <a href="#" class="card-link continuar text-uppercase mr-2" id="continuar">Continuar</a>
                           <img src="./assets/img/continuar-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image">
                         </div> -->
-                      </div>
+                        </div>
                     </div>
-                  </div>
+                </div>
                 <!--Container - botones principales-->
                 <div class="container d-flex justify-content-between mt-4 px-5">
                     <a href="2-a.html" class="button_back">
@@ -934,7 +941,7 @@
                                     <div class="card-text card-subtitle card-block__subtitle pt-3">1 cuota</div>
                                     <div class="card-subtitle card-planes__precio" id="priceRight"></div>
                                     <div class="card-gift py-2 my-2">giftcard $15.000</div>
-                                  </div>
+                                </div>
                                 <div class="list text-center mt-5">
                                     <ul class="text-center list-parametros">
                                         <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Auto reemplazo

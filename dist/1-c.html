@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="This is a boilerplate for a Bootstrap 4.0 (beta) project">
-  <meta name="keywords" content="HTML, CSS, JS, Sass, JavaScript, framework, bootstrap, front-end, frontend, web development">
-  <title>HDI Maqueta</title>
+  <meta name="description" content="Cotice y Contrate su Seguro Automotriz con las mejores coberturas y la mejor asistencia. Infórmate sobre nuestras coberturas y contrata tu seguro online">
+  <meta name="keywords" content="Cotice y Contrate su Seguro Automotriz con las mejores coberturas y la mejor asistencia. Infórmate sobre nuestras coberturas y contrata tu seguro online">
+  <title>Cotice y Contrate su Seguro Automotriz</title>
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" type="text/css" href="assets/css/6-HDI/font-HDI/webfontkit-20171211-152350/hdi-font.css">
@@ -201,9 +201,8 @@
         </div>
       </div>
     </div>
-
+    <!-- Conteiner izquierdo -->
     <div class="row">
-      <!-- Conteiner izquierdo -->
       <div class="col-lg-6 left-container">
         <!-- Nav principal -->
         <a class="navbar-brand" href="https://www.hdi.cl/">
@@ -211,13 +210,17 @@
         </a>
         <nav class="navbar navbar-expand-lg sticky-top nav-principal justify-content-center">
           <ul class="nav">
-            <li class="nav-item nav-link active-completado" href="">
-              <img src="./assets/img/paso-completado.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Cotiza
-              <span class="sr-only">(current)</span>
-            </li>
-            <li class="nav-item nav-link active-completado" href="#">
-              <img src="./assets/img/paso-completado.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Elige
-            </li>
+            <a class="pasos-links" href="1-a.html">
+              <li class="nav-item nav-link active-completado" href="">
+                <img src="./assets/img/paso-completado.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Cotiza
+                <span class="sr-only">(current)</span>
+              </li>
+            </a>
+            <a class="pasos-links" href="1-b.html">
+              <li class="nav-item nav-link active-completado" href="#">
+                <img src="./assets/img/paso-completado.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Elige
+              </li>
+            </a>
             <li class="nav-item nav-link active" href="#">
               <img src="./assets/img/3.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Contrata
             </li>
@@ -268,7 +271,7 @@
               </div>
               <!-- Pago automatico PAT -->
               <div class="row hide" id="pat">
-                <div class="col-lg-12">
+                <div class="col-lg-12 container-inputitem">
                   <label id="img_category_label" class="field" for="img_category" data-value="">
                     <span>Banco</span>
                     <div id="img_category" class="psuedo_select" name="img_category">
@@ -280,21 +283,19 @@
                     </div>
                   </label>
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 container-inputitem">
                   <div class="form-group has-float-label">
-                    <input type="text" class="form-control" id="numTarjetaPAT-input" aria-describedby="tarjeta-help"
-                      placeholder="xxxxxx" required>
+                    <input type="text" class="form-control" id="numTarjetaPAT-input" aria-describedby="tarjeta-help" placeholder="xxxxxx" required>
                     <label class="col-form-label form-control-label">Número de Tarjeta</label>
                   </div>
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 container-inputitem">
                   <div class="form-group has-float-label">
-                    <input type="text" class="form-control" id="fechaPATInput" aria-describedby="fecha-help"
-                      placeholder="xxxxxx" required>
+                    <input type="text" class="form-control" id="fechaPATInput" aria-describedby="fecha-help" placeholder="xxxxxx" required>
                     <label class="col-form-label form-control-label">Fecha de expiración</label>
                   </div>
                 </div>
-                <div class="container d-flex justify-content-between">
+                <div class="container d-flex justify-content-between container-inputitem">
                   <div class="d-flex terminos-condiciones">
                     <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input" id="aceptar">
@@ -308,7 +309,7 @@
               </div>
               <!-- Pago automatico PAC -->
               <div class="row hide" id="pac">
-                <div class="col-lg-12">
+                <div class="col-lg-12 container-inputitem">
                   <label id="img_category_label" class="field" for="img_category" data-value="">
                     <span>Banco</span>
                     <div id="img_category" class="psuedo_select" name="img_category">
@@ -320,23 +321,21 @@
                     </div>
                   </label>
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 container-inputitem">
                   <div class="form-group has-float-label">
-                    <input type="text" class="form-control" id="numTarjetaPAC-input" aria-describedby="tarjeta-help"
-                      placeholder="xxxxxx" required>
+                    <input type="text" class="form-control" id="numTarjetaPAC-input" aria-describedby="tarjeta-help" placeholder="xxxxxx" required>
                     <label class="col-form-label form-control-label">Número de Tarjeta</label>
                     <span class="form-control-feedback"></span>
                   </div>
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 container-inputitem">
                   <div class="form-group has-float-label">
-                    <input type="text" class="form-control" id="fechaPACInput" aria-describedby="fecha-help"
-                      placeholder="xxxxxx" required>
+                    <input type="text" class="form-control" id="fechaPACInput" aria-describedby="fecha-help" placeholder="xxxxxx" required>
                     <label class="col-form-label form-control-label">Fecha de expiración</label>
                     <span class="form-control-feedback"></span>
                   </div>
                 </div>
-                <div class="container d-flex justify-content-between">
+                <div class="container d-flex justify-content-between container-inputitem">
                   <div class="d-flex terminos-condiciones">
                     <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input">
@@ -348,7 +347,7 @@
                 </div>
               </div>
               <div class="row hide" id="pc">
-                <div class="col-lg-12">
+                <div class="col-lg-12 container-inputitem">
                   <label id="img_category_label" class="field" for="img_category" data-value="">
                     <span>Banco</span>
                     <div id="img_category" class="psuedo_select" name="img_category">
@@ -360,7 +359,7 @@
                     </div>
                   </label>
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 container-inputitem">
                   <div class="form-group has-float-label has-success">
                     <label id="img_category_label" class="field" for="img_category" data-value="">
                       <span>Sucursal</span>
@@ -374,14 +373,13 @@
                     </label>
                   </div>
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 container-inputitem">
                   <div class="form-group has-float-label">
-                    <input type="text" class="form-control" id="numCuenta-input" aria-describedby="cuenta-help"
-                      placeholder="xxxxxx" required>
+                    <input type="text" class="form-control" id="numCuenta-input" aria-describedby="cuenta-help" placeholder="xxxxxx" required>
                     <label class="col-form-label form-control-label">Número de cuenta</label>
                   </div>
                 </div>
-                <div class="container d-flex justify-content-between">
+                <div class="container d-flex justify-content-between container-inputitem">
                   <div class="d-flex terminos-condiciones">
                     <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input" id="aceptar-terminos">
@@ -409,7 +407,7 @@
               <h6 class="card-subtitle description_input py-2">Por favor seleccione el producto si desea contratarlo.</h6>
               <div class="d-flex justify-content-between pt-3">
                 <div class="row">
-                  <div class="col-lg-12">
+                  <div class="col-lg-12 container-inputitem">
                     <label class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input" id="SOAPCheckbox">
                       <span class="custom-control-indicator"></span>

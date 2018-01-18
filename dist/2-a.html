@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="This is a boilerplate for a Bootstrap 4.0 (beta) project">
-  <meta name="keywords" content="HTML, CSS, JS, Sass, JavaScript, framework, bootstrap, front-end, frontend, web development">
-  <title>HDI</title>
+  <meta name="description" content="Cotice y Contrate su Seguro Automotriz con las mejores coberturas y la mejor asistencia. Infórmate sobre nuestras coberturas y contrata tu seguro online">
+  <meta name="keywords" content="Cotice y Contrate su Seguro Automotriz con las mejores coberturas y la mejor asistencia. Infórmate sobre nuestras coberturas y contrata tu seguro online">
+  <title>Cotice y Contrate su Seguro Automotriz</title>
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" type="text/css" href="assets/css/6-HDI/font-HDI/webfontkit-20171211-152350/hdi-font.css">
@@ -211,17 +211,17 @@
           <div class="card card-open__shadow d-flex" id="container-datos-vehiculo__sinpatente">
             <div class="d-flex justify-content-between container-title">
               <h3 class="card-title card-title_open">1.1 Datos del vehículo</h3>
-              <a class="btn editar" id="editar">
+              <a class="btn editar" id="editar_sinpatente">
                 <img src="assets/img/open-icon.svg" width="8" height="8" class="img-fluid" alt="Responsive image">
               </a>
             </div>
             <div class="card-body datos-vehiculo__sinpatente">
               <div class="card card-block">
                 <h4 class="pt-3 pb-2 subtitle">Datos para cotizar</h4>
-                <h6 class="card-subtitle description_input py-3">Por favor completar los siguientes campos para realizar la cotización</h6>
-                <div class="patente_container">
+                <h6 class="card-subtitle description_input py-2">Por favor completar los siguientes campos para realizar la cotización</h6>
+                <div class="container-inputs">
                   <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 container-inputitem">
                       <label id="img_category_label" class="field marcaSelect" for="img_category" data-value="">
                         <span>Marca</span>
                         <div id="img_category" class="psuedo_select" name="img_category">
@@ -236,7 +236,7 @@
                         </div>
                       </label>
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 container-inputitem">
                       <label id="img_category_label" class="field modeloSelect" for="img_category" data-value="">
                         <span>Modelo</span>
                         <div id="img_category" class="psuedo_select" name="img_category">
@@ -250,7 +250,7 @@
                         </div>
                       </label>
                     </div>
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 container-inputitem">
                       <label id="img_category_label" class="field anoSelect" for="img_category" data-value="">
                         <span>Año</span>
                         <div id="img_category" class="psuedo_select" name="img_category">
@@ -274,12 +274,11 @@
               </div>
             </div>
           </div>
-            
           <!--Card - datos del contratante-->
           <div class="card card-open__shadow d-flex mt-4" id="container-datos-contratante__sinpatente">
             <div class="d-flex justify-content-between container-title">
               <h3 class="card-title card-title_open">1.2 Completar datos del contratante</h3>
-              <a class="btn editar" id="editar">
+              <a class="btn editar" id="editarcontratante_sinpatente">
                 <img src="assets/img/open-icon.svg" width="8" height="8" class="img-fluid" alt="Responsive image">
               </a>
             </div>
@@ -287,30 +286,49 @@
               <div class="card card-block">
                 <h4 class="pt-3 pb-2 subtitle">Datos para cotizar</h4>
                 <h6 class="card-subtitle description_input py-2">Por favor complete los siguientes datos</h6>
-                <div class="row">
-                  <div class="col-lg-12">
-                    <div class="form-group has-float-label has-success">
-                      <input type="text" class="form-control" id="correoInput" aria-describedby="email-help"
-                        placeholder="jaded676@gmail.com" required>
-                      <label class="col-form-label form-control-label">Correo</label>
+                <div class="container-inputs">
+                  <div class="row">
+                    <div class="col-lg-12 container-inputitem">
+                      <div class="form-group has-float-label">
+                        <input type="text" class="form-control" id="correoInput" aria-describedby="email-help" placeholder="jaded676@gmail.com" required>
+                        <label class="col-form-label form-control-label">Correo</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="form-group has-float-label has-success">
-                      <input type="text" class="form-control" id="telefonoInput" aria-describedby="telefono-help"
-                        placeholder="+56 9435205403" required>
-                      <label class="col-form-label form-control-label">Teléfono</label>
+                    <div class="col-lg-12 container-inputitem">
+                      <div class="form-group has-float-label">
+                        <input type="text" class="form-control" id="telefonoInput" aria-describedby="telefono-help" placeholder="+56 9435205403"
+                          required>
+                        <label class="col-form-label form-control-label">Teléfono</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="form-group has-float-label has-success">
-                      <input type="text" class="form-control" id="rutInput" aria-describedby="rut-help"
-                        placeholder="+56 9435205403" required>
-                      <label class="col-form-label form-control-label">Rut</label>
+                    <div class="col-lg-12 container-inputitem">
+                      <div class="form-group has-float-label">
+                        <input type="text" class="form-control" id="rutInput" aria-describedby="rut-help" placeholder="+56 9435205403" required>
+                        <label class="col-form-label form-control-label">Rut</label>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="d-flex mt-4">
+                <div class="container-inputitem">
+                  <div class="parametros-title">Edad del menor conductor
+                    <a href="" class="showTooltip">
+                      <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
+                      <span id="some-element">
+                        Un mayor daño puede ser fácilmente reparado en 30 días. Para facilitar tu movilidad, te recomendamos tomar este periodo
+                        de cobertura de un auto de reemplazo.
+                      </span>
+                    </a>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-lg-6 mt-2">
+                      <div class="slider-edad mt-4 ml-2" id="double-label-slider"></div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div id="edadConductor" class="panel callout radius text-center info-slider"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="d-flex mt-4">
                   <div class="col-lg-6 container_edad">
                     <h4 class="pt-2 pb-3">Edad del menor conductor</h4>
                     <div class="slider-edad mt-4 ml-2" id="double-label-slider"></div>
@@ -318,7 +336,7 @@
                   <div class="col-lg-6 mt-5 mx-4">
                     <p id="edadConductor" class="panel callout radius text-center"></p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -424,8 +442,8 @@
                 </div>
                 <div class="tab-content">
                   <div class="col-lg-12 mt-3 tab-pane active seguro-incluye_info" id="home" role="tabpanel">
-                    <p>Coberturas:</p>
                     <ul>
+                      <li class="mb-2 title-quecubre">Coberturas:</li>
                       <li>Daños al Vehículo</li>
                       <li>Responsabilidad Civil Daño Emergente</li>
                       <li>Robo de Accesorios</li>
@@ -438,8 +456,8 @@
                     </ul>
                   </div>
                   <div class="col-lg-12 mt-3 tab-pane seguro-incluye_info" id="profile" role="tabpanel">
-                    <p>Exclusiones:</p>
                     <ul>
+                      <li class="mb-2 title-quecubre">Exclusiones:</li>
                       <li>Daños producidos a neumáticos y cámaras a no ser que provengan de un accidente, por deterioro, desgaste
                         o desperfectos mecánicos.</li>
                       <li>Daños por atravesar agua, río, arena, playa de mar, lago o terreno no destinado para el tránsito de
@@ -455,8 +473,8 @@
                     </ul>
                   </div>
                   <div class="col-lg-12 mt-3 tab-pane seguro-incluye_info" id="messages" role="tabpanel">
-                    <p>Asistencias al vehículo</p>
                     <ul>
+                      <li class="mb-2 title-quecubre">Asistencias al vehículo</li>
                       <li>Servicio de Remolque.</li>
                       <li>Estadía y desplazamiento del asegurado y sus acompañantes.</li>
                       <li>Transporte, depósito y custodia del vehículo reparado y recuperado.</li>
@@ -467,9 +485,9 @@
                     </ul>
                   </div>
                   <div class="col-lg-12 mt-3 tab-pane seguro-incluye_info" id="settings" role="tabpanel">
-                    <p>Formas de pago</p>
-                    <p>Puede elegir pagar:</p>
                     <ul>
+                      <li class="mb-2 title-quecubre">Formas de pago</li>
+                      <li>Puede elegir pagar:</li>
                       <li>Al contado en una sola cuota.</li>
                       <li>En Cuotas Vía Pago automático con descuento desde su Tarjeta de Crédito PAT.</li>
                       <li>A través de Cupones de Pago enviados a su Domicilio y/o email.</li>

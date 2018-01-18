@@ -103,8 +103,6 @@ var show8 = function() {
   document.getElementById("inspeccion-domicilio").style.display = "none";
 };
 
-
-
 /* Patente show - hide */
 
 $("#seleccionar").click(function() {
@@ -135,7 +133,7 @@ $("#continuar").click(function() {
     });
   });
 });
-$("#editar").click(function() {
+$("#editar_patente").click(function() {
   $(".datos-vehiculo").slideDown(function(cb) {
     $("#datos-vehiculo__patente")
       .removeClass("card-closed__shadow")
@@ -147,8 +145,20 @@ $("#editar").click(function() {
     });
   });
 });
+$("#editarcontratante_patente").click(function() {
+  $(".datos-contratante").slideDown(function(cb) {
+    $("#container-datos-contratante")
+      .removeClass("card-closed__shadow")
+      .addClass("card-open__shadow");
+    $(".datos-vehiculo").slideUp(function(cb) {
+      $("#datos-vehiculo__patente")
+        .removeClass("card-open__shadow")
+        .addClass("card-closed__shadow");
+    });
+  });
+});
 
-/* Close and change card-shadow show - hide  / Patente */
+/* Close and change card-shadow show - hide  / Sin Patente */
 
 $("#continuar").click(function() {
   $(".datos-vehiculo__sinpatente").slideUp(function(cb) {
@@ -162,13 +172,25 @@ $("#continuar").click(function() {
     });
   });
 });
-$("#editar").click(function() {
+$("#editar_sinpatente").click(function() {
   $(".datos-vehiculo__sinpatente").slideDown(function(cb) {
     $("#datos-vehiculo__patente")
       .removeClass("card-closed__shadow")
       .addClass("card-open__shadow");
     $(".datos-contratante__sinpatente").slideUp(function(cb) {
       $("#container-datos-contratante__sinpatente")
+        .removeClass("card-open__shadow")
+        .addClass("card-closed__shadow");
+    });
+  });
+});
+$("#editarcontratante_sinpatente").click(function() {
+  $(".datos-contratante__sinpatente").slideDown(function(cb) {
+    $("#container-datos-contratante__sinpatente")
+      .removeClass("card-closed__shadow")
+      .addClass("card-open__shadow");
+    $(".datos-vehiculo__sinpatente").slideUp(function(cb) {
+      $("#datos-vehiculo__patente")
         .removeClass("card-open__shadow")
         .addClass("card-closed__shadow");
     });
@@ -371,8 +393,6 @@ $("#editar-datos-vehiculos__sinpatente").click(function() {
   });
 });
 
-
-
 /* Close and change card-shadow show - hide  / Datos personales */
 
 $("#continuar-datos-direccion__planes").click(function() {
@@ -428,8 +448,6 @@ $("#editar_datos-direccion__sinpatente").click(function() {
     });
   });
 });
-
-
 
 /* Agregar productos SOAP */
 
@@ -535,325 +553,334 @@ $(document).ready(function() {
   $("#correoInput").change(function() {
     if ($(this).val()) {
       $("#correoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#correoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-error");
+        .removeClass("form-control:focus")
+        .addClass("form-control-error");
     }
   });
   $("#correoduenoInput").change(function() {
     if ($(this).val()) {
       $("#correoduenoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#correoduenoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-error");
+        .removeClass("form-control:focus")
+        .addClass("form-control-error");
     }
   });
   $("#telefonoInput").change(function() {
     if ($(this).val()) {
       $("#telefonoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#telefonoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-error");
+        .removeClass("form-control:focus")
+        .addClass("form-control-error");
     }
   });
   $("#numChasis").change(function() {
     if ($(this).val()) {
       $("#numChasis")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#numChasis")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#calleInput").change(function() {
     if ($(this).val()) {
       $("#calleInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#calleInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#calleduenoInput").change(function() {
     if ($(this).val()) {
       $("#calleduenoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#calleduenoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#callecontratanteInput").change(function() {
     if ($(this).val()) {
       $("#callecontratanteInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#callecontratanteInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#numeroInput").change(function() {
     if ($(this).val()) {
       $("#numeroInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#numeroInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#numduenoInput").change(function() {
     if ($(this).val()) {
       $("#numduenoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#numduenoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#numcontratanteInput").change(function() {
     if ($(this).val()) {
       $("#numcontratanteInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#numcontratanteInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#departamentoInput").change(function() {
     if ($(this).val()) {
       $("#departamentoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#departamentoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#departamentoduenoInput").change(function() {
     if ($(this).val()) {
       $("#departamentoduenoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#departamentoduenoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#departamentocontratanteInput").change(function() {
     if ($(this).val()) {
       $("#departamentocontratanteInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#departamentocontratanteInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#numTarjetaPAT-input").change(function() {
     if ($(this).val()) {
       $("#numTarjetaPAT-input")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#numTarjetaPAT-input")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#fechaPATInput").change(function() {
     if ($(this).val()) {
       $("#fechaPATInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#fechaPATInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#numTarjetaPAC-input").change(function() {
     if ($(this).val()) {
       $("#numTarjetaPAC-input")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#numTarjetaPAC-input")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#fechaInputPAC").change(function() {
     if ($(this).val()) {
       $("#fechaInputPAC")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#fechaInputPAC")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#numCuenta-input").change(function() {
     if ($(this).val()) {
       $("#numCuenta-input")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#numCuenta-input")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#patenteInput").change(function() {
     if ($(this).val()) {
       $("#patenteInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#patenteInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#nombreInput").change(function() {
     if ($(this).val()) {
       $("#nombreInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#nombreInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#apepaternoInput").change(function() {
     if ($(this).val()) {
       $("#apepaternoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#apepaternoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#apematernoInput").change(function() {
     if ($(this).val()) {
       $("#apematernoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#apematernoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#apematernoduenoInput").change(function() {
     if ($(this).val()) {
       $("#apematernoduenoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#apematernoduenoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#rutInput").change(function() {
     if ($(this).val()) {
       $("#rutInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#rutInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
+  $("#rutduenoInput").change(function() {
+    if ($(this).val()) {
+      $("#rutduenoInput")
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
+    } else {
+      $("#rutduenoInput")
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
+    }
+  });
+
   $("#nummotorInput").change(function() {
     if ($(this).val()) {
       $("#nummotorInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#nummotorInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#numFacturaInput").change(function() {
     if ($(this).val()) {
       $("#numFacturaInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#numFacturaInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#fechafacturaInput").change(function() {
     if ($(this).val()) {
       $("#fechafacturaInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#fechafacturaInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#nummotornuevoInput").change(function() {
     if ($(this).val()) {
       $("#nummotornuevoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#nummotornuevoInput")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
   $("#numChasisnuevo").change(function() {
     if ($(this).val()) {
       $("#numChasisnuevo")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     } else {
       $("#numChasisnuevo")
-      .removeClass("form-control:focus")
-      .addClass("form-control-success");
+        .removeClass("form-control:focus")
+        .addClass("form-control-success");
     }
   });
-  
-  
-
 
   /* Slider */
 
