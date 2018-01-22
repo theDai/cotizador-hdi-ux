@@ -9,9 +9,8 @@
   <meta name="keywords" content="Cotice y Contrate su Seguro Automotriz con las mejores coberturas y la mejor asistencia. Infórmate sobre nuestras coberturas y contrata tu seguro online">
   <title>Cotice y Contrate su Seguro Automotriz</title>
   <link rel="shortcut icon" href="favicon.ico">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/6-HDI/font-HDI/webfontkit-20171211-152350/hdi-font.css">
-
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/6-HDI/font-HDI/webfontkit-20171211-152350/hdi-font.css">
   <!-- Google Tag Manager -->
   <!-- <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -22,7 +21,6 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-MVK4LN');</script> -->
   <!-- End Google Tag Manager -->
-
 </head>
 
 <body>
@@ -75,14 +73,14 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>Deducible</p>
+            <p class="modal-subtitle">Deducible</p>
             <p>Se entiende por deducible la suma de dinero, establecida en las Condiciones Particulares de la póliza, que siempre
               será de cargo del asegurado en caso de siniestro. De tal modo, cuando se haya contratado alguna cobertura con
               deducible, la compañía será responsable sólo de la cantidad que lo exceda. En caso de siniestros que se indemnicen
               a través de orden de reparación, el deducible deberá ser pagado en el taller donde se efectúen las reparaciones
               al momento de retirar el vehículo. Ej.: Si contrata un Deducible de UF 3, y tiene un siniestro por un costo
               de $1.000.000, la Compañía cubrirá aproximadamente $932.000 y usted sólo tendrá que pagar 3UF de su bolsillo.</p>
-            <p>Deducible Inteligente</p>
+            <p class="modal-subtitle">Deducible Inteligente</p>
             <p>El deducible establecido en el contrato de la póliza, no se aplicará cuando exista un tercero claramente identificado
               y definitivamente culpable. El tercero se entenderá claramente identificado cuando se conozca el nombre, la
               dirección y el teléfono del conductor, la patente, marca, modelo y el color del vehículo del tercero. El tercero
@@ -124,6 +122,30 @@
         </div>
       </div>
     </div>
+    <!-- Modal errores campos-->
+    <div class="modal fade modal-info bd-example-modal-sm" id="error-campos" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Errores</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Informacion Plan</p>
+            <ul>
+              <li>Calculados a la UF de hoy:$ 26.806.</li>
+              <li>Exclusividad de Taller de Marca.</li>
+              <li>Deducible Inteligente.</li>
+            </ul>
+          </div>
+          <div class="modal-footer modal-info__footer">
+            <button type="button" class="btn button-aceptar" data-dismiss="modal">Entendido</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Modal slide -->
     <div id="mySidenav" class="sidenav">
       <a class="closebtn" onclick="closeNav()">&times;</a>
@@ -136,10 +158,10 @@
           <p class="modal-text pt-3">Paga al contado y tendrá un 15% de descuento adicional</p>
         </div>
       </div>
-      <div class="d-flex justify-content-end align-items-center mr-3">
+      <!-- <div class="d-flex justify-content-end align-items-center mr-3">
         <a href="1-c.html">pagar al contado</a>
         <img src="./assets/img/ir_icon.svg" width="13" class="img-fluid" alt="Responsive image">
-      </div>
+      </div> -->
     </div>
     <!-- Modal slide -envio cotizacion al correo-->
     <div id="notificacion-envioCorreo" class="sidenav">
@@ -159,147 +181,7 @@
       </div> -->
     </div>
     <!-- Preguntas Frecuentes -->
-    <div class="modal" id="preguntas-frecuentes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Preguntas Frecuentes</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div id="exampleAccordion" data-children=".item">
-              <div class="item">
-                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" role="button"
-                  aria-expanded="false" aria-controls="exampleAccordion1">
-                  ¿Puedo contratar el seguro por Internet para mi auto nuevo a pesar de no tener patente aún?
-                </a>
-                <div id="exampleAccordion1" class="collapse pt-2" role="tabpanel">
-                  <p class="mb-3">
-                    Sí, puede contratar un seguro cuando se trate de un vehículo nuevo y todavía no se haya obtenido la patente. Solamente debe
-                    elegir la opción "Sin patente" en el paso 2, en la sección “Datos del Vehículo”. En estos casos, deberá
-                    subir al sistema la imagen de la factura o guía de despacho al momento de contratar el seguro en hdi.cl
-                    o magallanes.cl, o bien enviar una copia de la factura o guía de despacho en forma posterior a la contratación,
-                    a nombre de facturas48horas@hdi.cl. La factura sólo será válida para efectos del seguro, mientras no
-                    hayan transcurrido más de 48 hrs. entre la compra del auto y la contratación del seguro y siempre que
-                    esta se recepcione conforme en la compañía, dentro de las siguientes 24 horas desde la contratación en
-                    línea del seguro. De no enviar la factura a tiempo, deberá inspeccionar su vehículo en los centros de
-                    inspección de la Compañía, la cual debe ser coordinada a través del teléfono 6006006010 o concurriendo
-                    directamente a uno de nuestros centros de inspección.
-                  </p>
-                </div>
-              </div>
-              <div class="item">
-                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" role="button"
-                  aria-expanded="false" aria-controls="exampleAccordion2">
-                  ¿Qué información me solicitan para poder contratar el seguro en línea?
-                </a>
-                <div id="exampleAccordion2" class="collapse pt-2" role="tabpanel">
-                  <p class="mb-3">
-                    Para contratar el seguro automotriz en línea, se solicitan los siguientes datos: Datos del propietario y del asegurado (Rut,
-                    nombres, dirección, teléfonos, correo electrónico), datos del vehículo (Tipo, marca, modelo, año, patente,
-                    Nº motor y Chasis,), edad de los conductores, datos de la inspección (a domicilio o en sucursales - ambos
-                    sin costo) y por último datos del medio de pago (número de cta. cte. o TC).
-                  </p>
-                </div>
-              </div>
-              <div class="item">
-                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion3" role="button"
-                  aria-expanded="false" aria-controls="exampleAccordion2">
-                  ¿Un auto usado queda asegurado de inmediato al contratar el seguro en hdi.cl o magallanes.cl
-                </a>
-                <div id="exampleAccordion3" class="collapse pt-2" role="tabpanel">
-                  <p class="mb-3">
-                    Una vez contratado el seguro en hdi.cl o magallanes.cl, el vehículo usado está cubierto inmediatamente contra daños propios,
-                    pero con un deducible adicional transitorio hasta la aprobación de la inspección por parte de la compañía:
-                    Será exclusiva responsabilidad del asegurado realizar la inspección del vehículo en cualquier centro
-                    habilitado para estos efectos por la compañía. Sin perjuicio del deducible estipulado en cada una de
-                    las coberturas contratadas, se aplicará, además, en todo y cada siniestro un deducible de equivalente
-                    al 10% de la pérdida con un mínimo UF30 y quedará excluida la cobertura de robo hurto y uso no autorizado,
-                    al igual que el robo de los accesorios del vehículo asegurado. Sólo una vez inspeccionado y aprobada
-                    la inspección por parte de la compañía, regirá el deducible pactado para cada cobertura, quedando excluidos
-                    de cobertura los daños constatados al momento de la inspección.
-                  </p>
-                </div>
-              </div>
-              <div class="item">
-                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion4" role="button"
-                  aria-expanded="false" aria-controls="exampleAccordion2">
-                  ¿Cómo se concreta la inspección del vehículo? </a>
-                <div id="exampleAccordion4" class="collapse pt-2" role="tabpanel">
-                  <p class="mb-3">
-                    Se debe llevar el vehículo limpio, a un centro de inspección HDI Seguros Magallanes o bien se debe coordinar un inspector
-                    a domicilio, ambos sin costo para el asegurado.
-                  </p>
-                </div>
-              </div>
-              <div class="item">
-                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion5" role="button"
-                  aria-expanded="false" aria-controls="exampleAccordion2">
-                  ¿El seguro cubre si el vehículo es conducido por otras personas además del asegurado?</a>
-                <div id="exampleAccordion5" class="collapse pt-2" role="tabpanel">
-                  <p class="mb-3">
-                    Sí, el seguro cubre a cualquier persona que tenga autorización para conducir el vehículo, tenga licencia de conducir competente,
-                    y cumpla además con el mínimo de edad establecido en la póliza si esta fue contratada con restricción
-                    en la edad de los conductores.
-                  </p>
-                </div>
-              </div>
-              <div class="item">
-                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion6" role="button"
-                  aria-expanded="false" aria-controls="exampleAccordion2">
-                  Si estoy en proceso de comprarme un auto usado que está a nombre de otra persona ¿Desde qué momento puedo contratar el seguro?
-                  ¿Qué pasa si el vehículo tiene un seguro a nombre de otra persona?</a>
-                <div id="exampleAccordion6" class="collapse pt-2" role="tabpanel">
-                  <p class="mb-3">
-                    Usted puede contratar su seguro desde el momento que se concreta la transferencia del vehículo. Si el antiguo dueño no ha
-                    comunicado a su compañía la transferencia del vehículo, el otro seguro también seguirá vigente, pero
-                    en caso de siniestro sólo se podrá hacer efectivo uno de los dos seguros. Es importante dar aviso a la
-                    compañía al momento de vender un vehículo, para que el seguro no siga vigente.
-                  </p>
-                </div>
-              </div>
-              <div class="item">
-                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion7" role="button"
-                  aria-expanded="false" aria-controls="exampleAccordion2">
-                  ¿Cómo puedo pagar el seguro?</a>
-                <div id="exampleAccordion7" class="collapse pt-2" role="tabpanel">
-                  <p class="mb-3">
-                    Usted puede elegir la alternativa que más le acomode para pagar: • Al contado en una sola cuota a través de WebPay Plus,
-                    con su tarjeta de crédito o débito. • En 12 Cuotas con cargo automático en Cuenta Corriente o Tarjeta
-                    de Crédito PAC/PAT • A través de Cupones de Pago enviados a su Domicilio y/o email Se le solicitará el
-                    pago online la primera cuota (cuota 1 de 12) del seguro a través del sistema WebPay o Servipag.com. Luego,
-                    usted podrá elegir la forma que estime conveniente para el pago de las siguientes 11 cuotas restantes.
-                    Es decir, para las 11 cuotas restantes usted, podrá suscribir PAC/PAT o bien cupones de pago.
-                  </p>
-                </div>
-              </div>
-              <div class="item">
-                <a class="preguntas-frecuentes-title" data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion8" role="button"
-                  aria-expanded="false" aria-controls="exampleAccordion2">
-                  ¿Qué es lo primero que debo hacer en caso de siniestro?</a>
-                <div id="exampleAccordion8" class="collapse pt-2" role="tabpanel">
-                  <p class="mb-3">
-                    En caso de siniestro de daños al vehículo asegurado o a terceros, el asegurado o conductor debe dejar constancia inmediata
-                    de los hechos en la unidad policial más cercana y tomar las providencias del caso para el debido resguardo
-                    del vehículo y sus accesorios. En caso de robo o hurto del vehículo, el asegurado debe denunciar el hecho
-                    en la unidad policial más cercana al lugar donde haya sucedido, inmediatamente de haber tenido conocimiento
-                    del robo o hurto. Posteriormente, el asegurado o conductor debe efectuar la denuncia del siniestro en
-                    la compañía dentro de diez días para el caso de siniestro de daños propios o a terceros, y para el caso
-                    de robo, este aviso a la compañía debe ser inmediato.
-                  </p>
-                </div>
-              </div>
-            </div>
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn" data-dismiss="modal">Cerrar</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="modal-preguntasfrecuentes"></div>
 
     <!-- Layout principal-->
     <div class="row">
@@ -339,10 +221,10 @@
         <div class="container px-5 mt-4">
           <div class="card card-open__shadow d-flex" id="container-elige-plan">
             <!--Card - seleccion de medios de pagos -->
-            <div class="d-flex justify-content-between container-title">
+            <div class="d-flex justify-content-between container-title" id="editar_plan">
               <h3 class="card-title card-title_open">2.1 Elige el plan</h3>
-              <a class="btn editar" id="editar_plan">
-                <img src="assets/img/open-icon.svg" width="12" height="12" class="img-fluid" alt="Responsive image">
+              <a class="btn editar completado">
+                <img src="assets/img/check-green-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> completado
               </a>
             </div>
             <div class="card-body eligePlan">
@@ -496,10 +378,10 @@
         <!--Container - completar datos del vehículo-->
         <div class="container completar-datos__vehiculo px-5 mt-3">
           <div class="card card-open__shadow d-flex" id="completar-datos-vehiculo__planes">
-            <div class="d-flex justify-content-between container-title">
+            <div class="d-flex justify-content-between container-title" id="editar-datos-vehiculos__planes">
               <h3 class="card-title card-title_open">2.2 Completar datos del vehículo</h3>
-              <a class="btn editar" id="editar-datos-vehiculos__planes">
-                <img src="assets/img/open-icon.svg" width="12" height="12" class="img-fluid" alt="Responsive image">
+              <a class="btn editar completado2">
+                <img src="assets/img/check-green-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> completado
               </a>
             </div>
             <!--Container - Resumen datos de patente-->
@@ -522,29 +404,29 @@
               </div> -->
               <h4 class="pt-3 pb-2 subtitle">Datos del vehículo resultado de la patente</h4>
               <div class="row py-2 patente_container">
-                <div class="col-lg-4 col-sm-4 marca_container">
+                <div class="col-lg-4 col-4 marca_container">
                   <div class="patente_title">Marca</div>
                   <div>Seat</div>
                 </div>
-                <div class="col-lg-4 col-sm-4">
+                <div class="col-lg-4 col-4">
                   <div class="patente_title">Modelo</div>
                   <div>Leon</div>
                 </div>
-                <div class="col-lg-4 col-sm-4">
+                <div class="col-lg-4 col-4">
                   <div class="patente_title">Año</div>
                   <div>2016</div>
                 </div>
               </div>
               <div class="row patente_container">
-                <div class="col-lg-4 col-sm-4">
+                <div class="col-lg-4 col-4">
                   <div class="patente_title">Tipo de vehículo</div>
                   <div>Sedán</div>
                 </div>
-                <div class="col-lg-4 col-sm-4">
+                <div class="col-lg-4 col-4">
                   <div class="patente_title">Número de motor</div>
                   <div>xxxx</div>
                 </div>
-                <div class="col-lg-4 col-sm-4">
+                <div class="col-lg-4 col-4">
                   <div class="patente_title">Patente</div>
                   <div>FF DD 33</div>
                 </div>
@@ -575,10 +457,10 @@
         <!--Container - completar datos personales-->
         <div class="container completar-datos__direccion px-5 mt-3">
           <div class="card card-open__shadow d-flex" id="completar-datos-direccion__planes">
-            <div class="d-flex justify-content-between container-title">
+            <div class="d-flex justify-content-between container-title" id="editar_datos-direccion-planes">
               <h3 class="card-title card-title_open">2.3 Completar datos personales</h3>
-              <a class="btn editar" id="editar_datos-direccion-planes">
-                <img src="assets/img/open-icon.svg" width="12" height="12" class="img-fluid" alt="Responsive image">
+              <a class="btn editar completado3">
+                <img src="assets/img/check-green-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> completado
               </a>
             </div>
             <div class="card-body completar-datos-direccion__planes">
@@ -629,10 +511,10 @@
         <!--Container - inspeccion del vehículo-->
         <div class="container inspeccion-vehiculo px-5 mt-3">
           <div class="card card-open__shadow d-flex" id="seleccionar-inspeccion__planes">
-            <div class="d-flex justify-content-between container-title">
+            <div class="d-flex justify-content-between container-title" id="editar-inspeccion__planes">
               <h3 class="card-title card-title_open">2.4 Inspección del vehículo</h3>
-              <a class="btn editar" id="editar-inspeccion__planes">
-                <img src="assets/img/open-icon.svg" width="12" height="12" class="img-fluid" alt="Responsive image">
+              <a class="btn editar completado4">
+                <img src="assets/img/check-green-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> completado
               </a>
             </div>
             <div class="card-body seleccionar-inspeccion">
@@ -915,14 +797,13 @@
       </div>
     </div>
   </div>
+  <!-- Footer -->
   <footer class="footer">
-    <!-- Footer -->
     <div class="d-flex footer-content">
       <div class="col-lg-4">HDI Seguros - Todos los derechos reservados</div>
       <div class="col-lg-4">
         <a data-toggle="modal" data-target="#preguntas-frecuentes">Preguntas Frecuentes</a>
       </div>
-      <!-- <div class="col-lg-4">Términos y Condiciones</div> -->
       <div class="col-lg-2 necesitas-ayuda_telefonica">
         <img src="./assets/img/ayuda-telefonica__white.svg" width="20" height="20" class="img-fluid" alt="Responsive image">
         <div>600 600 610</div>
@@ -934,7 +815,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

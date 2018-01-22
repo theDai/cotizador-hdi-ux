@@ -126,10 +126,15 @@ $("#continuar").click(function() {
     $("#container-datos-vehiculo")
       .removeClass("card-open__shadow")
       .addClass("card-closed__shadow");
+    $(".completado").toggle();
     $(".datos-contratante").slideDown(function(cb) {
       $("#container-datos-contratante")
-        .removeClass("card-closed__shadow")
+        .removeClass("card-closed__shadow ")
         .addClass("card-open__shadow");
+
+      $("#titleDatosContratante")
+        .removeClass("card_title__close")
+        .addClass("card_title__open");
     });
   });
 });
@@ -222,6 +227,7 @@ $(".ver-tarifas").click(function() {
 $("#seleccionPlan_1").click(function() {
   $(".eligePlan").slideUp(function(cb) {
     openNav2();
+    $(".completado").toggle();
     $(".seguro-incluye_infomas").show();
     $("#container-elige-plan")
       .removeClass("card-open__shadow")
@@ -237,6 +243,7 @@ $("#seleccionPlan_1").click(function() {
 $("#seleccionPlan_2").click(function() {
   $(".eligePlan").slideUp(function(cb) {
     openNav2();
+    $(".completado").toggle();
     $(".seguro-incluye_infomas").show();
     $("#container-elige-plan")
       .removeClass("card-open__shadow")
@@ -252,6 +259,7 @@ $("#seleccionPlan_2").click(function() {
 $("#seleccionPlan_3").click(function() {
   $(".eligePlan").slideUp(function(cb) {
     openNav2();
+    $(".completado").toggle();
     $(".seguro-incluye_infomas").show();
     $("#container-elige-plan")
       .removeClass("card-open__shadow")
@@ -344,6 +352,7 @@ $("#continuar_completar-datos-vehiculo").click(function() {
     $("#completar-datos-vehiculo__planes")
       .removeClass("card-open__shadow")
       .addClass("card-closed__shadow");
+    $(".completado2").toggle();
     $(".completar-datos-direccion__planes").slideDown(function(cb) {
       $("#completar-datos-direccion__planes")
         .removeClass("card-closed__shadow")
@@ -400,6 +409,7 @@ $("#continuar-datos-direccion__planes").click(function() {
     $("#completar-datos-vehiculo__planes")
       .removeClass("card-open__shadow")
       .addClass("card-closed__shadow");
+    $(".completado3").toggle();
     $(".seleccionar-inspeccion").slideDown(function(cb) {
       $("#seleccionar-inspeccion__planes")
         .removeClass("card-closed__shadow")
@@ -428,6 +438,7 @@ $("#continuar-datos-personales__sinpatente").click(function() {
     $("#completar-datos-vehiculo__sinpatente")
       .removeClass("card-open__shadow")
       .addClass("card-closed__shadow");
+    $(".completado4").toggle();
     $(".seleccionar-inspeccion__sinpatente").slideDown(function(cb) {
       $("#seleccionar-inspeccion__sinpatente")
         .removeClass("card-closed__shadow")
@@ -456,6 +467,7 @@ $("#aceptar").click(function() {
     $("#seleccion-pago")
       .removeClass("card-open__shadow")
       .addClass("card-closed__shadow");
+    $(".completado4").toggle();
     $(".agregar-productos").slideDown(function(cb) {
       $("#agregarProductos")
         .removeClass("card-closed__shadow")
@@ -532,24 +544,6 @@ $(document).ready(function() {
       $("#success-input-val__chasis").hide();
     }
   });
-  // $("#correoInput").change(function() {
-  //   if ($(this).val()) {
-  //     $("#success-input-val__correo").show();
-  //     $("#error-input-val__correo").hide();
-  //   } else {
-  //     $("#error-input-val__correo").show();
-  //     $("#success-input-val__correo").hide();
-  //   }
-  // });
-  // $("#telefonoInput").change(function() {
-  //   if ($(this).val()) {
-  //     $("#success-input-val__telefono").show();
-  //     $("#error-input-val__telefono").hide();
-  //   } else {
-  //     $("#error-input-val__telefono").show();
-  //     $("#success-input-val__telefono").hide();
-  //   }
-  // });
   $("#correoInput").change(function() {
     if ($(this).val()) {
       $("#correoInput")
@@ -1300,4 +1294,11 @@ $(document).ready(function() {
   /* Carousel*/
 
   $(".carousel").carousel();
+
+  setTimeout(function() {
+    $("body").addClass("loaded");
+    // $('h1').css('color','#222222');
+  }, 3000);
+
+  $("#modal-preguntasfrecuentes").load("preguntas-frecuentes.html");
 });
