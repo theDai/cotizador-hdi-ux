@@ -532,7 +532,6 @@ $("#patenteOption").click(function() {
   }
 });
 
-
 /* Switch active - ver tarifas  */
 
 $("#table-prices").hide();
@@ -633,15 +632,15 @@ $("#seleccionPlan1__sinpatente").click(function() {
       $("#titleDatosContratante5")
         .removeClass("card_title__close")
         .addClass("card_title__open");
-        if($("#plan-sugerido2_sinpatente").hasClass("plan-sugerido-active__1"))
+      if ($("#plan-sugerido2_sinpatente").hasClass("plan-sugerido-active__1"))
         $("#plan-sugerido2_sinpatente")
-        .addClass("plan-sugerido__2")
-        .removeClass("plan-sugerido-active__1");
-        if($("#plan-sugerido3_sinpatente").hasClass("plan-sugerido-active__1"))
+          .addClass("plan-sugerido__2")
+          .removeClass("plan-sugerido-active__1");
+      if ($("#plan-sugerido3_sinpatente").hasClass("plan-sugerido-active__1"))
         $("#plan-sugerido3_sinpatente")
-        .addClass("plan-sugerido__3")
-        .removeClass("plan-sugerido-active__1");
-        
+          .addClass("plan-sugerido__3")
+          .removeClass("plan-sugerido-active__1");
+
       $("#plan-sugerido1_sinpatente")
         .removeClass("plan-sugerido__1")
         .addClass("plan-sugerido-active__1");
@@ -664,21 +663,20 @@ $("#seleccionPlan2__sinpatente").click(function() {
       $("#titleDatosContratante5")
         .removeClass("card_title__close")
         .addClass("card_title__open");
-        if($("#plan-sugerido1_sinpatente").hasClass("plan-sugerido-active__1"))
+      if ($("#plan-sugerido1_sinpatente").hasClass("plan-sugerido-active__1"))
         $("#plan-sugerido1_sinpatente")
-        .addClass("plan-sugerido__1")
-        .removeClass("plan-sugerido-active__1");
-        if($("#plan-sugerido3_sinpatente").hasClass("plan-sugerido-active__1"))
+          .addClass("plan-sugerido__1")
+          .removeClass("plan-sugerido-active__1");
+      if ($("#plan-sugerido3_sinpatente").hasClass("plan-sugerido-active__1"))
         $("#plan-sugerido3_sinpatente")
-        .addClass("plan-sugerido__3")
-        .removeClass("plan-sugerido-active__1");
+          .addClass("plan-sugerido__3")
+          .removeClass("plan-sugerido-active__1");
       $("#plan-sugerido2_sinpatente")
         .removeClass("plan-sugerido__3")
         .addClass("plan-sugerido-active__1");
     });
   });
 });
-
 
 $("#seleccionPlan3__sinpatente").click(function() {
   $(".eligePlan").slideUp(function(cb) {
@@ -695,21 +693,20 @@ $("#seleccionPlan3__sinpatente").click(function() {
       $("#titleDatosContratante5")
         .removeClass("card_title__close")
         .addClass("card_title__open");
-        if($("#plan-sugerido1_sinpatente").hasClass("plan-sugerido-active__1"))
+      if ($("#plan-sugerido1_sinpatente").hasClass("plan-sugerido-active__1"))
         $("#plan-sugerido1_sinpatente")
-        .addClass("plan-sugerido__1")
-        .removeClass("plan-sugerido-active__1");
-        if($("#plan-sugerido2_sinpatente").hasClass("plan-sugerido-active__1"))
+          .addClass("plan-sugerido__1")
+          .removeClass("plan-sugerido-active__1");
+      if ($("#plan-sugerido2_sinpatente").hasClass("plan-sugerido-active__1"))
         $("#plan-sugerido2_sinpatente")
-        .addClass("plan-sugerido__2")
-        .removeClass("plan-sugerido-active__1");
+          .addClass("plan-sugerido__2")
+          .removeClass("plan-sugerido-active__1");
       $("#plan-sugerido3_sinpatente")
         .removeClass("plan-sugerido__2")
         .addClass("plan-sugerido-active__1");
     });
   });
 });
-
 
 $("#editar_plan__sinpatente").click(function() {
   $(".eligePlan").slideDown(function(cb) {
@@ -910,8 +907,6 @@ $("#aceptar2").click(function() {
     });
   });
 });
-
-
 
 $("#editar-agregar").click(function() {
   $(".agregar-productos").slideDown(function(cb) {

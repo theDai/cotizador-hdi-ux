@@ -8483,6 +8483,12 @@ html {
 .btn {
   border: none; }
 
+.modal-dialog.modal-lg {
+  -webkit-overflow-scrolling: touch; }
+
+.modal-open .modal {
+  -webkit-overflow-scrolling: touch; }
+
 /* HTML, Body
 -------------------------------------------------- */
 html {
@@ -8942,7 +8948,7 @@ input[type="radio"]:checked ~ label {
   padding: 0;
   overflow: hidden; }
   .layout-container .left-container {
-    background: #f9f9f9;
+    background-color: #f9fafc;
     height: 100vh;
     padding: 0 0 60px 0;
     overflow: scroll;
@@ -10764,6 +10770,7 @@ a#pagar {
 
 .terminos-comprarplan {
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   height: 200px;
   width: 100%; }
 
@@ -10788,7 +10795,8 @@ a#pagar {
 
 .terminos-condiciones {
   color: #525c65;
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  padding-left: 0em; }
 
 .agregar-productos {
   font-size: 1em;
@@ -11450,8 +11458,8 @@ a#adjuntar-icon {
         flex-wrap: wrap;
     text-align: center; }
   .footer-condiciones {
-    bottom: 152px;
-    font-size: 0.6em; }
+    bottom: 165px;
+    font-size: 0.59em; }
   .iconoInfo-container {
     padding-left: 1em; }
   .necesitas-ayuda_telefonica {
@@ -11483,7 +11491,8 @@ a#adjuntar-icon {
     margin-bottom: 11em; }
   .precio {
     font-size: 1em;
-    padding: 0.5em 2.5em; }
+    padding: 1em 2.5em;
+    white-space: nowrap; }
   .ver-detalle__planresumen {
     padding-right: 0; }
   .card-resumen .ribbon {

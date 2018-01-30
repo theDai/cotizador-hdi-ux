@@ -225,6 +225,12 @@ $letter-spacing-button: 0.18em;
 .btn {
   border: none;
 }
+.modal-dialog.modal-lg {
+  -webkit-overflow-scrolling: touch;
+}
+.modal-open .modal {
+  -webkit-overflow-scrolling: touch;
+}
 
 /* HTML, Body
 -------------------------------------------------- */
@@ -771,11 +777,14 @@ input[type="radio"]:checked ~ label {
   padding: 0;
   overflow: hidden;
   .left-container {
-    background: $background-color-left;
+    // background: $background-color-left;
+    background-color: #f9fafc;
     height: 100vh;
     padding: 0 0 60px 0;
     overflow: scroll;
     z-index: 3;
+    .navbar-brand {
+    }
   }
   .right-container {
     background: $background-color-right;
@@ -2465,12 +2474,12 @@ a.nav-link.nav-link__active {
 .plan-sugerido__2 {
   box-shadow: $shadow-color-card-planes-sugeridos;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  top:0em;
+  top: 0em;
 }
 .plan-sugerido__3 {
   box-shadow: $shadow-color-card-planes-sugeridos;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  top:0em;
+  top: 0em;
 }
 
 .plan-sugerido__1 {
@@ -2917,6 +2926,7 @@ a#pagar {
 }
 .terminos-comprarplan {
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   height: 200px;
   width: 100%;
 }
@@ -2943,6 +2953,7 @@ a#pagar {
 .terminos-condiciones {
   color: $font-color-active;
   font-size: $font-size-small;
+  padding-left: 0em;
 }
 .agregar-productos {
   font-size: $font-size-regular;
@@ -3071,6 +3082,7 @@ a#pagar {
   font-size: 1.9em;
   font-family: $font-family-bold;
   padding: 0.7em 1.5em;
+  // white-space: nowrap;
 }
 
 a.ver-mas__resumen {
@@ -3674,8 +3686,9 @@ a#adjuntar-icon {
     text-align: center;
   }
   .footer-condiciones {
-    bottom: 152px;
-    font-size: 0.6em;
+    bottom: 165px;
+    font-size: 0.59em;
+    // height: 227px;
   }
   .iconoInfo-container {
     padding-left: 1em;
@@ -3716,7 +3729,8 @@ a#adjuntar-icon {
   }
   .precio {
     font-size: $font-size-regular;
-    padding: 0.5em 2.5em;
+    padding: 1em 2.5em;
+    white-space: nowrap;
   }
   .ver-detalle__planresumen {
     padding-right: 0;
@@ -3764,5 +3778,4 @@ a#adjuntar-icon {
   .container ul.list-radio2 {
     margin-bottom: -3em;
   }
-
 }
