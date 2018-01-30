@@ -40,7 +40,7 @@
       <div class="col-lg-6 left-container">
         <!-- Conteiner izquierdo -->
         <a class="navbar-brand" href="https://www.hdi.cl/">
-          <img src="./assets/img/logo_HDI.png" width="50" height="40" alt="Cotiza tu seguro automotriz online" class="d-inline-block align-top">
+          <img src="./assets/img/LOGO_COLOR(RGB)_HDI.png" width="75" height="65" alt="Cotiza tu seguro automotriz online" class="d-inline-block align-top">
         </a>
         <!-- Nav principal -->
         <nav class="navbar navbar-expand-lg sticky-top nav-principal justify-content-center">
@@ -57,28 +57,19 @@
             </li>
           </ul>
         </nav>
-        <!--Alert-->
-        <!-- <div class="container px-5 mt-2">
-          <div class="alert alert-info alert-dismissible fade show" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <img src="./assets/img/check_white.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Notificaciones
-          </div>
-        </div> -->
         <!--Card - Ingresar datos del vehiculo -->
         <div class="container px-5 mt-4">
           <div class="card card-open__shadow d-flex" id="container-datos-vehiculo__sinpatente">
             <div class="d-flex justify-content-between container-title">
-              <h3 class="card-title card-title_open">1.1 Datos del vehículo</h3>
-              <a class="btn editar" id="editar_sinpatente">
-                <img src="./assets/img/open-icon.svg" width="8" height="8" class="img-fluid" alt="Responsive image">
+              <h3 class="card-title card_title__open">1.1 Datos del vehículo</h3>
+              <a class="btn editar completado6" id="editar_sinpatente">
+                <img src="assets/img/check-green-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> completado
               </a>
             </div>
             <div class="card-body datos-vehiculo__sinpatente">
               <div class="card card-block">
                 <h4 class="pt-3 pb-2 subtitle">Datos para cotizar</h4>
-                <h6 class="card-subtitle description_input py-2">Por favor completar los siguientes campos para realizar la cotización</h6>
+                <h6 class="card-subtitle description_input py-2">Por favor completar los siguientes campos para realizar la cotización.</h6>
                 <div class="container-inputs">
                   <div class="row">
                     <div class="col-lg-12 container-inputitem">
@@ -87,11 +78,11 @@
                         <div id="img_category" class="psuedo_select" name="img_category">
                           <span class="selected"></span>
                           <ul id="img_category_options" class="options">
-                            <li class="option" data-value="commercial">Acura</li>
-                            <li class="option" data-value="residential">Alfa Romeo</li>
-                            <li class="option" data-value="residential">American Motor</li>
-                            <li class="option" data-value="residential">Asia</li>
-                            <li class="option" data-value="residential">Aston Martin</li>
+                            <li class="option" data-value="marca">Acura</li>
+                            <li class="option" data-value="marca">Alfa Romeo</li>
+                            <li class="option" data-value="marca">American Motor</li>
+                            <li class="option" data-value="marca">Asia</li>
+                            <li class="option" data-value="marca">Aston Martin</li>
                           </ul>
                         </div>
                       </label>
@@ -102,10 +93,10 @@
                         <div id="img_category" class="psuedo_select" name="img_category">
                           <span class="selected"></span>
                           <ul id="img_category_options" class="options">
-                            <li class="option" data-value="commercial">Integra</li>
-                            <li class="option" data-value="residential">Legend</li>
-                            <li class="option" data-value="residential">MDX</li>
-                            <li class="option" data-value="residential">RDX</li>
+                            <li class="option" data-value="modelo">Integra</li>
+                            <li class="option" data-value="modelo">Legend</li>
+                            <li class="option" data-value="modelo">MDX</li>
+                            <li class="option" data-value="modelo">RDX</li>
                           </ul>
                         </div>
                       </label>
@@ -116,11 +107,23 @@
                         <div id="img_category" class="psuedo_select" name="img_category">
                           <span class="selected"></span>
                           <ul id="img_category_options" class="options">
-                            <li class="option" data-value="commercial">2018</li>
-                            <li class="option" data-value="residential">2017</li>
-                            <li class="option" data-value="residential">2016</li>
-                            <li class="option" data-value="residential">2015</li>
-                            <li class="option" data-value="residential">2014</li>
+                            <li class="option" data-value="ano">2018</li>
+                            <li class="option" data-value="ano">2017</li>
+                            <li class="option" data-value="ano">2016</li>
+                            <li class="option" data-value="ano">2015</li>
+                            <li class="option" data-value="ano">2014</li>
+                          </ul>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="col-lg-12 container-inputitem">
+                      <label id="img_category_label" class="field tipoSelect" for="img_category" data-value="">
+                        <span>Tipo</span>
+                        <div id="img_category" class="psuedo_select" name="img_category">
+                          <span class="selected"></span>
+                          <ul id="img_category_options" class="options">
+                            <li class="option" data-value="tipo">Sedan</li>
+                            <li class="option" data-value="tipo">Camión</li>
                           </ul>
                         </div>
                       </label>
@@ -137,33 +140,33 @@
           <!--Card - datos del contratante-->
           <div class="card card-open__shadow d-flex mt-4" id="container-datos-contratante__sinpatente">
             <div class="d-flex justify-content-between container-title">
-              <h3 class="card-title card-title_open">1.2 Completar datos del contratante</h3>
-              <a class="btn editar" id="editarcontratante_sinpatente">
-                <img src="./assets/img/open-icon.svg" width="8" height="8" class="img-fluid" alt="Responsive image">
+              <h3 id="titleDatosContratante2" class="card-title card_title__close">1.2 Completar datos del contratante</h3>
+              <a class="btn editar completado7" id="editarcontratante_sinpatente">
+                <img src="assets/img/check-green-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> completado
               </a>
             </div>
             <div class="card-body datos-contratante__sinpatente">
               <div class="card card-block">
                 <h4 class="pt-3 pb-2 subtitle">Datos para cotizar</h4>
-                <h6 class="card-subtitle description_input py-2">Por favor complete los siguientes datos</h6>
+                <h6 class="card-subtitle description_input py-2">Por favor complete los siguientes datos.</h6>
                 <div class="container-inputs">
                   <div class="row">
                     <div class="col-lg-12 container-inputitem">
                       <div class="form-group has-float-label">
-                        <input type="text" class="form-control" id="correoInput" aria-describedby="email-help" placeholder="jaded676@gmail.com" required>
+                        <input type="text" class="form-control" id="correoInput" aria-describedby="email" placeholder="jaded676@gmail.com" required>
                         <label class="col-form-label form-control-label">Correo</label>
                       </div>
                     </div>
                     <div class="col-lg-12 container-inputitem">
                       <div class="form-group has-float-label">
-                        <input type="text" class="form-control" id="telefonoInput" aria-describedby="telefono-help" placeholder="+56 9435205403"
+                        <input type="text" class="form-control" id="telefonoInput" aria-describedby="telefono" placeholder="+56 9435205403"
                           required>
                         <label class="col-form-label form-control-label">Teléfono</label>
                       </div>
                     </div>
                     <div class="col-lg-12 container-inputitem">
                       <div class="form-group has-float-label">
-                        <input type="text" class="form-control" id="rutInput" aria-describedby="rut-help" placeholder="+56 9435205403" required>
+                        <input type="text" class="form-control" id="rutInput" aria-describedby="rut" placeholder="15.543.765-1" required>
                         <label class="col-form-label form-control-label">Rut</label>
                       </div>
                     </div>
@@ -174,8 +177,10 @@
                     <a href="" class="showTooltip">
                       <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
                       <span id="some-element">
-                        Un mayor daño puede ser fácilmente reparado en 30 días. Para facilitar tu movilidad, te recomendamos tomar este periodo
-                        de cobertura de un auto de reemplazo.
+                        La edad de los conductores afecta el precio del seguro ya que el riesgo que un adulto,con más experiencia al volante, representa
+                        para la Compañía de Seguros es menor al de una persona más joven.Evite contratar con restricciones
+                        de edad si los conductores son más jóvenes ya que en caso de sufrir un accidente,se le aplicará un
+                        deducible de UF 100.
                       </span>
                     </a>
                   </div>
@@ -188,15 +193,6 @@
                     </div>
                   </div>
                 </div>
-                <!-- <div class="d-flex mt-4">
-                  <div class="col-lg-6 container_edad">
-                    <h4 class="pt-2 pb-3">Edad del menor conductor</h4>
-                    <div class="slider-edad mt-4 ml-2" id="double-label-slider"></div>
-                  </div>
-                  <div class="col-lg-6 mt-5 mx-4">
-                    <p id="edadConductor" class="panel callout radius text-center"></p>
-                  </div>
-                </div> -->
               </div>
             </div>
           </div>
@@ -205,16 +201,18 @@
         <div class="container d-flex justify-content-between mt-4 px-5">
           <a href="index.html" class="button_back">
             <img src="./assets/img/back_icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Volver</a>
-          <a href="2-b.html" class="button-primary">Cotizar</a>
+          <a hre="#" class="button-primary" id="cotizar" value="Redirect" onclick="DelayRedirect1()">Cotizar</a>
+          <!-- <a href="404.html" class="button-primary">Cotizar</a> -->
         </div>
       </div>
       <!-- Conteiner derecho -->
       <div class="col-lg-6 right-container">
         <!-- Conteiner titulo secundario -->
         <div class="container mt-5">
-          <h2 class="text-center">Beneficios de contratar con HDI</h2>
+          <h2 class="text-center">Beneficios de contratar con HDI Seguros</h2>
         </div>
-        <div class="container">
+        <!-- Conteiner Tab Beneficios - Que cubre -->
+        <div class="container tab-container">
           <ul class="nav nav-pills my-5 justify-content-center nav-beneficios" id="pills-tab" role="tablist">
             <li class="nav-item">
               <a class="nav-link active text-uppercase" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
@@ -286,17 +284,17 @@
               <div class="tab-pane fade show active tab-quecubre" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                 <div class="col-lg-12">
                   <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item">
-                      <a class="nav-link active nav-link__active" data-toggle="tab" href="#home" role="tab">¿Qué cubre?</a>
+                    <li class="nav-item col-lg-3 col-12 text-center">
+                      <a class="nav-link active nav-link__active info-quecubre" data-toggle="tab" href="#home" role="tab">¿Qué cubre?</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link nav-link__noactive" data-toggle="tab" href="#profile" role="tab">¿Qué no cubre?</a>
+                    <li class="nav-item col-lg-3 col-12 text-center">
+                      <a class="nav-link nav-link__noactive info-quecubre" data-toggle="tab" href="#profile" role="tab">¿Qué no cubre?</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link nav-link__noactive" data-toggle="tab" href="#messages" role="tab">Asistencia al vehículo</a>
+                    <li class="nav-item col-lg-3 col-12 text-center">
+                      <a class="nav-link nav-link__noactive info-quecubre" data-toggle="tab" href="#messages" role="tab">Asistencia al vehículo</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link nav-link__noactive" data-toggle="tab" href="#settings" role="tab">Formas de pago</a>
+                    <li class="nav-item col-lg-3 col-12 text-center">
+                      <a class="nav-link nav-link__noactive info-quecubre" data-toggle="tab" href="#settings" role="tab">Formas de pago</a>
                     </li>
                   </ul>
                 </div>
@@ -304,15 +302,15 @@
                   <div class="col-lg-12 mt-3 tab-pane active seguro-incluye_info" id="home" role="tabpanel">
                     <ul>
                       <li class="mb-2 title-quecubre">Coberturas:</li>
-                      <li>Daños al Vehículo</li>
-                      <li>Responsabilidad Civil Daño Emergente</li>
-                      <li>Robo de Accesorios</li>
-                      <li>Actos Maliciosos</li>
-                      <li>Daños por Huelga y Terrorismo</li>
-                      <li>Riesgos de la Naturaleza, Granizo y Sismo</li>
-                      <li>Asistencia al Vehículo</li>
-                      <li>Aumento monto asegurado por Responsabilidad Civil Daño Emergente</li>
-                      <li>Responsabilidad Civil por: Daño Moral y Lucro Cesante</li>
+                      <li>Daños al Vehículo.</li>
+                      <li>Responsabilidad Civil Daño Emergente.</li>
+                      <li>Robo de Accesorios.</li>
+                      <li>Actos Maliciosos.</li>
+                      <li>Daños por Huelga y Terrorismo.</li>
+                      <li>Riesgos de la Naturaleza, Granizo y Sismo.</li>
+                      <li>Asistencia al Vehículo.</li>
+                      <li>Aumento monto asegurado por Responsabilidad Civil Daño Emergente.</li>
+                      <li>Responsabilidad Civil por: Daño Moral y Lucro Cesante.</li>
                     </ul>
                   </div>
                   <div class="col-lg-12 mt-3 tab-pane seguro-incluye_info" id="profile" role="tabpanel">
@@ -379,12 +377,14 @@
   </div>
   <!-- Footer -->
   <footer class="footer">
-    <div class="d-flex">
-      <div class="col-lg-4">HDI Seguros - Todos los derechos reservados</div>
-      <div class="col-lg-4">
-        <a data-toggle="modal" data-target="#preguntas-frecuentes">Preguntas Frecuentes</a>
+    <div class="d-flex footer-content">
+      <div class="col-lg-3">HDI Seguros - Todos los derechos reservados</div>
+      <div class="col-lg-2">
+        <a href="./assets/img/terminos_condiciones.pdf" class="condiciones-footer" download>Términos y Condiciones</a>
       </div>
-      <!-- <div class="col-lg-4">Términos y Condiciones</div> -->
+      <div class="col-lg-3">
+        <a data-toggle="modal" data-target="#preguntas-frecuentes" class="preguntas-frecuentes">Preguntas Frecuentes</a>
+      </div>
       <div class="col-lg-2 necesitas-ayuda_telefonica">
         <img src="./assets/img/ayuda-telefonica__white.svg" width="20" height="20" class="img-fluid" alt="Responsive image">
         <div>600 600 610</div>
@@ -395,6 +395,7 @@
       </div>
     </div>
   </footer>
+
 
   <script src="./assets/js/main.js"></script>
 </body>

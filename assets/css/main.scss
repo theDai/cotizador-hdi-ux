@@ -2,30 +2,32 @@
 // Global Imports
 //====================================
 
-
 // 1- Import bootstrap framework
-@import '1-frameworks/index';
+@import "1-frameworks/index";
 
 // 2 - Import plugins
-@import '2-plugins/index';
+@import "2-plugins/index";
 
 // 3 - Import base style, custom variables and mixins
-@import '3-base/index';
+@import "3-base/index";
 
 // 4 - Import modules
-@import '4-modules/index';
+@import "4-modules/index";
 
 // 5 - Import layout  styles
-@import '5-layout/index';
+@import "5-layout/index";
 
 // 6 - Import hdi styles
-@import '6-HDI/hdi';
+@import "6-HDI/hdi";
 
 // 7 - Import PIPS styles
-@import '7-PIPS/PIPS';
+@import "7-PIPS/PIPS";
 
 // 8 - Import jqueryUI styles
-@import '8-jqueryUI/jqueryUI-v1.10.4';
+@import "8-jqueryUI/jqueryUI-v1.10.4";
 
 // 9 - Choose Folder Input
-@import '9-Adjuntar/adjuntar';
+@import "9-Adjuntar/adjuntar";
+
+// 10 - Slick slider
+@import "10-slick/slick";

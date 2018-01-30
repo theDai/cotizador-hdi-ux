@@ -1,3 +1,274 @@
+/* Calendar */
+
+var monthNames = {
+  0: "Enero",
+  1: "Febrero",
+  2: "Marzo",
+  3: "Abril",
+  4: "Mayo",
+  5: "Junio",
+  6: "Julio",
+  7: "Agosto",
+  8: "Septiembre",
+  9: "Octubre",
+  10: "Noviembre",
+  11: "Diciembre"
+};
+
+function Cal() {
+  this.date = {};
+  this.markup = {};
+  this.date.today = new Date();
+  this.date.today = new Date(
+    this.date.today.getUTCFullYear(),
+    this.date.today.getUTCMonth(),
+    this.date.today.getUTCDate()
+  );
+  this.date.browse = new Date();
+  this.markup.row = "row";
+  this.markup.cell = "cell";
+  this.markup.inactive = "g";
+  this.markup.currentMonth = "mn";
+  this.markup.slctd = "slctd";
+  this.markup.today = "today";
+  this.markup.dayArea = "dayArea";
+  this.elementTag = "calendar";
+  this.targetInput = "#hbdsdf";
+  this.init = false;
+  this.buildDOM();
+  this.selectDate(
+    this.date.today.getFullYear(),
+    this.date.today.getMonth(),
+    this.date.today.getDate()
+  );
+  this.constructDayArea();
+  this.updateInput("Fecha de facturación", "", "");
+
+  t = this;
+  $(document).ready(function() {
+    $(".outsideCal").click(function(ms) {
+      e = $("." + t.elementTag + " .view");
+      eco = e.offset();
+      if (
+        ms.pageX < eco.left ||
+        ms.pageX > eco.left + e.width() ||
+        ms.pageY < eco.top ||
+        ms.pageY > eco.top + e.height()
+      ) {
+        if (!t.init) t.hide(300);
+      }
+    });
+    $("." + t.elementTag).on("click", ".next-month", function() {
+      t.setMonthNext();
+    });
+    $("." + t.elementTag).on("click", ".prev-month", function() {
+      t.setMonthPrev();
+    });
+    $("." + t.elementTag).on("click", ".next-year", function() {
+      t.setYearNext();
+    });
+    $("." + t.elementTag).on("click", ".prev-year", function() {
+      t.setYearPrev();
+    });
+
+    $("." + t.elementTag).on("click", ".jump-to-next-month", function() {
+      t.setMonthNext();
+    });
+    $("." + t.elementTag).on("click", ".jump-to-previous-month", function() {
+      t.setMonthPrev();
+    });
+
+    $("." + t.elementTag).on("click", "." + t.markup.currentMonth, function() {
+      d = t.selectDate(
+        t.date.browse.getUTCFullYear(),
+        t.date.browse.getUTCMonth(),
+        $(this).html()
+      );
+      t.hide(300);
+    });
+
+    $("." + t.elementTag).on("click", ".title", function() {
+      t.date.browse = new Date(t.date.today.getTime());
+      t.constructDayArea(false);
+    });
+
+    $(t.targetInput).focus(function() {
+      t.show(100);
+      $(this).blur();
+    });
+  });
+}
+Cal.prototype.wd = function(wd) {
+  if (wd == 0) return 7;
+  return wd;
+};
+Cal.prototype.buildDOM = function() {
+  html =
+    "<div class='clear " +
+    this.elementTag +
+    "'>\n<div class='view'>\n<div class='head'>\n<div class='title'><span class='m'></span> <span class='y'></span></div>\n</div>\n";
+  html +=
+    "<div class='row th'>\n<div class='C'>M</div>\n<div class='C'>T</div>\n<div class='C'>W</div>\n<div class='C'>T</div>\n<div class='C'>F</div>\n<div class='C'>S</div>\n<div class='C'>S</div>\n</div>\n<div class='" +
+    this.markup.dayArea +
+    "'>\n";
+  html +=
+    "</div>\n\n<div class='row nav'>\n\n<i class='btn prev prev-year fa fa-fast-backward'></i>\n<i class='btn prev prev-month fa fa-play fa-flip-horizontal'></i>\n<i class='btn next next-month fa fa-play'></i>\n<i class='btn next next-year fa fa-fast-forward'></i>\n</div>\n</div>\n</div>\n";
+  $(html).insertAfter(this.targetInput);
+  $(this.targetInput).css("cursor", "pointer");
+  this.hide(0);
+};
+Cal.prototype.constructDayArea = function(flipDirection) {
+  newViewContent = "";
+  wd = this.wd(this.date.browse.getUTCDay());
+  d = this.date.browse.getUTCDate();
+  m = this.date.browse.getUTCMonth();
+  y = this.date.browse.getUTCFullYear();
+
+  monthBgnDate = new Date(y, m, 1);
+  monthBgn = monthBgnDate.getTime();
+  monthEndDate = new Date(this.getMonthNext().getTime() - 1000 * 60 * 60 * 24);
+  monthEnd = monthEndDate.getTime();
+
+  monthBgnWd = this.wd(monthBgnDate.getUTCDay());
+  itrBgn = monthBgnDate.getTime() - (monthBgnWd - 1) * 1000 * 60 * 60 * 24;
+  /*itrEnd = monthEnd;
+  i = 0;
+  while(this.wd(new Date(itrEnd).getUTCDay())!=7) {
+      itrEnd += 1000*60*60*24;
+      i = i+1;
+      if(i>10) break;
+  }*/
+
+  i = 1;
+  n = 0;
+  dayItr = itrBgn;
+  newViewContent += "<div class='" + this.markup.row + "'>\n";
+  while (n < 42) {
+    cls = new Array("C", this.markup.cell);
+    if (dayItr <= monthBgn)
+      cls.push(this.markup.inactive, "jump-to-previous-month");
+    else if (dayItr >= monthEnd + 1000 * 60 * 60 * 36)
+      cls.push(this.markup.inactive, "jump-to-next-month");
+    else cls.push(this.markup.currentMonth);
+    if (dayItr == this.date.slctd.getTime() + 1000 * 60 * 60 * 24)
+      cls.push(this.markup.slctd);
+    if (dayItr == this.date.today.getTime() + 1000 * 60 * 60 * 24)
+      cls.push(this.markup.today);
+
+    date = new Date(dayItr);
+    newViewContent +=
+      "<div class='" + cls.join(" ") + "'>" + date.getUTCDate() + "</div>\n";
+    i += 1;
+    if (i > 7) {
+      i = 1;
+      newViewContent += "</div>\n<div class='" + this.markup.row + "'>\n";
+    }
+    n += 1;
+    dayItr = dayItr + 1000 * 60 * 60 * 24;
+  }
+  newViewContent += "</div>\n";
+
+  this.changePage(newViewContent, flipDirection);
+  $("." + this.elementTag + " .title .m").html(monthNames[m]);
+  $("." + this.elementTag + " .title .y").html(y);
+  return newViewContent;
+};
+Cal.prototype.changePage = function(newPageContent, flipDirection) {
+  multiplier = -1;
+  mark = "-";
+  if (flipDirection) {
+    multiplier = 1;
+    mark = "+";
+  }
+
+  oldPage = $("." + this.elementTag + " ." + this.markup.dayArea + " .mArea");
+  newPage = $("<div class='mArea'></div>")
+    .css("left", -1 * multiplier * 224 + "px")
+    .html(newPageContent);
+  $("." + this.elementTag + " ." + this.markup.dayArea).append(newPage);
+
+  $(".mArea")
+    .stop(1, 1)
+    .animate(
+      {
+        left: mark + "=224px"
+      },
+      300,
+      function() {
+        oldPage.remove();
+      }
+    );
+};
+Cal.prototype.selectDate = function(y, m, d) {
+  this.date.slctd = new Date(y, m, d);
+  this.updateInput(y, m, d);
+  this.constructDayArea(false);
+  return this.date.slctd;
+};
+Cal.prototype.updateInput = function(y, m, d) {
+  if (m == "") m = "";
+  else m = monthNames[m];
+  $(this.targetInput).val(y + " " + m + " " + d);
+};
+Cal.prototype.getMonthNext = function() {
+  m = this.date.browse.getUTCMonth();
+  y = this.date.browse.getUTCFullYear();
+  if (m + 1 > 11) return new Date(y + 1, 0);
+  else return new Date(y, m + 1);
+};
+Cal.prototype.getMonthPrev = function() {
+  m = this.date.browse.getUTCMonth();
+  y = this.date.browse.getUTCFullYear();
+  if (m - 1 < 0) return new Date(y - 1, 11);
+  else return new Date(y, m - 1);
+};
+Cal.prototype.setMonthNext = function() {
+  m = this.date.browse.getUTCMonth();
+  y = this.date.browse.getUTCFullYear();
+  if (m + 1 > 11) {
+    this.date.browse.setUTCFullYear(y + 1);
+    this.date.browse.setUTCMonth(0);
+  } else {
+    this.date.browse.setUTCMonth(m + 1);
+  }
+  this.constructDayArea(false);
+};
+Cal.prototype.setMonthPrev = function() {
+  m = this.date.browse.getUTCMonth();
+  y = this.date.browse.getUTCFullYear();
+  if (m - 1 < 0) {
+    this.date.browse.setUTCFullYear(y - 1);
+    this.date.browse.setUTCMonth(11);
+  } else {
+    this.date.browse.setUTCMonth(m - 1);
+  }
+  this.constructDayArea(true);
+};
+Cal.prototype.setYearNext = function() {
+  y = this.date.browse.getUTCFullYear();
+  this.date.browse.setUTCFullYear(y + 1);
+  this.constructDayArea(false);
+};
+Cal.prototype.setYearPrev = function() {
+  y = this.date.browse.getUTCFullYear();
+  this.date.browse.setUTCFullYear(y - 1);
+  this.constructDayArea(true);
+};
+Cal.prototype.hide = function(duration) {
+  $("." + this.elementTag + " .view").slideUp(duration);
+};
+Cal.prototype.show = function(duration) {
+  t = this;
+  t.init = true;
+  $("." + this.elementTag + " .view").slideDown(duration, function() {
+    t.init = false;
+  });
+};
+
+var c = new Cal();
+
+/* Modal */
+
 function openNav2() {
   $("#notificacion-envioCorreo").addClass("sideNav_open");
 }
@@ -9,17 +280,31 @@ function closeNav2() {
 /* Modal */
 
 function openNav() {
-  $("#mySidenav").addClass("sideNav_open");
+  $("#modal-lateral").addClass("sideNav_open");
 }
 
 function closeNav() {
-  $("#mySidenav").removeClass("sideNav_open");
+  $("#modal-lateral").removeClass("sideNav_open");
 }
 
 var pageURL = $(location).attr("href");
-if (pageURL == "http://localhost:3000/1-b.html") {
+if (pageURL == "http://localhost:3000/404.html") {
+  setTimeout(function() {
+    window.location = "2-b.html";
+  }, 4000);
+}
+
+var pageURL = $(location).attr("href");
+if (pageURL == "http://localhost:3000/2-b.html") {
   setTimeout(function() {
     openNav();
+  }, 2000);
+}
+
+var pageURL = $(location).attr("href");
+if (pageURL == "http://localhost:3000/1-d.html") {
+  setTimeout(function() {
+    window.location = "exito.html";
   }, 6000);
 }
 
@@ -90,16 +375,28 @@ var show6 = function() {
   document.getElementById("centro-compania").style.display = "block";
   document.getElementById("inspeccion-domicilio").style.display = "none";
   document.getElementById("autoInspeccion").style.display = "none";
+  document.getElementById("inspeccion-domicilio__edicion").style.display =
+    "none";
 };
 var show7 = function() {
   document.getElementById("inspeccion-domicilio").style.display = "block";
   document.getElementById("centro-compania").style.display = "none";
   document.getElementById("autoInspeccion").style.display = "none";
+  document.getElementById("inspeccion-domicilio__edicion").style.display =
+    "none";
 };
 
 var show8 = function() {
   document.getElementById("autoInspeccion").style.display = "block";
   document.getElementById("centro-compania").style.display = "none";
+  document.getElementById("inspeccion-domicilio").style.display = "none";
+  document.getElementById("inspeccion-domicilio__edicion").style.display =
+    "none";
+};
+
+var ediDireccion = function() {
+  document.getElementById("inspeccion-domicilio__edicion").style.display =
+    "block";
   document.getElementById("inspeccion-domicilio").style.display = "none";
 };
 
@@ -110,7 +407,6 @@ $("#seleccionar").click(function() {
     $("#container-datos-vehiculo")
       .removeClass("card-open__shadow")
       .addClass("card-closed__shadow");
-
     $(".datos-contratante").slideDown(function(cb) {
       $("#container-datos-contratante")
         .removeClass("card-closed__shadow")
@@ -170,10 +466,14 @@ $("#continuar").click(function() {
     $("#container-datos-vehiculo__sinpatente")
       .removeClass("card-open__shadow")
       .addClass("card-closed__shadow");
+    $(".completado6").toggle();
     $(".datos-contratante__sinpatente").slideDown(function(cb) {
       $("#container-datos-contratante__sinpatente")
         .removeClass("card-closed__shadow")
         .addClass("card-open__shadow");
+      $("#titleDatosContratante2")
+        .removeClass("card_title__close")
+        .addClass("card_title__open");
     });
   });
 });
@@ -202,6 +502,37 @@ $("#editarcontratante_sinpatente").click(function() {
   });
 });
 
+$("#cotizar").click(function() {
+  $(".datos-contratante__sinpatente").slideUp(function(cb) {
+    $("#container-datos-contratante__sinpatente")
+      .removeClass("card-open__shadow")
+      .addClass("card-closed__shadow");
+    $(".completado7").toggle();
+  });
+});
+
+function DelayRedirect1() {
+  var seconds = 3;
+  var dvCountDown = document.getElementById("dvCountDown");
+  var lblCount = document.getElementById("lblCount");
+  setInterval(function() {
+    seconds--;
+    if (seconds == 0) {
+      window.location = "404.html";
+    }
+  }, 3000);
+}
+
+$("#patenteOptioncontent").hide();
+$("#patenteOption").click(function() {
+  if ($(this).is(":checked")) {
+    $("#patenteOptioncontent").show();
+  } else {
+    $("#patenteOptioncontent").hide();
+  }
+});
+
+
 /* Switch active - ver tarifas  */
 
 $("#table-prices").hide();
@@ -227,7 +558,7 @@ $(".ver-tarifas").click(function() {
 $("#seleccionPlan_1").click(function() {
   $(".eligePlan").slideUp(function(cb) {
     openNav2();
-    $(".completado").toggle();
+    $(".completado8").toggle();
     $(".seguro-incluye_infomas").show();
     $("#container-elige-plan")
       .removeClass("card-open__shadow")
@@ -243,7 +574,7 @@ $("#seleccionPlan_1").click(function() {
 $("#seleccionPlan_2").click(function() {
   $(".eligePlan").slideUp(function(cb) {
     openNav2();
-    $(".completado").toggle();
+    $(".completado8").toggle();
     $(".seguro-incluye_infomas").show();
     $("#container-elige-plan")
       .removeClass("card-open__shadow")
@@ -259,7 +590,7 @@ $("#seleccionPlan_2").click(function() {
 $("#seleccionPlan_3").click(function() {
   $(".eligePlan").slideUp(function(cb) {
     openNav2();
-    $(".completado").toggle();
+    $(".completado8").toggle();
     $(".seguro-incluye_infomas").show();
     $("#container-elige-plan")
       .removeClass("card-open__shadow")
@@ -290,6 +621,7 @@ $("#editarplan__sinpatente").click(function() {
 $("#seleccionPlan1__sinpatente").click(function() {
   $(".eligePlan").slideUp(function(cb) {
     openNav2();
+    $(".completado8").toggle();
     $(".seguro-incluye_infomas").show();
     $("#container-elige-plan__sinpatente")
       .removeClass("card-open__shadow")
@@ -298,6 +630,21 @@ $("#seleccionPlan1__sinpatente").click(function() {
       $("#completar-datos-vehiculo__sinpatente")
         .removeClass("card-closed__shadow")
         .addClass("card-open__shadow");
+      $("#titleDatosContratante5")
+        .removeClass("card_title__close")
+        .addClass("card_title__open");
+        if($("#plan-sugerido2_sinpatente").hasClass("plan-sugerido-active__1"))
+        $("#plan-sugerido2_sinpatente")
+        .addClass("plan-sugerido__2")
+        .removeClass("plan-sugerido-active__1");
+        if($("#plan-sugerido3_sinpatente").hasClass("plan-sugerido-active__1"))
+        $("#plan-sugerido3_sinpatente")
+        .addClass("plan-sugerido__3")
+        .removeClass("plan-sugerido-active__1");
+        
+      $("#plan-sugerido1_sinpatente")
+        .removeClass("plan-sugerido__1")
+        .addClass("plan-sugerido-active__1");
     });
   });
 });
@@ -305,6 +652,7 @@ $("#seleccionPlan1__sinpatente").click(function() {
 $("#seleccionPlan2__sinpatente").click(function() {
   $(".eligePlan").slideUp(function(cb) {
     openNav2();
+    $(".completado8").toggle();
     $(".seguro-incluye_infomas").show();
     $("#container-elige-plan__sinpatente")
       .removeClass("card-open__shadow")
@@ -313,13 +661,29 @@ $("#seleccionPlan2__sinpatente").click(function() {
       $("#completar-datos-vehiculo__sinpatente")
         .removeClass("card-closed__shadow")
         .addClass("card-open__shadow");
+      $("#titleDatosContratante5")
+        .removeClass("card_title__close")
+        .addClass("card_title__open");
+        if($("#plan-sugerido1_sinpatente").hasClass("plan-sugerido-active__1"))
+        $("#plan-sugerido1_sinpatente")
+        .addClass("plan-sugerido__1")
+        .removeClass("plan-sugerido-active__1");
+        if($("#plan-sugerido3_sinpatente").hasClass("plan-sugerido-active__1"))
+        $("#plan-sugerido3_sinpatente")
+        .addClass("plan-sugerido__3")
+        .removeClass("plan-sugerido-active__1");
+      $("#plan-sugerido2_sinpatente")
+        .removeClass("plan-sugerido__3")
+        .addClass("plan-sugerido-active__1");
     });
   });
 });
+
 
 $("#seleccionPlan3__sinpatente").click(function() {
   $(".eligePlan").slideUp(function(cb) {
     openNav2();
+    $(".completado8").toggle();
     $(".seguro-incluye_infomas").show();
     $("#container-elige-plan__sinpatente")
       .removeClass("card-open__shadow")
@@ -328,11 +692,26 @@ $("#seleccionPlan3__sinpatente").click(function() {
       $("#completar-datos-vehiculo__sinpatente")
         .removeClass("card-closed__shadow")
         .addClass("card-open__shadow");
+      $("#titleDatosContratante5")
+        .removeClass("card_title__close")
+        .addClass("card_title__open");
+        if($("#plan-sugerido1_sinpatente").hasClass("plan-sugerido-active__1"))
+        $("#plan-sugerido1_sinpatente")
+        .addClass("plan-sugerido__1")
+        .removeClass("plan-sugerido-active__1");
+        if($("#plan-sugerido2_sinpatente").hasClass("plan-sugerido-active__1"))
+        $("#plan-sugerido2_sinpatente")
+        .addClass("plan-sugerido__2")
+        .removeClass("plan-sugerido-active__1");
+      $("#plan-sugerido3_sinpatente")
+        .removeClass("plan-sugerido__2")
+        .addClass("plan-sugerido-active__1");
     });
   });
 });
 
-$("#editar_plan").click(function() {
+
+$("#editar_plan__sinpatente").click(function() {
   $(".eligePlan").slideDown(function(cb) {
     $("#container-elige-plan")
       .removeClass("card-closed__shadow")
@@ -381,10 +760,14 @@ $("#continuar_completar-datos-vehiculo__sinpatente").click(function() {
     $("#completar-datos-vehiculo__sinpatente")
       .removeClass("card-open__shadow")
       .addClass("card-closed__shadow");
+    $(".completado9").toggle();
     $(".completar-datos-personales__sinpatente").slideDown(function(cb) {
       $("#completar-datos-direccion__sinpatente")
         .removeClass("card-closed__shadow")
         .addClass("card-open__shadow");
+      $("#titleDatosContratante3")
+        .removeClass("card_title__close")
+        .addClass("card_title__open");
     });
   });
 });
@@ -414,6 +797,9 @@ $("#continuar-datos-direccion__planes").click(function() {
       $("#seleccionar-inspeccion__planes")
         .removeClass("card-closed__shadow")
         .addClass("card-open__shadow");
+      $("#titleDatosContratante3")
+        .removeClass("card_title__close")
+        .addClass("card_title__open");
     });
   });
 });
@@ -431,18 +817,21 @@ $("#editar_datos-direccion-planes").click(function() {
   });
 });
 
-/* Close and change card-shadow show - hide  / Datos de personales */
+/* Close and change card-shadow show - hide  / Datos de personales sin patente*/
 
 $("#continuar-datos-personales__sinpatente").click(function() {
   $(".completar-datos-personales__sinpatente").slideUp(function(cb) {
     $("#completar-datos-vehiculo__sinpatente")
       .removeClass("card-open__shadow")
       .addClass("card-closed__shadow");
-    $(".completado4").toggle();
+    $(".completado10").toggle();
     $(".seleccionar-inspeccion__sinpatente").slideDown(function(cb) {
       $("#seleccionar-inspeccion__sinpatente")
         .removeClass("card-closed__shadow")
         .addClass("card-open__shadow");
+      $("#titleDatosContratante4")
+        .removeClass("card_title__close")
+        .addClass("card_title__open");
     });
   });
 });
@@ -456,9 +845,35 @@ $("#editar_datos-direccion__sinpatente").click(function() {
       $("#seleccionar-inspeccion__sinpatente")
         .removeClass("card-open__shadow")
         .addClass("card-closed__shadow");
+      $("#titleDatosContratante3")
+        .removeClass("card_title__close")
+        .addClass("card_title__open");
     });
   });
 });
+
+/* Close and change card-shadow show - hide  / Inspeccion sin patente*/
+
+$("#contratar").click(function() {
+  $(".seleccionar-inspeccion__sinpatente").slideUp(function(cb) {
+    $("#seleccionar-inspeccion__sinpatente")
+      .removeClass("card-open__shadow")
+      .addClass("card-closed__shadow");
+    $(".completado11").toggle();
+  });
+});
+
+function DelayRedirect3() {
+  var seconds = 3;
+  var dvCountDown = document.getElementById("dvCountDown");
+  var lblCount = document.getElementById("lblCount");
+  setInterval(function() {
+    seconds--;
+    if (seconds == 0) {
+      window.location = "1-c.html";
+    }
+  }, 1000);
+}
 
 /* Agregar productos SOAP */
 
@@ -472,9 +887,31 @@ $("#aceptar").click(function() {
       $("#agregarProductos")
         .removeClass("card-closed__shadow")
         .addClass("card-open__shadow");
+      $("#titleDatosContratante6")
+        .removeClass("card_title__close")
+        .addClass("card_title__open");
     });
   });
 });
+
+$("#aceptar2").click(function() {
+  $(".seleccion-pago").slideUp(function(cb) {
+    $("#seleccion-pago")
+      .removeClass("card-open__shadow")
+      .addClass("card-closed__shadow");
+    $(".completado4").toggle();
+    $(".agregar-productos").slideDown(function(cb) {
+      $("#agregarProductos")
+        .removeClass("card-closed__shadow")
+        .addClass("card-open__shadow");
+      $("#titleDatosContratante6")
+        .removeClass("card_title__close")
+        .addClass("card_title__open");
+    });
+  });
+});
+
+
 
 $("#editar-agregar").click(function() {
   $(".agregar-productos").slideDown(function(cb) {
@@ -501,6 +938,38 @@ $("#editar-mediospago").click(function() {
     });
   });
 });
+$("#pagar").click(function() {
+  $(".agregar-productos").slideUp(function(cb) {
+    $("#agregarProductos")
+      .removeClass("card-open__shadow")
+      .addClass("card-closed__shadow");
+    $(".completado12").toggle();
+  });
+});
+
+function DelayRedirect() {
+  var seconds = 3;
+  var dvCountDown = document.getElementById("dvCountDown");
+  var lblCount = document.getElementById("lblCount");
+  setInterval(function() {
+    seconds--;
+    if (seconds == 0) {
+      window.location = "1-d.html";
+    }
+  }, 1000);
+}
+
+// function DelayRedirect4() {
+//   var seconds = 6;
+//   var dvCountDown = document.getElementById("dvCountDown");
+//   var lblCount = document.getElementById("lblCount");
+//   setInterval(function() {
+//     seconds--;
+//     if (seconds == 0) {
+//       window.location = "exito.html";
+//     }
+//   }, 1000);
+// }
 
 // Seleccionar SOAP
 
@@ -1296,9 +1765,33 @@ $(document).ready(function() {
   $(".carousel").carousel();
 
   setTimeout(function() {
-    $("body").addClass("loaded");
-    // $('h1').css('color','#222222');
-  }, 3000);
+    $("#loadingImg").addClass("loadingImg");
+  }, 1000);
+
+  $(function() {
+    $("#datepicker").datepicker();
+  });
 
   $("#modal-preguntasfrecuentes").load("preguntas-frecuentes.html");
+  $("#modal-beneficiosseguro").load("beneficios-seguro.html");
+  $("#modal-infodeducible").load("info-deducible.html");
+  $("#modal-detalleplanes").load("detalle-planes.html");
+  $("#modal-lateral").load("modal-lateral.html");
+  $("#notificacion-envioCorreo").load("modal-enviocotizacion.html");
+
+  $(".Modern-Slider").slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+    dots: true,
+    pauseOnDotsHover: true,
+    cssEase: "linear",
+    fade: true,
+    draggable: false,
+    infinite: true,
+    arrows: false
+  });
 });

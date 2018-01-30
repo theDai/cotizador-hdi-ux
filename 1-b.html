@@ -11,6 +11,7 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" type="text/css" href="./assets/fonts/hdi-font.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
 
   <!-- Google Tag Manager -->
   <!-- <script>(function (w, d, s, l, i) {
@@ -234,7 +235,7 @@
                 <h6 class="card-subtitle description_input py-2">Por favor complete los datos del contratante.</h6>
                 <!--Seleccion tipo de pago-->
                 <div class="tipodepago_container pt-3 pb-2">
-                  <fieldset class="form-group">
+                  <!-- <fieldset class="form-group">
                     <div class="form-check radio">
                       <label class="form-check-label">
                         <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked onclick="changePAC()">Pago automático PAT/PAC.
@@ -245,7 +246,30 @@
                         <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2" onclick="changeAvisovencimiento()">Aviso de vencimiento.
                       </label>
                     </div>
-                  </fieldset>
+                  </fieldset> -->
+                  <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                      <ul class="list-radio">
+                        <li>
+                          <input type="radio" class="form-check-input" id="f-option" class="form-check-input" name="optionsRadios" id="optionsRadios1"
+                            value="option1" checked onclick="changePAC()">
+                          <label for="f-option" class="form-check-label">Pago automático PAT/PAC.</label>
+                          <div class="check"></div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                      <ul class="list-radio">
+                        <li>
+                          <input type="radio" class="form-check-input" id="s-option" name="optionsRadios" id="optionsRadios2" value="option2" onclick="changeAvisovencimiento()">
+                          <label for="s-option" class="form-check-label">Aviso de vencimiento.</label>
+                          <div class="check">
+                            <div class="inside"></div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <!-- Seleccion parametros-->
                 <h4 class="pt-3 pb-2 subtitle">Ajusta los paramétros</h4>
@@ -562,30 +586,32 @@
                 </div>
               </div> -->
               <div class="hide" id="centro-compania">
-                <div class="row">
-                  <div class="col-lg-12 container-inputitem">
-                    <label id="img_category_label" class="field firstSelect" for="img_category" data-value="">
-                      <span>Comuna</span>
-                      <div id="img_category" class="psuedo_select" name="img_category">
-                        <span class="selected"></span>
-                        <ul id="img_category_options" class="options">
-                          <li class="option" data-value="commercial">Providencia</li>
-                          <li class="option" data-value="residential">Santiago</li>
-                        </ul>
-                      </div>
-                    </label>
-                  </div>
-                  <div class="col-lg-12 container-inputitem">
-                    <label id="img_category_label" class="field secondSelect" for="img_category" data-value="">
-                      <span>Sucursal</span>
-                      <div id="img_category" class="psuedo_select" name="img_category">
-                        <span class="selected"></span>
-                        <ul id="img_category_options" class="options">
-                          <li class="option" data-value="commercial">Providencia</li>
-                          <li class="option" data-value="residential">Santiago</li>
-                        </ul>
-                      </div>
-                    </label>
+                <div class="container-inputs">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <label id="img_category_label" class="field firstSelect" for="img_category" data-value="">
+                        <span>Comuna</span>
+                        <div id="img_category" class="psuedo_select" name="img_category">
+                          <span class="selected"></span>
+                          <ul id="img_category_options" class="options">
+                            <li class="option" data-value="commercial">Providencia</li>
+                            <li class="option" data-value="residential">Santiago</li>
+                          </ul>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="col-lg-12 container-inputitem">
+                      <label id="img_category_label" class="field secondSelect" for="img_category" data-value="">
+                        <span>Sucursal</span>
+                        <div id="img_category" class="psuedo_select" name="img_category">
+                          <span class="selected"></span>
+                          <ul id="img_category_options" class="options">
+                            <li class="option" data-value="commercial">Providencia</li>
+                            <li class="option" data-value="residential">Santiago</li>
+                          </ul>
+                        </div>
+                      </label>
+                    </div>
                   </div>
                 </div>
                 <h6 class="pt-2">Los datos de contacto para la inspección serian:</h6>

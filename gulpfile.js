@@ -20,6 +20,7 @@ gulp.task("concatScripts", function() {
       "assets/js/vendor/bootstrap.min.js",
       "assets/js/vendor/jqueryUI-V1.11.1.js",
       "assets/js/vendor/jquery_pips.js",
+      "assets/js/slick.min.js",
       "assets/js/functions.js"
     ])
     .pipe(maps.init())
