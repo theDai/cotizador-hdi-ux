@@ -4,7 +4,8 @@
   "description": "a bootstrap 4 boiler plate with sass, concatenation, minification, autoprefixer, sourcemaps, browser-sync, git and gulp task runner",
   "main": "index.js",
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "start": "node ./index.js"
   },
   "author": "wapbamboogie",
   "license": "ISC",
@@ -23,11 +24,10 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
-    "gulp-uglify": "^3.0.0",
-    "select2": "^4.0.6-rc.1"
+    "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
-    "material-design-icons": "^3.0.1",
-    "propellerkit-select2": "^1.1.0"
+    "express": "^4.16.2",
+    "material-design-icons": "^3.0.1"
   }
 }
