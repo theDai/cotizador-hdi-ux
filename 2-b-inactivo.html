@@ -44,21 +44,21 @@
         <!-- Modal detalle planes-->
         <div id="modal-detalleplanes"></div>
         <!-- Modal slide -->
-        <div id="modal-lateral" class="sidenav sidenav-responsive"></div>
+        <div id="modal-lateral" class="sidenav"></div>
         <!-- Modal slide -envio cotizacion al correo-->
-        <div id="notificacion-envioCorreo" class="sidenav sidenav-responsive"></div>
+        <div id="notificacion-envioCorreo" class="sidenav"></div>
         <!-- Preguntas Frecuentes -->
         <div id="modal-preguntasfrecuentes"></div>
         <div class="row">
             <!-- Conteiner izquierdo -->
-            <div class="col-xl-6 col-lg-12 left-container left-container-explorer">
+            <div class="col-xl-6 col-lg-12 left-container">
                 <!-- Nav principal -->
                 <a class="navbar-brand" href="https://www.hdi.cl/">
                     <img src="./assets/img/LOGO_COLOR(RGB)_HDI.png" width="75" height="65" alt="Cotiza tu seguro automotriz online" class="d-inline-block align-top">
                 </a>
                 <nav class="navbar navbar-expand-lg sticky-top nav-principal justify-content-center">
                     <ul class="nav">
-                        <a class="pasos-links" href="2-a.html">
+                        <a class="pasos-links" href="2-a-inactivo.html">
                             <li class="nav-item nav-link active-completado" href="#">
                                 <img src="./assets/img/paso-completado.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Cotiza
                                 <span class="sr-only">(current)</span>
@@ -78,7 +78,7 @@
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <img src="./assets/img/alert-instruccion_1.svg" width="25" height="25" class="img-fluid" alt="Responsive image"> Para poder continuar el proceso de cotización, debes seleccionar una de las opciones propuestas
+                        <img src="./assets/img/alert-instruccion_1.svg" width="25" height="25" class="img-fluid" alt="Responsive image"> Para poder continuar el proceso de cotización, debes seleccionar una de las opciones de la derecha
                         <!-- <a class="alert-link ml-2" data-toggle="modal" data-target="#info-instruccion" href="#"> Leer más</a> -->
                     </div>
                 </div>
@@ -391,27 +391,29 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12 container-inputitem">
-                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                                            <label for="help1">
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label has-warning">
+                                            <label for="inputWarning1" class="control-label">
                                                 Número de motor
                                             </label>
                                             <input type="text" id="help1" class="form-control" placeholder="xxxxxx">
+                                            <p class="help-block">Por favor verificar los datos ingresados</p>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 container-inputitem">
-                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                                            <label for="help1">
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label has-success">
+                                            <label for="inputSuccess1" class="control-label">
                                                 Número de Chasis
                                             </label>
                                             <input type="text" id="help1" class="form-control" placeholder="xxxxxx">
                                         </div>
                                     </div>
                                     <div class="col-lg-12 container-inputitem ">
-                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                                            <label for="help1">
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label has-error">
+                                            <label for="inputError1" class="control-label">
                                                 Número de factura
                                             </label>
                                             <input type="text" id="help1" class="form-control" placeholder="xxxxxx">
+                                            <p class="help-block">Por favor verificar los datos ingresados</p>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 container-inputitem ">
@@ -786,11 +788,10 @@
                     </div>
                 </div>
                 <!--Container - botones principales-->
-                <div class="container d-flex justify-content-between mt-4 px-5 leftExplorer">
+                <div class="container d-flex justify-content-between mt-4 px-5">
                     <a href="2-a.html" class="button_back">
                         <img src="./assets/img/back_icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Volver</a>
-                    <a href="2-c.html" class="button-primary" id="contratar">Contratar</a>
-
+                    <a href="2-c-inactivo.html" class="button-primary__inactivo" id="contratar">Contratar</a>
                 </div>
             </div>
             <!-- Conteiner derecho -->
@@ -811,24 +812,23 @@
                                     <div class="card-block__title" id="rightPAC_3rd">Pago automático PAT/PAC</div>
                                     <!-- <div class="card-block__title"></div> -->
                                     <div class="card-block__subtitle pt-2">12 cuotas</div>
-                                    <div class="card-planes__precio">$32.190</div>
+                                    <div class="card-planes__precio">$29.470</div>
                                 </div>
                                 <div class="card-block text-center">
                                     <div class="card-gift py-1">giftcard $15.000</div>
                                 </div>
                                 <div class="list text-center container-list-paramentros pt-1">
-                                    <!--Nota: Lo siguientes valores del plan son solo ejemplo -->
                                     <ul class="list-parametros text-center">
                                         <li class="list-parametros__item text-capitalize d-flex justify-content-between flex-row align-items-center text-left">Auto
                                             <br> reemplazo
-                                            <p class="card-textplanes__textdinamicos">30 días</p>
+                                            <p class="card-textplanes__textdinamicos">15 días</p>
                                         </li>
                                         <li class="list-parametros__item text-capitalize d-flex justify-content-between flex-row align-items-center text-left">Responsabilidad
                                             <br> civil
-                                            <p class="card-textplanes__textdinamicos"> 3000 UF</p>
+                                            <p class="card-textplanes__textdinamicos"> 500 UF</p>
                                         </li>
                                         <li class="list-parametros__item text-capitalize d-flex justify-content-between flex-row align-items-center">Deducible
-                                            <p class="card-textplanes__textdinamicos">0 UF</p>
+                                            <p class="card-textplanes__textdinamicos">10 UF</p>
                                         </li>
                                         <li class="list-parametros__item d-flex justify-content-center flex-row align-items-center">
                                             <a class="detalle-planes" data-toggle="modal" data-target="#detalle-planes">ver detalle</a>

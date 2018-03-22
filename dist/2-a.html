@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -13,6 +13,8 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" type="text/css" href="./assets/fonts/hdi-font.css">
+
+
   <!-- Google Tag Manager -->
   <!-- <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -22,7 +24,8 @@
         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-MVK4LN');</script> -->
-  <!-- End Google Tag Manager -->
+  <!-- End Google Tag Manager-->
+
 </head>
 
 <body>
@@ -37,10 +40,33 @@
   <div class="container-fluid layout-container">
     <!-- Preguntas Frecuentes -->
     <div id="modal-preguntasfrecuentes"></div>
+    <div class="modal modal-info" id="info-extra" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Plan de pago automático</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Si seleccionas la opción de Pago Automático asociado a tu Tarjeta de Crédito (PAT), éste queda habilitado de
+              manera inmediata y por este motivo, tiene el beneficio de ser más económico para ti. Además, te permite mantener
+              el control del pago de tus cuotas con la tranquilidad de que tu seguro se encuentra activo. En caso de cualquier
+              inconveniente en el cargo de tu prima, te avisaremos mediante correo electrónico para que siempre estés informado.</p>
+            <p>La alternativa de Pago Automático asociado a tu Cuenta Corriente (PAC) también ofrece el mismo beneficio económico,
+              con la diferencia de que en él, tus cuotas son descontadas del saldo que existe en tu cuenta bancaria. Para
+              activarlo, debes firmar un mandato que autoriza a la Compañía a realizar estos cargos en tu cuenta corriente.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn button-aceptar" data-dismiss="modal">Entendido</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <!-- Conteiner izquierdo -->
-      <div class="col-lg-6 left-container">
-        <!-- Conteiner izquierdo -->
+      <div class="col-xl-6 col-lg-12 left-container">
         <a class="navbar-brand" href="https://www.hdi.cl/">
           <img src="./assets/img/LOGO_COLOR(RGB)_HDI.png" width="75" height="65" alt="Cotiza tu seguro automotriz online" class="d-inline-block align-top">
         </a>
@@ -59,8 +85,21 @@
             </li>
           </ul>
         </nav>
+
+        <!--Alert: Información adicional-->
+        <div class="container container-cards mt-4">
+          <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <img src="./assets/img/alert-info.svg" width="20" height="20" class="img-fluid" alt="Responsive image"> ¿Sabías que puedes ahorrar en tu póliza escogiendo un plan de pago automático?
+            <a data-toggle="modal" data-target="#info-extra" class="alert-link__info ml-2" href="#"> Leer más</a>
+          </div>
+        </div>
+
+
         <!--Card - Ingresar datos del vehiculo -->
-        <div class="container px-5 mt-4">
+        <div class="container container-cards">
           <div class="card card-open__shadow d-flex" id="container-datos-vehiculo__sinpatente">
             <div class="d-flex justify-content-between container-title">
               <h3 class="card-title card_title__open">1.1 Datos del vehículo</h3>
@@ -74,61 +113,59 @@
                 <h6 class="card-subtitle description_input py-2">Por favor completar los siguientes campos para realizar la cotización.</h6>
                 <div class="container-inputs">
                   <div class="row">
-                    <div class="col-lg-12 container-inputitem">
-                      <label id="img_category_label" class="field marcaSelect" for="img_category" data-value="">
-                        <span>Marca</span>
-                        <div id="img_category" class="psuedo_select" name="img_category">
-                          <span class="selected"></span>
-                          <ul id="img_category_options" class="options">
-                            <li class="option" data-value="marca">Acura</li>
-                            <li class="option" data-value="marca">Alfa Romeo</li>
-                            <li class="option" data-value="marca">American Motor</li>
-                            <li class="option" data-value="marca">Asia</li>
-                            <li class="option" data-value="marca">Aston Martin</li>
-                          </ul>
-                        </div>
-                      </label>
+                    <div class="col-12">
+                      <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                        <label>Marca</label>
+                        <select class="select-with-search form-control pmd-select2">
+                          <option></option>
+                          <option>Chevrolet</option>
+                          <option>Toyota</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="col-lg-12 container-inputitem">
-                      <label id="img_category_label" class="field modeloSelect" for="img_category" data-value="">
-                        <span>Modelo</span>
-                        <div id="img_category" class="psuedo_select" name="img_category">
-                          <span class="selected"></span>
-                          <ul id="img_category_options" class="options">
-                            <li class="option" data-value="modelo">Integra</li>
-                            <li class="option" data-value="modelo">Legend</li>
-                            <li class="option" data-value="modelo">MDX</li>
-                            <li class="option" data-value="modelo">RDX</li>
-                          </ul>
-                        </div>
-                      </label>
+                    <div class="col-12 container-inputitem">
+                      <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                        <label>Modelo</label>
+                        <select class="select-with-search form-control pmd-select2">
+                          <option></option>
+                          <option>Optra</option>
+                          <option>Corolla</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="col-lg-12 container-inputitem">
-                      <label id="img_category_label" class="field anoSelect" for="img_category" data-value="">
-                        <span>Año</span>
-                        <div id="img_category" class="psuedo_select" name="img_category">
-                          <span class="selected"></span>
-                          <ul id="img_category_options" class="options">
-                            <li class="option" data-value="ano">2018</li>
-                            <li class="option" data-value="ano">2017</li>
-                            <li class="option" data-value="ano">2016</li>
-                            <li class="option" data-value="ano">2015</li>
-                            <li class="option" data-value="ano">2014</li>
-                          </ul>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="col-lg-12 container-inputitem">
-                      <label id="img_category_label" class="field tipoSelect" for="img_category" data-value="">
-                        <span>Tipo</span>
-                        <div id="img_category" class="psuedo_select" name="img_category">
-                          <span class="selected"></span>
-                          <ul id="img_category_options" class="options">
-                            <li class="option" data-value="tipo">Sedan</li>
-                            <li class="option" data-value="tipo">Camión</li>
-                          </ul>
-                        </div>
-                      </label>
+                    <div class="col-12 container-inputitem">
+                      <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                        <label>Año</label>
+                        <select class="select-with-search form-control pmd-select2">
+                          <option></option>
+                          <option>2018</option>
+                          <option>2017</option>
+                          <option>2016</option>
+                          <option>2015</option>
+                          <option>2014</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                          <option>Option</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -154,29 +191,35 @@
                 <div class="container-inputs">
                   <div class="row">
                     <div class="col-lg-12 container-inputitem">
-                      <div class="form-group has-float-label">
-                        <input type="text" class="form-control" id="correoInput" aria-describedby="email" placeholder="jaded676@gmail.com" required>
-                        <label class="col-form-label form-control-label">Correo</label>
+                      <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                        <label for="help1">
+                          Correo
+                        </label>
+                        <input type="text" id="help1" class="form-control" placeholder="jaded676@yahoo.com">
                       </div>
                     </div>
                     <div class="col-lg-12 container-inputitem">
-                      <div class="form-group has-float-label">
-                        <input type="text" class="form-control" id="telefonoInput" aria-describedby="telefono" placeholder="+56 9435205403" required>
-                        <label class="col-form-label form-control-label">Teléfono</label>
+                      <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                        <label for="help1">
+                          Teléfono
+                        </label>
+                        <input type="text" id="help1" class="form-control" placeholder="+56 923240360">
                       </div>
                     </div>
                     <div class="col-lg-12 container-inputitem">
-                      <div class="form-group has-float-label">
-                        <input type="text" class="form-control" id="rutInput" aria-describedby="rut" placeholder="15.543.765-1" required>
-                        <label class="col-form-label form-control-label">Rut</label>
+                      <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                        <label for="help1">
+                          Rut
+                        </label>
+                        <input type="text" id="help1" class="form-control" placeholder="12.232.564-1">
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="container-inputitem">
+                <div class="container-inputitem pb-3">
                   <div class="parametros-title">Edad del menor conductor
                     <a href="" class="showTooltip">
-                      <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
+                      <img src="./assets/img/informacion-icon.svg" width="20" height="20" class="img-fluid" id="info" alt="Responsive image">
                       <span id="some-element">
                         La edad de los conductores afecta el precio del seguro ya que el riesgo que un adulto,con más experiencia al volante, representa
                         para la Compañía de Seguros es menor al de una persona más joven.Evite contratar con restricciones
@@ -186,28 +229,32 @@
                     </a>
                   </div>
                   <div class="row mt-2">
-                    <div class="col-lg-6 mt-2">
+                    <div class="col-lg-7 mt-2">
                       <div class="slider-edad mt-4 ml-2" id="double-label-slider"></div>
                     </div>
-                    <div class="col-lg-6">
-                      <div id="edadConductor" class="panel callout radius text-center info-slider"></div>
+                    <div class="col-lg-5 info-slider">
+                      <div id="edadConductor" class="panel callout radius text-center">El conductor tiene entre
+                        <br>18 años y 23 años</div>
                     </div>
                   </div>
                 </div>
+                <div class="button-container__edicion d-flex justify-content-end mt-3">
+                    <a href="#" class="card-link continuar text-uppercase mr-2" id="continuar_datoscontratante">Continuar</a>
+                    <img src="./assets/img/continuar-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image">
+                  </div>
               </div>
             </div>
           </div>
         </div>
         <!--Container - botones principales-->
-        <div class="container d-flex justify-content-between mt-4 px-5">
+        <div class="container container-botonesprimarios mt-4 px-5 leftExplorer">
           <a href="index.html" class="button_back">
             <img src="./assets/img/back_icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Volver</a>
-          <!-- <a hre="#" class="button-primary" id="cotizar" value="Redirect" onclick="DelayRedirect1()">Cotizar</a> -->
-          <a href="2-b.html" class="button-primary">Cotizar</a>
+          <a id="cotizarButton" href="2-b.html" class="button-primary">Cotizar</a>
         </div>
       </div>
       <!-- Conteiner derecho -->
-      <div class="col-lg-6 right-container">
+      <div class="col-xl-6 col-lg-12 right-container">
         <!-- Conteiner titulo secundario -->
         <div class="container mt-5">
           <h2 class="text-center">Beneficios de contratar con HDI Seguros</h2>
@@ -221,58 +268,56 @@
             </li>
             <li class="nav-item">
               <a class="nav-link text-uppercase" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
-                aria-selected="false">Que cubre</a>
+                aria-selected="false">Qué cubre</a>
             </li>
           </ul>
           <div class="tab-content container" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-              <div class="d-flex justify-content-center">
+              <div class="container-tabs">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                   <!-- Conteiner Beneficios-->
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="card card-beneficios">
-                        <div class="col-lg-3 offset-md-9 container-beneficios">
-                          <img class="beneficios_icon" src="./assets/img/rapido-icon.svg" width="45" height="35" alt="Card image cap">
+                  <div class="row conteiner-card-beneficios">
+                    <div class="col-xl-6 marginbottom-card">
+                      <div class="card card-beneficios h-100">
+                        <div class="container-beneficios d-flex align-items-end flex-column">
+                          <img class="beneficios_icon p-2" src="./assets/img/rapido-icon.svg" width="50" height="50" alt="más rápido">
                         </div>
-                        <div class="card-body">
-                          <p class="card-beneficios__title">Más rápido</p>
-                          <p class="card-text"></p>
+                        <div class="card-body__beneficios">
+                          <p class="card-beneficios__title my-auto">Más rápido: Contrata 100% online en menos de 10 minutos.
+                          </p>
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6">
-                      <div class="card card-beneficios">
-                        <div class="col-lg-3 offset-md-9 container-beneficios">
-                          <img class="beneficios_icon" src="./assets/img/giftcard-icon.svg" width="45" height="35" alt="Card image cap">
+                    <div class="col-xl-6">
+                      <div class="card card-beneficios h-100">
+                        <div class="container-beneficios d-flex align-items-end flex-column">
+                          <img class="beneficios_icon p-2" src="./assets/img/giftcard-icon.svg" width="50" height="50" alt="gift card">
                         </div>
-                        <div class="card-body">
-                          <p class="card-beneficios__title">Gift Card</p>
-                          <p class="card-text"></p>
+                        <div class="card-body__beneficios">
+                          <p class="card-beneficios__title my-auto">Gift Card: Te regalamos una tarjeta de $20.000 para que puedas realizar compras en Falabella y
+                            sus comercios asociados.</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="row mt-4">
-                    <div class="col-lg-6">
-                      <div class="card card-beneficios">
-                        <div class="col-lg-3 offset-md-9 container-beneficios">
-                          <img class="beneficios_icon" src="./assets/img/instante-icon.svg" width="45" height="35" alt="Card image cap">
+                  <div class="row conteiner-card-beneficios margin-bottom">
+                    <div class="col-xl-6 marginbottom-card">
+                      <div class="card card-beneficios h-100">
+                        <div class="container-beneficios d-flex align-items-end flex-column">
+                          <img class="beneficios_icon p-2" src="./assets/img/instante-icon.svg" width="50" height="50" alt="asegurado al instante">
                         </div>
-                        <div class="card-body">
-                          <p class="card-beneficios__title">Quedas asegurado al instante</p>
-                          <p class="card-text"></p>
+                        <div class="card-body__beneficios">
+                          <p class="card-beneficios__title">Quedas asegurado al instante: Obtén cobertura inmediata para tu vehículo.</p>
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6">
-                      <div class="card card-beneficios">
-                        <div class="col-lg-3 offset-md-9 container-beneficios">
-                          <img class="beneficios_icon" src="./assets/img/inspeccion-icon.svg" width="45" height="35" alt="Card image cap">
+                    <div class="col-xl-6">
+                      <div class="card card-beneficios h-100">
+                        <div class="container-beneficios d-flex align-items-end flex-column">
+                          <img class="beneficios_icon p-2" src="./assets/img/inspeccion-icon.svg" width="50" height="50" alt="inspección a domicilio">
                         </div>
-                        <div class="card-body">
-                          <p class="card-beneficios__title">Inspección a domicilio</p>
-                          <p class="card-text"></p>
+                        <div class="card-body__beneficios">
+                          <p class="card-beneficios__title">Inspección a domicilio: Vamos donde tú quieras para realizar la inspección de tu automóvil.</p>
                         </div>
                       </div>
                     </div>
@@ -285,17 +330,14 @@
               <div class="tab-pane fade show active tab-quecubre" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                 <div class="col-lg-12">
                   <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item col-lg-3 col-12 text-center">
+                    <li class="nav-item col-lg-4 col-12 text-center">
                       <a class="nav-link active nav-link__active info-quecubre" data-toggle="tab" href="#home" role="tab">¿Qué cubre?</a>
                     </li>
-                    <li class="nav-item col-lg-3 col-12 text-center">
-                      <a class="nav-link nav-link__noactive info-quecubre" data-toggle="tab" href="#profile" role="tab">¿Qué no cubre?</a>
+                    <li class="nav-item col-lg-4 col-12 text-center">
+                      <a class="nav-link info-quecubre" data-toggle="tab" href="#profile" role="tab">¿Qué no cubre?</a>
                     </li>
-                    <li class="nav-item col-lg-3 col-12 text-center">
-                      <a class="nav-link nav-link__noactive info-quecubre" data-toggle="tab" href="#messages" role="tab">Asistencia al vehículo</a>
-                    </li>
-                    <li class="nav-item col-lg-3 col-12 text-center">
-                      <a class="nav-link nav-link__noactive info-quecubre" data-toggle="tab" href="#settings" role="tab">Formas de pago</a>
+                    <li class="nav-item col-lg-4 col-12 text-center">
+                      <a class="nav-link info-quecubre" data-toggle="tab" href="#messages" role="tab">Asistencia al vehículo</a>
                     </li>
                   </ul>
                 </div>
@@ -325,7 +367,8 @@
                       <li>Daños por causa de guerra, reacción nuclear, invasión, hechos que las leyes castigan como delito contra
                         la seguridad interior del estado.</li>
                       <li>Daños a puentes, carreteras, viaductos y a todo lo que pueda existir bajo los mismos debido al peso
-                        del vehículo.</li>
+                        del vehículo.
+                      </li>
                       <li>Daños a los bienes de las personas que dependan del asegurado.</li>
                       <li>Daños producidos cuando el vehículo sea conducido por una persona bajo la influencia de cualquier droga
                         o alcohol.</li>
@@ -333,7 +376,7 @@
                   </div>
                   <div class="col-lg-12 mt-3 tab-pane seguro-incluye_info" id="messages" role="tabpanel">
                     <ul>
-                      <li class="mb-2 title-quecubre">Asistencias al vehículo</li>
+                      <li class="mb-2 title-quecubre">Asistencias al vehículo:</li>
                       <li>Servicio de Remolque.</li>
                       <li>Estadía y desplazamiento del asegurado y sus acompañantes.</li>
                       <li>Transporte, depósito y custodia del vehículo reparado y recuperado.</li>
@@ -343,18 +386,8 @@
                       <li>Auxilio ante pannes de mecánica ligera.</li>
                     </ul>
                   </div>
-                  <div class="col-lg-12 mt-3 tab-pane seguro-incluye_info" id="settings" role="tabpanel">
-                    <ul>
-                      <li class="mb-2 title-quecubre">Formas de pago</li>
-                      <li>Puede elegir pagar:</li>
-                      <li>Al contado en una sola cuota.</li>
-                      <li>En Cuotas Vía Pago automático con descuento desde su Tarjeta de Crédito PAT.</li>
-                      <li>A través de Cupones de Pago enviados a su Domicilio y/o email.</li>
-                    </ul>
-                  </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -391,12 +424,11 @@
         <div>600 600 610</div>
       </div>
       <div class="col-lg-2 necesitas-ayuda_chat">
-        <img src="./assets/img/message-white-icon.svg" width="20" height="20" class="img-fluid" alt="Responsive image">
-        <div>¿Necesitas ayuda?</div>
+        <img src="./assets/img/WhatsApp-icon.svg" width="20" height="20" class="img-fluid" alt="Responsive image">
+        <div>+56 9 68352878</div>
       </div>
     </div>
   </footer>
-
 
   <script src="./assets/js/main.js"></script>
 </body>

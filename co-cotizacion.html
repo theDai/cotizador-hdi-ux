@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="Cotice y Contrate su Seguro Automotriz con las mejores coberturas y la mejor asistencia. Infórmate sobre nuestras coberturas y contrata tu seguro online">
     <meta name="keywords" content="Cotice y Contrate su Seguro Automotriz con las mejores coberturas y la mejor asistencia. Infórmate sobre nuestras coberturas y contrata tu seguro online">
@@ -11,6 +13,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="./assets/fonts/hdi-font.css">
+    <script type="text/javascript" src="./assets/js/slick/slick.min.js"></script>
     <!-- Google Tag Manager -->
     <!-- <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -21,7 +24,6 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-MVK4LN');</script> -->
     <!-- End Google Tag Manager -->
-
 </head>
 
 <body>
@@ -31,45 +33,51 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Container layout -->
-    <div class="container-fluid layout-container__home">
+    <!-- Layout principal-->
+    <div class="layout-container__home">
         <!-- Preguntas Frecuentes -->
         <div id="modal-preguntasfrecuentes"></div>
         <div class="row">
             <!-- Conteiner izquierdo -->
-            <div class="col-lg-6 left-container__exito">
+            <div class="col-lg-6 left-container__home">
                 <!-- logo nav-->
                 <nav class="navbar-brandhome">
                     <a class="navbar-home" href="#">
                         <img src="./assets/img/LOGO_COLOR(RGB)_HDI.png" width="120" height="100" class="align-top" alt="Cotiza tu seguro automotriz HDI">
                     </a>
                 </nav>
-                <!-- Container Mensaje exito-->
+                <!-- Container preguntas-->
                 <div class="container intro">
                     <div class="col-xl-10 col-lg-12 col-md-12">
-                        <div class="exito-title">Lo sentimos, vuelva a intentar</div>
-                        <div class="d-flex align-items-center referencia-error">
-                            <div class="pr-2">Ocurrio un error en la transacción</div>
-                            <img src="./assets/img/error-icon.svg" width="40" height="40" class="" alt="Cotiza tu seguro automotriz HDI">
-                        </div>
+                        <h1>Contrata tu seguro automotriz en línea</h1>
+                        <div class="referencia-home">Por favor ingresa el código de cotización</div>
                     </div>
                     <div class="d-flex flex-column align-items-start">
-                        <div class="d-flex flex-column align-items-start mt-4">
-                            <a href="hdi.cl" class="btn button-ir_HDI">Regresar a hdi.cl</a>
+                        <div class="d-flex mt-4">
+                            <div class="col-lg-8">
+                                <!-- <div class="form-group has-float-label has-success">
+                  <input type="text" class="form-control" id="rutduenoInput" aria-describedby="email-help" placeholder="15.125.658" required>
+                  <label class="col-form-label form-control-label">Ingrese el rut del dueño</label>
+                </div> -->
+                                <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                    <label for="help1">
+                                        Código de cotización
+                                    </label>
+                                    <input type="text" id="help1" class="form-control" placeholder="N-123456">
+                                    <!-- <p class="help-block">Ingrese el código de cotización enviado por correo</p> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <a href="2-a.html" class="btn button-home">Enviar</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Loading-->
-                <div id="loader-wrapper">
-                    <div id="loader"></div>
-                    <div class="loader-section section-left"></div>
-                    <div class="loader-section section-right"></div>
                 </div>
             </div>
             <!-- Conteiner derecho -->
-            <div class="col-lg-6 right-container__exito">
-                <!--Slider tutorial -->
-                <div class="container-fluid background-exito">
+            <div class="col-lg-6 right-container__home">
+                <!--Carousell tutorial -->
+                <div class="background-exito">
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="./assets/fonts/hdi-font.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
 
     <!-- Google Tag Manager -->
     <!-- <script>(function (w, d, s, l, i) {
@@ -28,7 +28,7 @@
 
 </head>
 
-<body class="outsideCal">
+<body>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVK4LN" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -44,14 +44,14 @@
         <!-- Modal detalle planes-->
         <div id="modal-detalleplanes"></div>
         <!-- Modal slide -->
-        <div id="modal-lateral" class="sidenav"></div>
+        <div id="modal-lateral" class="sidenav sidenav-responsive"></div>
         <!-- Modal slide -envio cotizacion al correo-->
-        <div id="notificacion-envioCorreo" class="sidenav"></div>
+        <div id="notificacion-envioCorreo" class="sidenav sidenav-responsive"></div>
         <!-- Preguntas Frecuentes -->
         <div id="modal-preguntasfrecuentes"></div>
         <div class="row">
             <!-- Conteiner izquierdo -->
-            <div class="col-lg-6 left-container">
+            <div class="col-xl-6 col-lg-12 left-container left-container-explorer">
                 <!-- Nav principal -->
                 <a class="navbar-brand" href="https://www.hdi.cl/">
                     <img src="./assets/img/LOGO_COLOR(RGB)_HDI.png" width="75" height="65" alt="Cotiza tu seguro automotriz online" class="d-inline-block align-top">
@@ -72,18 +72,18 @@
                         </li>
                     </ul>
                 </nav>
-                <!--Alert: Información adicional-->
-                <div class="container px-5 mt-4">
-                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <!--Alert: Instrucción para poder continuar el flujo-->
+                <div class="container container-cards mt-4">
+                    <div class="alert alert-instrucción alert-dismissible fade show" role="alert">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                        <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" alt="Responsive image"> ¿Conoce que es deducible y responsabilidad civil?
-                        <a class="alert-link ml-2" data-toggle="modal" data-target="#info-extra" href="#"> Leer más</a>
+                        <img src="./assets/img/alert-instruccion_1.svg" width="25" height="25" class="img-fluid" alt="Responsive image"> Para poder continuar el proceso de cotización, debes seleccionar una de las opciones propuestas
+                        <!-- <a class="alert-link ml-2" data-toggle="modal" data-target="#info-instruccion" href="#"> Leer más</a> -->
                     </div>
                 </div>
                 <!--Container - elige plan-->
-                <div class="container px-5 mt-4">
+                <div class="container container-cards mt-4">
                     <div class="card card-open__shadow d-flex" id="container-elige-plan__sinpatente">
                         <div class="d-flex justify-content-between container-title">
                             <h3 id="titleDatosContratante6" class="card-title card-title_open">2.1 Elige el plan</h3>
@@ -94,11 +94,11 @@
                         <div class="card-body eligePlan">
                             <div class="card card-block">
                                 <h4 class="pt-3 pb-2 subtitle">Tipo de pago</h4>
-                                <h6 class="card-subtitle description_input py-2">Por favor complete los datos del contratante.</h6>
+                                <h6 class="card-subtitle description_input py-2"></h6>
                                 <!--Seleccion tipo de pago-->
                                 <div class="tipodepago_container pb-2">
                                     <div class="row">
-                                        <div class="col-md-6 col-xs-12">
+                                        <div class="col-md-12 col-xs-12">
                                             <ul class="list-radio">
                                                 <li>
                                                     <input type="radio" class="form-check-input" id="a-option" class="form-check-input" name="optionsRadios1" id="optionsRadios1"
@@ -108,7 +108,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="col-md-6 col-xs-12">
+                                        <div class="col-md-12 col-xs-12">
                                             <ul class="list-radio">
                                                 <li>
                                                     <input type="radio" class="form-check-input" id="b-option" name="optionsRadios1" id="optionsRadios2" value="option2" onclick="changeAvisovencimiento()">
@@ -119,72 +119,88 @@
                                                 </li>
                                             </ul>
                                         </div>
+                                        <div class="col-md-12 col-xs-12">
+                                            <ul class="list-radio">
+                                                <li>
+                                                    <input type="radio" class="form-check-input" id="b-option" name="optionsRadios1" id="optionsRadios2" value="option2" onclick="changeAvisovencimiento()">
+                                                    <label for="b-option" class="form-check-label">Pago Contado.</label>
+                                                    <div class="check">
+                                                        <div class="inside"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <h4 class="pt-3 pb-2 subtitle">Ajusta los paramétros</h4>
+                                <h4 class="pt-3 pb-2 subtitle">Selecciona las coberturas</h4>
                                 <div class="pt-4">
                                     <div class="parametros-title">Auto reemplazo
                                         <a href="" class="showTooltip">
-                                            <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
+                                            <img src="./assets/img/informacion-icon.svg" width="20" height="20" class="img-fluid" id="info" alt="Responsive image">
                                             <span id="some-element">
-                                                Un mayor daño puede ser fácilmente reparado en 30 días. Para facilitar tu movilidad, te recomendamos tomar este periodo
-                                                de cobertura de un auto de reemplazo.
+                                                Para reanudar su rutina diaria mientras su vehículo está en reparación después de un siniestro, usted podrá solicitar su
+                                                auto de cortesía por los días que usted elija contratar (Opción de cobertura
+                                                para 0,15,30 y 45 días con copago diario de $5.000 iva incluido).
                                             </span>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="row mt-2 mb-5">
-                                    <div class="col-lg-6 mt-2">
+                                <div class="row">
+                                    <div class="col-lg-6 parametros-container">
                                         <div class="slider" id="double-label-slider"></div>
                                     </div>
                                     <div class="col-lg-6">
-                                        <h6 class="my-3 text-center" id="autoreemplazo"></h6>
+                                        <h6 class="my-3 text-left" id="autoreemplazo"></h6>
                                     </div>
                                 </div>
-                                <div class="pt-2">
+                                <div class="pt-4">
                                     <div class="parametros-title">Responsabilidad Civil
                                         <a href="" class="showTooltip">
-                                            <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
+                                            <img src="./assets/img/informacion-icon.svg" width="20" height="20" class="img-fluid" id="info" alt="Responsive image">
                                             <span id="some-element">
-                                                Una cobertura de 1.000 UF de Responsabilidad Civil cubre los daños más frecuentes causados en los accidentes automovilísticos.
-                                                Sin embargo, puede no ser suficiente si el siniestro genera pérdida total
-                                                en el otro vehículo involucrado.
+                                                Cubre en caso que usted se vea involucrado en un accidente y cause daños a terceras personas, por lo que el monto escogido
+                                                es relevante y determina el tope que cubrirá el seguro en caso que usted
+                                                afecte a otros. Considera los daños a bienes muebles e inmuebles (daños materiales),
+                                                indemnizaciones a terceros por incapacidad para trabajar a raíz del accidente
+                                                (lucro cesante) o por daños emocionales o sicológicos que le hayan causado
+                                                el accidente (daño moral). Las opciones de cobertura son UF 500 ($13.413.500),
+                                                UF 1.000 ( $26.827.000) y UF 3.000 ($80.481.000).
                                             </span>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="row mt-2 mb-5">
-                                    <div class="col-lg-6 mt-2">
+                                <div class="row">
+                                    <div class="col-lg-6 parametros-container">
                                         <div class="slider2" id="double-label-slider"></div>
                                     </div>
                                     <div class="col-lg-6">
-                                        <h6 class="my-3 text-center" id="responsabilidad-civil"></h6>
+                                        <h6 class="my-3 text-left" id="responsabilidad-civil"></h6>
                                     </div>
                                 </div>
-                                <div class="pt-2">
+                                <div class="pt-4">
                                     <div class="parametros-title">Deducible en UF
                                         <a href="" class="showTooltip">
-                                            <img src="./assets/img/informacion-icon.svg" width="25" height="25" class="img-fluid" id="info" alt="Responsive image">
+                                            <img src="./assets/img/informacion-icon.svg" width="20" height="20" class="img-fluid" id="info" alt="Responsive image">
                                             <span id="some-element">
-                                                Un mayor daño puede ser fácilmente reparado en 30 días. Para facilitar tu movilidad, te recomendamos tomar este periodo
-                                                de cobertura de un auto de reemplazo.
+                                                El deducible es la cantidad de dinero que deberás pagar en caso de que el vehículo asegurado sufra algún daño.
                                             </span>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="row mt-2 mb-4">
-                                    <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-lg-6 parametros-container">
                                         <div class="slider3" id="double-label-slider"></div>
                                     </div>
                                     <div class="col-lg-6">
-                                        <h6 class="my-3 text-center" id="deduciblesUF"></h6>
+                                        <h6 class="mt-4 text-left" id="deduciblesUF"></h6>
                                     </div>
                                 </div>
                                 <!--Card - grilla de precios-->
                                 <div class="row">
-                                    <div class="col-lg-12 pt-3">
+                                    <div class="col-lg-12 mt-5">
+                                        <hr class="linea-division__seccion">
                                         <div class="planesgrilla-container d-flex justify-content-between">
-                                            <h4>Desea ver comparación de tarifas</h4>
+                                            <h4>Deseas ver comparación de tarifas</h4>
                                             <label class="switch">
                                                 <input type="checkbox" class="ver-tarifas">
                                                 <span class="slider-switch round" id="switch"></span>
@@ -192,7 +208,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-12 d-flex justify-content-center">
+                                <div class="col-xl-12 d-flex justify-content-center">
                                     <table class="table table-responsive table-prices" id="table-prices__caminoinicial">
                                         <thead>
                                             <tr>
@@ -215,7 +231,8 @@
                                                 <td id="firstRow3">$41.406</td>
                                                 <td id="firstRow4">$43.389</td>
                                             </tr>
-                                            <tr>
+                                            <!--Nota: Debe cambiar en relación al tipo de pago seleccionado: es decir se muestra las filas correspondientes al tipo de pago seleccionado arriba-->
+                                            <!-- <tr>
                                                 <th scope="row">Aviso de vencimiento</th>
                                                 <td id="secondRow1">$35.805</td>
                                                 <td class="showTooltiptable" id="secondRow2">
@@ -224,8 +241,9 @@
                                                     </span> $41.406 </td>
                                                 <td id="secondRow3">$41.140</td>
                                                 <td id="secondRow4">$43.768</td>
-                                            </tr>
-                                            <tr>
+                                            </tr> -->
+                                            <!--Nota: Debe cambiar en relación al tipo de pago seleccionado: es decir se muestra las filas correspondientes al tipo de pago seleccionado arriba-->
+                                            <!-- <tr>
                                                 <th scope="row">Pago de contado</th>
                                                 <td id="thirdRow1">$260.407</td>
                                                 <td id="thirdRow2">$261.268</td>
@@ -235,16 +253,20 @@
                                                         Podrías obtener un 15% pagando al contado
                                                     </span> $522.474</td>
                                                 <td id="thirdRow4">$622.267</td>
-                                            </tr>
+                                            </tr> -->
                                         </tbody>
                                     </table>
+                                </div>
+                                <div class="continuar-eligeplan d-flex justify-content-end">
+                                    <a href="#" class="card-link continuar text-uppercase mr-2" id="continuar_eligeplan">Continuar</a>
+                                    <img src="./assets/img/continuar-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--Container - completar datos del vehículo-->
-                <div class="container completar-datos__vehiculo px-5 mt-3">
+                <div class="container completar-datos__vehiculo container-cards mt-4">
                     <div class="card card-open__shadow d-flex" id="completar-datos-vehiculo__sinpatente">
                         <div class="d-flex justify-content-between container-title">
                             <h3 id="titleDatosContratante5" class="card-title card_title__close">2.2 Completar datos del vehículo</h3>
@@ -254,31 +276,34 @@
                         </div>
                         <div class="card-body completar-datos__vehículo__sinpatente">
                             <h4 class="pt-3 pb-2 subtitle">Datos del vehículo</h4>
-                            <div class="row py-2 patente_container">
+                            <div class="row py-3 patente_container">
                                 <!--Container - Resumen datos de patente-->
                                 <div class="col-lg-3 col-6 marca_container">
                                     <div class="patente_title">Marca</div>
-                                    <div>Seat</div>
+                                    <div class="datos">Seat</div>
                                 </div>
                                 <div class="col-lg-3 col-6 ">
                                     <div class="patente_title">Modelo</div>
-                                    <div>Leon</div>
+                                    <div class="datos">Leon</div>
                                 </div>
                                 <div class="col-lg-3 col-6 ">
                                     <div class="patente_title">Año</div>
-                                    <div>2016</div>
+                                    <div class="datos">2016</div>
                                 </div>
                                 <div class="col-lg-3 col-6 ">
                                     <div class="patente_title">Tipo de vehículo</div>
-                                    <div>Sedán</div>
+                                    <div class="datos">Sedán</div>
                                 </div>
                             </div>
                             <!--Card - Seleccion tipo de auto-->
-                            <div class="mt-3">
-                                <div class="d-flex pt-3 info-nuevo align-items-center">
-                                    <img src="./assets/img/info-default-icon.svg" width="15" height="15" class="img-fluid" id="info" alt="Responsive image">
-                                    <div class="pl-1 pr-2">¿Cuando se considera un auto nuevo?</div>
-                                    <a href="#" class="ver-mas" id="ver-vehiculo-nuevo__info">Leer más</a>
+                            <h4 class="pt-4 pb-2 subtitle">Escoja si su auto es nuevo o usado.</h4>
+                            <!--Info - Cuando se considera un auto nuevo -->
+                            <div class="mt-2">
+                                <div class="d-flex pt-2 info-nuevo align-items-center">
+                                    <img src="./assets/img/info-default-icon.svg" width="18" height="18" class="img-fluid" id="info" alt="Responsive image">
+                                    <div class="pl-1">¿Cuando se considera un auto nuevo?
+                                        <a href="#" class="ver-mas" id="ver-vehiculo-nuevo__info">Leer más</a>
+                                    </div>
                                 </div>
                                 <div class="verinfo-nuevo mt-2" id="vehiculo-nuevo__info">
                                     <p>Una vez contratado el seguro, será exclusiva responsabilidad del asegurado realizar la
@@ -289,12 +314,11 @@
                                         del bien aseguradoo cuando la inspección no se realice dentro del plazo otorgado.</p>
                                 </div>
                             </div>
-                            <h6 class="card-subtitle description_input mt-2 mb-2">Por favor escoja si su auto es nuevo o usado.</h6>
 
                             <div class="tipodeauto_container mt-1">
                                 <fieldset class="form-group">
                                     <div class="row">
-                                        <div class="col-md-3 col-12">
+                                        <div class="col-md-12 col-xs-12">
                                             <ul class="list-radio2">
                                                 <li>
                                                     <input type="radio" class="form-check-input nuevo-check" name="optionsRadios2" id="c-option" value="option1" onclick="show1()">
@@ -303,7 +327,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="col-md-9 col-12">
+                                        <div class="col-md-12 col-xs-12">
                                             <ul class="list-radio2">
                                                 <li>
                                                     <input type="radio" class="form-check-input usado-check" name="optionsRadios2" id="d-option" value="option2" checked onclick="show2()">
@@ -321,24 +345,31 @@
                             <div class="container-inputs">
                                 <div class="row hide" id="usado">
                                     <div class="col-lg-12 container-inputitem">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="patenteInput" aria-describedby="patente" placeholder="FF AA DD" required>
-                                            <label class="col-form-label form-control-label">Patente</label>
-                                            <span class="form-control-feedback"></span>
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label for="help1">
+                                                Patente
+                                            </label>
+                                            <input type="text" id="help1" class="form-control" placeholder="FF AA DD">
                                         </div>
                                     </div>
                                     <div class="col-lg-12 container-inputitem">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="nummotorInput" aria-describedby="numero-motor" placeholder="xxxxxx" required>
-                                            <label class="col-form-label form-control-label">Número de Motor</label>
-                                            <span class="form-control-feedback"></span>
+                                        <div class="col-lg-12 container-inputitem">
+                                            <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                                <label for="help1">
+                                                    Número de motor
+                                                </label>
+                                                <input type="text" id="help1" class="form-control" placeholder="xxxxxx">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 container-inputitem">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="numChasis" aria-describedby="numero-chasis" placeholder="xxxxxx" required>
-                                            <label class="col-form-label form-control-label">Número de Chasis</label>
-                                            <span class="form-control-feedback"></span>
+                                        <div class="col-lg-12 container-inputitem">
+                                            <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                                <label for="help1">
+                                                    Número de Chasis
+                                                </label>
+                                                <input type="text" id="help1" class="form-control" placeholder="xxxxxx">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -346,59 +377,54 @@
                                     <div class="col-lg-12 container-inputitem">
                                         <label class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="patenteOption">
-                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-label"></span>
                                             <span class="custom-control-description">Patente</span>
                                         </label>
                                     </div>
-                                    <div class="col-lg-12 container-inputitem" id="patenteOptioncontent">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="patenteInput" aria-describedby="patente" placeholder="FF AA DD" required>
-                                            <label class="col-form-label form-control-label">Patente</label>
-                                            <span class="form-control-feedback"></span>
+                                    <div class="col-lg-12" id="patenteOptioncontent">
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label for="help1">
+                                                Patente
+                                            </label>
+                                            <input type="text" id="help1" class="form-control" placeholder="FF AA DD">
+                                            <!-- <p class="help-block"> Help text </p> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 container-inputitem">
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label for="help1">
+                                                Número de motor
+                                            </label>
+                                            <input type="text" id="help1" class="form-control" placeholder="xxxxxx">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 container-inputitem">
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label for="help1">
+                                                Número de Chasis
+                                            </label>
+                                            <input type="text" id="help1" class="form-control" placeholder="xxxxxx">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 container-inputitem ">
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label for="help1">
+                                                Número de factura
+                                            </label>
+                                            <input type="text" id="help1" class="form-control" placeholder="xxxxxx">
                                         </div>
                                     </div>
                                     <div class="col-lg-12 container-inputitem ">
                                         <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="nummotornuevoInput" aria-describedby="numero-motor" placeholder="xxxxxx" required>
-                                            <label class="col-form-label form-control-label">Número de Motor</label>
-                                            <span class="form-control-feedback"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 container-inputitem ">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="numChasisnuevo" aria-describedby="numero-chasis" placeholder="xxxxxx" required>
-                                            <label class="col-form-label form-control-label">Número de Chasis</label>
-                                            <span class="form-control-feedback"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 container-inputitem ">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="numFacturaInput" aria-describedby="numero-factura" placeholder="xxxxxx" required>
-                                            <label class="col-form-label form-control-label">Número de Fáctura</label>
-                                            <span class="form-control-feedback"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 container-inputitem ">
-                                        <div class="form-group has-float-label">
-                                            <!-- <input type="text" class="form-control" id="fechafacturaInput" aria-describedby="fechafactura-help" placeholder="xxxxxx"
-                                                required>
-                                            <label class="col-form-label form-control-label">Fecha de Factura</label>
-                                            <input type="text" id="datepicker"> -->
-                                            <!-- <div class="form-item">
-                                                <label>Depart on</label>
-                                                <span class="fontawesome-calendar"></span>
-                                                <input class="input-sm form-control" type="text" id="start-date" name="start" placeholder="Select depart date" data-date-format="DD, MM d">
-                                                <span class="date-text date-depart"></span>
-                                            </div> -->
-                                            <div class="formInput dateSelector">
-                                                <input type='text' name='fechaFacturacion' id='hbdsdf' placeholder='Fecha de facturación' />
+                                            <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                                <label class="control-label" for="regular1">Fecha de facturación</label>
+                                                <input type="text" class="form-control" id="datepicker-view-mode">
                                             </div>
-
                                         </div>
                                     </div>
                                     <div class="col-lg-12 d-flex container-inputitem">
                                         <div class="pr-2">
-                                            <h6 class="card-subtitle description_input py-2">Adjuntar la factura o número de despacho</h6>
+                                            <div class="card-subtitle py-2">Adjuntar la factura o número de despacho (JPG, PNG, PDF).</div>
                                         </div>
                                         <div class="">
                                             <input type="file" name="file-3[]" id="file-3" class="inputfile inputfile-3" data-multiple-caption="{count} files selected"
@@ -409,11 +435,17 @@
                                                 </svg>
                                             </label>
                                         </div>
-                                        <!-- <div class="adjunto-ready">
-                                            <img src="assets/img/check-green-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Archivo subido
-                                            <h6 class="card-subtitle description_input py-2">Archivo subido</h6>
-                                        </div> -->
                                     </div>
+                                    <!--Mensaje de validacion de carga de archivo incorrecto-->
+                                    <!-- <div class="d-flex pt-3 pl-3 adjunto-mensaje align-items-center">
+                                        <img src="./assets/img/informacion-icon.svg" width="18" height="18" class="img-fluid" id="info" alt="Responsive image">
+                                        <div class="card-subtitle pl-1">Archivo adjuntado no corresponde al formato aceptado.</div>
+                                    </div> -->
+                                    <!--Mensaje de validacion de carga de archivo correcto-->
+                                    <!-- <div class="d-flex pt-3 pl-3 adjunto-mensaje align-items-center">
+                                        <img src="./assets/img/check-green-icon.svg" width="18" height="18" class="img-fluid" id="info" alt="Responsive image">
+                                        <div class="card-subtitle pl-1">Archivo subido</div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="continuar-datosvehiculos__patente d-flex justify-content-end">
@@ -424,7 +456,7 @@
                     </div>
                 </div>
                 <!--Container - completar datos personales-->
-                <div class="container completar-datos__direccion px-5 mt-3">
+                <div class="container container-cards completar-datos__direccion mt-4">
                     <div class="card card-open__shadow d-flex" id="completar-datos-direccion__sinpatente">
                         <div class="d-flex justify-content-between container-title">
                             <h3 id="titleDatosContratante3" class="card-title card_title__close">2.3 Completar datos personales</h3>
@@ -436,69 +468,75 @@
                         <!-- Nota: Estos datos son cuando no es el dueño-->
                         <div class="card-body completar-datos-personales__sinpatente">
                             <h4 class="pt-2">Datos del dueño</h4>
-                            <div class="row py-2 patente_container">
+                            <div class="row py-3 patente_container">
                                 <div class="col-lg-3 col-6 marca_container">
                                     <div class="patente_title">Rut</div>
-                                    <div>12.234.213-1</div>
+                                    <div class="datos">12.234.213-1</div>
                                 </div>
                                 <div class="col-lg-3 col-6">
                                     <div class="patente_title">Nombre</div>
-                                    <div>Cecilia</div>
+                                    <div class="datos">Cecilia</div>
                                 </div>
                                 <div class="col-lg-3 col-6">
                                     <div class="patente_title">Apellido Paterno</div>
-                                    <div>Bermúdez</div>
+                                    <div class="datos">Bermúdez</div>
                                 </div>
                                 <div class="col-lg-3 col-6">
                                     <div class="patente_title">Apellido Materno</div>
-                                    <div>Perez</div>
+                                    <div class="datos">Perez</div>
                                 </div>
                             </div>
                             <h6 class="pt-3 pb-2">Por favor complete los siguientes datos.</h6>
                             <div class="container-inputs">
                                 <div class="row">
-                                    <!-- <div class="col-lg-12 container-inputitem">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="apematernoduenoInput" aria-describedby="apellido" placeholder="Perez" required>
-                                            <label class="col-form-label form-control-label">Apellido Materno</label>
-                                        </div>
-                                    </div> -->
                                     <div class="col-lg-12 container-inputitem">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="correoduenoInput" aria-describedby="email-help" placeholder="jaded676@yahoo.com"
-                                                required>
-                                            <label class="col-form-label form-control-label">Correo</label>
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label for="help1">
+                                                Correo
+                                            </label>
+                                            <input type="text" id="help1" class="form-control" placeholder="jaded676@yahoo.com">
                                         </div>
                                     </div>
                                     <div class="col-lg-12 container-inputitem">
-                                        <label id="img_category_label" class="field" for="img_category" data-value="">
-                                            <span>Comuna</span>
-                                            <div id="img_category" class="psuedo_select" name="img_category">
-                                                <span class="selected"></span>
-                                                <ul id="img_category_options" class="options">
-                                                    <li class="option" data-value="commercial">Providencia</li>
-                                                    <li class="option" data-value="residential">Santiago</li>
-                                                </ul>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="col-lg-6 container-inputitem">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="calleduenoInput" aria-describedby="calle-help" placeholder="San Francisco" required>
-                                            <label class="col-form-label form-control-label">Calle</label>
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label>Comuna</label>
+                                            <select class="select-with-search form-control pmd-select2">
+                                                <option></option>
+                                                <option>Santiago</option>
+                                                <option>Providencia</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 container-inputitem">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="numduenoInput" aria-describedby="numero-help" placeholder="270" required>
-                                            <label class="col-form-label form-control-label">Número</label>
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label for="help1">
+                                                Calle
+                                            </label>
+                                            <input type="text" id="help1" class="form-control" placeholder="San Francisco">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 container-inputitem">
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label for="help1">
+                                                Número
+                                            </label>
+                                            <input type="text" id="help1" class="form-control" placeholder="270">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-lg-offset-6 container-inputitem">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="departamentoduenoInput" aria-describedby="departamento-help" placeholder="17 11b"
-                                                required>
-                                            <label class="col-form-label form-control-label">Departamento o Número de casa</label>
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label for="help1">
+                                                Departamento o casa
+                                            </label>
+                                            <input type="text" id="help1" class="form-control" placeholder="17 11b">
                                         </div>
                                     </div>
                                 </div>
@@ -506,35 +544,45 @@
                             <h4 class="pt-3 pb-2 subtitle">Datos del contratante</h4>
                             <div class="row">
                                 <div class="col-lg-12 container-inputitem">
-                                    <label id="img_category_label" class="field" for="img_category" data-value="">
-                                        <span>Comuna</span>
-                                        <div id="img_category" class="psuedo_select" name="img_category">
-                                            <span class="selected"></span>
-                                            <ul id="img_category_options" class="options">
-                                                <li class="option" data-value="commercial">Providencia</li>
-                                                <li class="option" data-value="residential">Santiago</li>
-                                            </ul>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="col-lg-6 container-inputitem">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="callecontratanteInput" aria-describedby="calle-help" placeholder="San Isidro"
-                                            required>
-                                        <label class="col-form-label form-control-label">Calle</label>
+                                    <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                        <label>Comuna</label>
+                                        <select class="select-with-search form-control pmd-select2">
+                                            <option></option>
+                                            <option>Santiago</option>
+                                            <option>Providencia</option>
+                                            <option>Option</option>
+                                            <option>Option</option>
+                                            <option>Option</option>
+                                            <option>Option</option>
+                                            <option>Option</option>
+                                            <option>Option</option>
+                                            <option>Option</option>
+                                            <option>Option</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 container-inputitem">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="numcontratanteInput" aria-describedby="numero-help" placeholder="191" required>
-                                        <label class="col-form-label form-control-label">Número</label>
+                                    <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                        <label for="help1">
+                                            Calle
+                                        </label>
+                                        <input type="text" id="help1" class="form-control" placeholder="San Francisco">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 container-inputitem">
+                                    <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                        <label for="help1">
+                                            Número
+                                        </label>
+                                        <input type="text" id="help1" class="form-control" placeholder="270">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-lg-offset-6 container-inputitem">
-                                    <div class="form-group has-float-label">
-                                        <input type="text" class="form-control" id="departamentocontratanteInput" aria-describedby="departamento-help" placeholder="1b"
-                                            required>
-                                        <label class="col-form-label form-control-label">Departamento o Número de casa</label>
+                                    <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                        <label for="help1">
+                                            Departamento o casa
+                                        </label>
+                                        <input type="text" id="help1" class="form-control" placeholder="17 11b">
                                     </div>
                                 </div>
                             </div>
@@ -547,7 +595,7 @@
                     </div>
                 </div>
                 <!--Container - inspeccion del vehículo-->
-                <div class="container inspeccion-vehiculo px-5 mt-3">
+                <div class="container inspeccion-vehiculo container-cards mt-4">
                     <div class="card card-open__shadow d-flex" id="seleccionar-inspeccion__sinpatente">
                         <div class="d-flex justify-content-between container-title">
                             <h3 id="titleDatosContratante4" class="card-title card_title__close">2.4 Inspección del vehículo</h3>
@@ -556,26 +604,26 @@
                             </a>
                         </div>
                         <div class="card-body seleccionar-inspeccion__sinpatente">
-                            <h6 class="pt-3 pb-2">Por favor complete los siguientes datos.</h6>
+                            <h6 class="pt-3 pb-2">Por favor completa los siguientes datos.</h6>
                             <fieldset class="form-group">
                                 <div class="row">
                                     <div class="col-12">
                                         <ul class="list-radio3">
                                             <li>
-                                                <input type="radio" class="form-check-input nuevo-check" name="optionsRadios3" id="f-option" value="option1" checked onclick="show6()">
-                                                <label for="f-option" class="form-check-label">Centro de inspección compañia.</label>
-                                                <div class="check3"></div>
+                                                <input type="radio" class="form-check-input usado-check" name="optionsRadios3" id="g-option" value="option1" checked onclick="show7()">
+                                                <label for="g-option" class="form-check-label">Inspección a domicilio.</label>
+                                                <div class="check3">
+                                                    <div class="inside2"></div>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-12">
                                         <ul class="list-radio3">
                                             <li>
-                                                <input type="radio" class="form-check-input usado-check" name="optionsRadios3" id="g-option" value="option2" onclick="show7()">
-                                                <label for="g-option" class="form-check-label">Inspección a domicilio.</label>
-                                                <div class="check3">
-                                                    <div class="inside2"></div>
-                                                </div>
+                                                <input type="radio" class="form-check-input nuevo-check" name="optionsRadios3" id="f-option" value="option2" onclick="show6()">
+                                                <label for="f-option" class="form-check-label">Centro de inspección compañia.</label>
+                                                <div class="check3"></div>
                                             </li>
                                         </ul>
                                     </div>
@@ -596,51 +644,63 @@
                                 <div class="container-inputs">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <label id="img_category_label" class="field firstSelect" for="img_category" data-value="">
-                                                <span>Comuna</span>
-                                                <div id="img_category" class="psuedo_select" name="img_category">
-                                                    <span class="selected"></span>
-                                                    <ul id="img_category_options" class="options">
-                                                        <li class="option" data-value="commercial">Providencia</li>
-                                                        <li class="option" data-value="residential">Santiago</li>
-                                                    </ul>
-                                                </div>
-                                            </label>
+                                            <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                                <label>Comuna</label>
+                                                <select class="select-with-search form-control pmd-select2">
+                                                    <option></option>
+                                                    <option>Santiago</option>
+                                                    <option>Providencia</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                </select>
+                                            </div>
                                         </div>
                                         <div class="col-lg-12 container-inputitem">
-                                            <label id="img_category_label" class="field secondSelect" for="img_category" data-value="">
-                                                <span>Sucursal</span>
-                                                <div id="img_category" class="psuedo_select" name="img_category">
-                                                    <span class="selected"></span>
-                                                    <ul id="img_category_options" class="options">
-                                                        <li class="option" data-value="commercial">Providencia</li>
-                                                        <li class="option" data-value="residential">Santiago</li>
-                                                    </ul>
-                                                </div>
-                                            </label>
+                                            <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                                <label>Comuna</label>
+                                                <select class="select-with-search form-control pmd-select2">
+                                                    <option></option>
+                                                    <option>Santiago</option>
+                                                    <option>Providencia</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                    <option>Option</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <h6 class="py-2">Los datos de contacto para la inspección serian:</h6>
                                 <div class="row patente_container pb-2">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6 col-sm-6">
                                         <div class="patente_title">Dirección</div>
-                                        <div>Maipón</div>
+                                        <div class="datos">Maipón</div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6 col-sm-6">
                                         <div class="patente_title">Teléfono de contacto</div>
-                                        <div>483 42222658</div>
+                                        <div class="datos">483 42222658</div>
                                     </div>
                                 </div>
                                 <div class="row patente_container">
                                     <div class="col-lg-6 col-lg-offset-6">
                                         <div class="patente_title">Horarios</div>
-                                        <div>Lunes-Jueves 08:30-13:30 14:30 -18:30 </div>
-                                        <div>Lunes-Viernes 08:30-13:30 14:30 -16:00 </div>
+                                        <div class="datos">Lunes-Jueves 08:30-13:30 14:30 -18:30 </div>
+                                        <div class="datos">Lunes-Viernes 08:30-13:30 14:30 -16:00 </div>
                                     </div>
                                     <div class="col-lg-6 col-lg-offset-6">
                                         <div class="patente_title">Correo</div>
-                                        <div>daniela.pinto@hdi.cl</div>
+                                        <div class="datos">daniela.pinto@hdi.cl</div>
                                     </div>
                                 </div>
                             </div>
@@ -660,193 +720,223 @@
                                 <div class="row patente_container py-2">
                                     <div class="col-lg-6">
                                         <div class="patente_title">Dirección</div>
-                                        <div>Las Condes 142, Santiago</div>
+                                        <div class="datos">Las Condes 142, Santiago</div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="patente_title">Teléfono de contacto</div>
-                                        <div>+56 9 45820603</div>
+                                        <div class="datos">+56 9 45820603</div>
                                     </div>
                                 </div>
                             </div>
                             <div id="inspeccion-domicilio__edicion">
                                 <div class="row">
                                     <div class="col-lg-12 container-inputitem">
-                                        <label id="img_category_label" class="field" for="img_category" data-value="">
-                                            <span>Comuna</span>
-                                            <div id="img_category" class="psuedo_select" name="img_category">
-                                                <span class="selected"></span>
-                                                <ul id="img_category_options" class="options">
-                                                    <li class="option" data-value="commercial">Providencia</li>
-                                                    <li class="option" data-value="residential">Santiago</li>
-                                                </ul>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="col-lg-6 container-inputitem">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="callecontratanteInput" aria-describedby="calle-help" placeholder="San Isidro"
-                                                required>
-                                            <label class="col-form-label form-control-label">Calle</label>
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label>Comuna</label>
+                                            <select class="select-with-search form-control pmd-select2">
+                                                <option></option>
+                                                <option>Santiago</option>
+                                                <option>Providencia</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                                <option>Option</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 container-inputitem">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="numcontratanteInput" aria-describedby="numero-help" placeholder="xxxxxx" required>
-                                            <label class="col-form-label form-control-label">Número</label>
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label for="help1">
+                                                Calle
+                                            </label>
+                                            <input type="text" id="help1" class="form-control" placeholder="San Francisco">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 container-inputitem">
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label for="help1">
+                                                Número
+                                            </label>
+                                            <input type="text" id="help1" class="form-control" placeholder="270">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-lg-offset-6 container-inputitem">
-                                        <div class="form-group has-float-label">
-                                            <input type="text" class="form-control" id="departamentocontratanteInput" aria-describedby="departamento-help" placeholder="xxxxxx"
-                                                required>
-                                            <label class="col-form-label form-control-label">Departamento o Número de casa</label>
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label for="help1">
+                                                Departamento o casa
+                                            </label>
+                                            <input type="text" id="help1" class="form-control" placeholder="17 11b">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="hide" id="autoInspeccion">
-                                <p>Le enviaremos los pasos a seguir por email.</p>
+                                <p>Realiza tú mismo la inspección de tu vehículo a través de nuestra aplicación móvil</p>
+                            </div>
+
+                            <div class="continuar-eligeplan d-flex justify-content-end">
+                                <a href="#" class="card-link continuar text-uppercase mr-2" id="continuar_inspeccion">Continuar</a>
+                                <img src="./assets/img/continuar-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image">
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--Container - botones principales-->
-                <div class="container d-flex justify-content-between mt-4 px-5">
+                <div class="container d-flex justify-content-between mt-4 px-5 leftExplorer">
                     <a href="2-a.html" class="button_back">
                         <img src="./assets/img/back_icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> Volver</a>
-                    <a href="#" class="button-primary" id="contratar" value="Redirect" onclick="DelayRedirect3()">Contratar</a>
+                    <a href="2-c.html" class="button-primary" id="contratar">Contratar</a>
+
                 </div>
             </div>
             <!-- Conteiner derecho -->
-            <div class="col-lg-6 right-container">
+            <div class="col-xl-6 col-lg-12 right-container">
                 <!-- Conteiner titulo secundario -->
                 <div class="container">
-                    <h2 class="text-center mt-4">Las Mejores Tarifas para ti</h2>
+                    <h2 class="text-center my-5">Los mejores productos para ti</h2>
                 </div>
                 <!-- Conteiner Planes Sugeridos -->
                 <!-- Nota: Solo un plan es seleccionable a la vez -->
                 <!-- Nota: Agregar a las cifras los puntos de miles (Solo se estaba simulando que cambiaba las tarifas y por eso no se separo en miles)-->
                 <div class="container planes-container">
-                    <div class="row mx-4">
+                    <div class="row">
                         <div class="col-lg-4 planes">
-                            <div class="card card-planes plan-sugerido__2" id="plan-sugerido3_sinpatente">
-                                <div class="card-header__plansugerido1 text-center py-2">3ra sugerida</div>
-                                <div class="card-block text-center py-2">
+                            <div class="card plan-sugerido__2 card-planes" id="plan-sugerido3_sinpatente">
+                                <div class="card-header text-center py-2">La más contratada</div>
+                                <div class="card-block text-center pt-3 pb-1 px-3">
                                     <div class="card-block__title" id="rightPAC_3rd">Pago automático PAT/PAC</div>
-                                    <!-- <div class="card-block__title">PAT/PAC</div> -->
-                                    <div class="card-text card-subtitle card-block__subtitle pt-3">1 cuota</div>
-                                    <div class="card-subtitle card-planes__precio">$260.406</div>
-                                    <div class="card-gift py-2 my-2">giftcard $15.000</div>
+                                    <!-- <div class="card-block__title"></div> -->
+                                    <div class="card-block__subtitle pt-2">12 cuotas</div>
+                                    <div class="card-planes__precio">$32.190</div>
                                 </div>
-                                <div class="list text-center mt-5">
-                                    <ul class="text-center list-parametros">
-                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Auto reemplazo
-                                            <p class="card-text card-textplanes__textdinamicos ">15</p>
+                                <div class="card-block text-center">
+                                    <div class="card-gift py-1">giftcard $15.000</div>
+                                </div>
+                                <div class="list text-center container-list-paramentros pt-1">
+                                    <!--Nota: Lo siguientes valores del plan son solo ejemplo -->
+                                    <ul class="list-parametros text-center">
+                                        <li class="list-parametros__item text-capitalize d-flex justify-content-between flex-row align-items-center text-left">Auto
+                                            <br> reemplazo
+                                            <p class="card-textplanes__textdinamicos">30 días</p>
                                         </li>
-                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center text-left list-parametros__item">Responsabilidad civil
-                                            <p class="card-text card-textplanes__textdinamicos">3000</p>
+                                        <li class="list-parametros__item text-capitalize d-flex justify-content-between flex-row align-items-center text-left">Responsabilidad
+                                            <br> civil
+                                            <p class="card-textplanes__textdinamicos"> 3000 UF</p>
                                         </li>
-                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Deducible
-                                            <p class="card-text card-textplanes__textdinamicos">5 UF</p>
+                                        <li class="list-parametros__item text-capitalize d-flex justify-content-between flex-row align-items-center">Deducible
+                                            <p class="card-textplanes__textdinamicos">0 UF</p>
                                         </li>
-                                        <li class="d-flex justify-content-center flex-row align-items-center list-parametros__item">
-                                            <a class="card-link detalle-planes" data-toggle="modal" data-target="#detalle-planes">ver detalle</a>
+                                        <li class="list-parametros__item d-flex justify-content-center flex-row align-items-center">
+                                            <a class="detalle-planes" data-toggle="modal" data-target="#detalle-planes">ver detalle</a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="text-center button-secundary__container">
-                                    <a href="#" class="btn button-secundary text-uppercase font-weight-bold" id="seleccionPlan3__sinpatente">Seleccionar</a>
+                                    <a href="#" class="btn button-secundary text-uppercase" id="seleccionPlan3__sinpatente">Seleccionar</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 planes">
                             <div class="card card-planes plan-sugerido__1" id="plan-sugerido1_sinpatente">
-                                <div class="card-header__plansugerido1 text-center py-2">1era sugerida</div>
-                                <div class="card-block text-center py-2">
+                                <div class="card-header text-center py-2">Tu selección</div>
+                                <div class="card-block text-center pt-3 pb-1 px-3">
                                     <div class="card-block__title" id="rightPAC_1st">Pago automático PAT/PAC</div>
-                                    <div class="card-text card-subtitle card-block__subtitle pt-3">1 cuota</div>
-                                    <div class="card-subtitle card-planes__precio" id="priceRight"></div>
-                                    <div class="card-gift py-2 my-2">giftcard $15.000</div>
+                                    <div class="card-block__subtitle pt-2">12 cuotas</div>
+                                    <!-- Nota: Agregar a las cifras los puntos de miles (Solo se estaba simulando que cambiaba las tarifas y por eso no se separo en miles)-->
+                                    <div class="card-planes__precio" id="priceRight"></div>
                                 </div>
-                                <div class="list text-center mt-5">
-                                    <ul class="text-center list-parametros">
-                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Auto reemplazo
-                                            <p class="card-text card-textplanes__textdinamicos" id="daysRight"> </p>
+                                <div class="card-block text-center">
+                                    <div class="card-gift py-1">giftcard $15.000</div>
+                                </div>
+                                <div class="container-list-paramentros text-center pt-1">
+                                    <ul class="list-parametros text-center">
+                                        <li class="list-parametros__item text-capitalize d-flex justify-content-between flex-row align-items-center text-left">Auto
+                                            <br> reemplazo
+                                            <p class="card-textplanes__textdinamicos" id="daysRight"> </p>
                                         </li>
-                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center text-left list-parametros__item">Responsabilidad civil
-                                            <p class="card-text card-textplanes__textdinamicos">3000</p>
+                                        <li class="list-parametros__item text-capitalize d-flex justify-content-between flex-row align-items-center text-left">Responsabilidad
+                                            <br> civil
+                                            <p class="card-textplanes__textdinamicos" id="responsabilidadRight"> UF</p>
                                         </li>
-                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Deducible
-                                            <p class="card-text card-textplanes__textdinamicos">5 UF</p>
+                                        <li class="list-parametros__item  text-capitalize d-flex justify-content-between flex-row align-items-center">Deducible
+                                            <p class="card-textplanes__textdinamicos" id="deducibleRight"> UF</p>
                                         </li>
-                                        <li class="d-flex justify-content-center flex-row align-items-center list-parametros__item">
-                                            <a class="card-link detalle-planes" data-toggle="modal" data-target="#detalle-planes">ver detalle</a>
+                                        <li class="list-parametros__item d-flex justify-content-center flex-row align-items-center">
+                                            <a class="detalle-planes" data-toggle="modal" data-target="#detalle-planes">ver detalle</a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="text-center button-secundary__container">
-                                    <a href="#" class="btn button-secundary text-uppercase font-weight-bold" id="seleccionPlan1__sinpatente">Seleccionar</a>
+                                <div class="button-secundary__container text-center">
+                                    <a href="#" class="btn button-secundary text-uppercase" id="seleccionPlan1__sinpatente">Seleccionar</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 planes">
                             <div class="card card-planes plan-sugerido__3" id="plan-sugerido2_sinpatente">
-                                <div class="card-header__plansugerido1 text-center py-2">2da sugerida</div>
-                                <div class="card-block text-center py-2">
+                                <div class="card-header text-center py-2">El precio más bajo</div>
+                                <div class="card-block text-center pt-3 pb-1 px-3">
                                     <div class="card-block__title" id="rightPAC_2nd">Pago automático PAT/PAC</div>
                                     <!-- <div class="card-block__title" id=""></div> -->
-                                    <div class="card-text card-subtitle card-block__subtitle pt-3">1 cuota</div>
-                                    <div class="card-subtitle card-planes__precio">$260.406</div>
-                                    <div class="card-gift py-2 my-2">giftcard $15.000</div>
+                                    <div class="card-block__subtitle pt-2">12 cuotas</div>
+                                    <div class="card-planes__precio">$31.590</div>
                                 </div>
-                                <div class="list text-center mt-5">
-                                    <ul class="text-center list-parametros">
-                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Auto reemplazo
-                                            <p class="card-text card-textplanes__textdinamicos">15</p>
+                                <div class="card-block text-center">
+                                    <div class="card-gift py-1">giftcard $15.000</div>
+                                </div>
+                                <div class="container-list-paramentros text-center pt-1">
+                                    <ul class="list-parametros text-center">
+                                        <li class="list-parametros__item text-capitalize d-flex justify-content-between flex-row align-items-center text-left">Auto
+                                            <br> reemplazo
+                                            <p class="card-textplanes__textdinamicos">15 días</p>
                                         </li>
-                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center text-left list-parametros__item">Responsabilidad civil
-                                            <p class="card-text card-textplanes__textdinamicos">3000</p>
+                                        <li class="list-parametros__item text-capitalize d-flex justify-content-between flex-row align-items-center text-left">Responsabilidad
+                                            <br> civil
+                                            <p class="card-textplanes__textdinamicos">1000 UF</p>
                                         </li>
-                                        <li class="text-capitalize d-flex justify-content-between flex-row align-items-center list-parametros__item">Deducible
-                                            <p class="card-text card-textplanes__textdinamicos">5 UF</p>
+                                        <li class="list-parametros__item text-capitalize d-flex justify-content-between flex-row align-items-center">Deducible
+                                            <p class="card-textplanes__textdinamicos">5 UF</p>
                                         </li>
-                                        <li class="d-flex justify-content-center flex-row align-items-center list-parametros__item">
-                                            <a class="card-link detalle-planes" data-toggle="modal" data-target="#detalle-planes">ver detalle</a>
+                                        <li class="list-parametros__item d-flex justify-content-center flex-row align-items-center">
+                                            <a class="detalle-planes" data-toggle="modal" data-target="#detalle-planes">ver detalle</a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="text-center button-secundary__container">
-                                    <a href="#" class="btn button-secundary text-uppercase font-weight-bold" id="seleccionPlan2__sinpatente">Seleccionar</a>
+                                <div class="button-secundary__container text-center">
+                                    <a href="#" class="btn button-secundary text-uppercase" id="seleccionPlan2__sinpatente">Seleccionar</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Conteiner Información (Seguro incluye) -->
-                    <div class="row mt-3">
-                        <div class="col-lg-12 seguro-incluye_info mt-2">
-                            <p class="text-center">Cotización válida 10 días corridos contados desde la fecha de hoy 06-01-2018.</p>
+                    <div class="row">
+                        <div class="col-lg-12 text-center seguro-incluye_info">
+                            Cotización válida por 10 días corridos contados desde la fecha de hoy 06-01-2018. Valores calculados a la UF de hoy 23-10-2017:
+                            $26.670. Conoce otros beneficios del seguro.
+                            <a data-toggle="modal" class="ver-mas" data-target="#beneficios-seguro">Leer más</a>
                         </div>
-                        <div class="col-lg-12 seguro-incluye_infomas">
+                        <!-- <div class="col-lg-12 seguro-incluye_infomas">
                             <ul>
-                                <!-- <li>El seguro que usted ha seleccionado es de 12 cuotas de U.F 1,55. ($41.406 IVA incluido).</li> -->
-                                <!-- <li>Calculados a la UF de hoy: $26.670.</li> -->
-                                <li>Conozca los beneficios del seguro.
+                                <li>Conoce otros beneficios del seguro.
                                     <a data-toggle="modal" class="ver-mas" data-target="#beneficios-seguro">Leer más</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <!-- Footer condiciones -->
                 <div class="col-lg-12 footer-condiciones">
                     <div class="d-flex justify-content-between pt-2" id="info-condiciones">
                         <div class="align-items-left iconoInfo-container">
-                            <img src="./assets/img/condiciones_icon.svg" width="25" height="25" class="img-fluid" alt="Responsive image">
-                            <span>Información</span>
+                            <img src="./assets/img/informacion-icon_white.svg" width="20" height="20" class="img-fluid" alt="Responsive image">
+                            <span>Información importante sobre la contratación de tu Seguro Automotriz</span>
                         </div>
-                        <div class="align-items-right">
-                            <a class="ver_detalle--buttom" id="ver-detalle">ver detalle
-                                <img src="./assets/img/ver-mas.svg" width="10" height="10" class="img-fluid ml-2 mr-2" alt="Responsive image">
+                        <div class="align-items-right pr-2">
+                            <a class="ver_detalle--buttom" id="ver-detalle">Leer más
+                                <!-- <img src="./assets/img/ver-mas.svg" width="10" height="10" class="img-fluid ml-2 mr-2" alt="Responsive image"> -->
                             </a>
                         </div>
                     </div>
@@ -882,8 +972,8 @@
                 <div>600 600 610</div>
             </div>
             <div class="col-lg-2 necesitas-ayuda_chat">
-                <img src="./assets/img/message-white-icon.svg" width="20" height="20" class="img-fluid" alt="Responsive image">
-                <div>¿Necesitas ayuda?</div>
+                <img src="./assets/img/WhatsApp-icon.svg" width="20" height="20" class="img-fluid" alt="Responsive image">
+                <div>+56 9 68352878</div>
             </div>
         </div>
     </footer>
