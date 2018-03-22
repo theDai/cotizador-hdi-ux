@@ -1,0 +1,55 @@
+/* Tool tips */
+
+#some-element {
+  border-radius: 4px;
+  background: $background-color-tooltips;
+  color: $white;
+  display: none;
+  font-size: $font-size-xs;
+  font-family: $font-family-base;
+  line-height: 1.5em;
+  margin-top: -130px;
+  padding: 1em;
+  z-index: 50;
+  width: 100%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3), 0px 0px 7px rgba(10, 10, 10, 0.2);
+  position: absolute;
+}
+.showTooltip:hover #some-element {
+  display: block;
+}
+.tooltips-table {
+  border-radius: 20px;
+  background: #2c2a3c;
+  color: $white;
+  display: none;
+  font-size: $font-size-sm;
+  font-family: $font-family-italic;
+  margin-top: -90px;
+  padding: 1.5em;
+  z-index: 50;
+  width: 40%;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3), 0px 0px 7px rgba(10, 10, 10, 0.2);
+  position: absolute;
+}
+.showTooltiptable:hover .tooltips-table {
+  display: block;
+}
+.inspeccion-vehiculo__domicilio {
+  &:hover {
+    color: $black;
+  }
+  &:active {
+    color: $black;
+  }
+}
+
+a.inspeccion-vehiculo__autoinspeccion {
+  &:hover {
+    color: $black;
+  }
+  &:active {
+    color: $black;
+  }
+}

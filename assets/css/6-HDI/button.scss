@@ -1,0 +1,147 @@
+/* Button Primary
+-------------------------------------------------- */
+.btn {
+  border: none;
+  &:focus {
+    color: $white;
+  }
+}
+button.btn {
+  background: none;
+  &:active {
+    color: $black;
+  }
+}
+.container-botonesprimarios {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+.button-primary {
+  background-size: 100% 100%;
+  font-family: $font-buttom-primary;
+  background-image: $background-color-buttom-primary;
+  box-shadow: $shadow-color-buttom-primary;
+  color: $white;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: $letter-spacing-button;
+  padding: 13px 36px;
+  border-radius: 50em;
+  transition: all 0.2s linear;
+  a#contratar,
+  a#cotizar,
+  a#pagar {
+    color: $white;
+  }
+  &:hover {
+    transition: all 200ms linear;
+    color: $white;
+    box-shadow: 0 3px 6px rgba(255, 111, 46, 0.3),
+      0 3px 6px rgba(255, 111, 46, 0.43);
+    text-decoration: none;
+  }
+  &:active {
+    color: $black;
+  }
+}
+
+.button-primary__inactivo {
+  background-size: 100% 100%;
+  font-family: $font-buttom-primary;
+  background-image: $white;
+  box-shadow: 8px 10px 20px 0px rgba(46, 61, 73, 0.15);
+  color: #dadada;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: $letter-spacing-button;
+  padding: 13px 36px;
+  border-radius: 50em;
+  transition: all 0.2s linear;
+  a#contratar,
+  a#cotizar,
+  a#pagar {
+    color: #dadada;
+  }
+  &:hover {
+    transition: all 200ms linear;
+    color: $font-color-buttom-primary-disable;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background: $white;
+    text-decoration: none;
+  }
+  &:focus {
+    transition: all 200ms linear;
+    color: $font-color-buttom-primary-disable;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background-image: $background-color-buttom-primary;
+  }
+  &:active {
+    transition: all 200ms linear;
+    color: $font-color-buttom-primary-disable;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background-image: $background-color-buttom-primary;
+  }
+}
+
+.button_back {
+  background-color: $background-color-buttom-back;
+  color: $font-buttom-color;
+  font-family: $font-buttom-primary;
+  border: none;
+  font-size: $font-size-buttonback;
+  &:hover {
+    text-decoration: none;
+    color: $black;
+  }
+}
+.button-secundary {
+  background-size: 100% 100%;
+  font-size: $font-size-buttonsecundary;
+  font-family: $font-buttom-primary;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: $letter-spacing-button;
+  padding: 13px 36px;
+  border: 0;
+  transition: all 0.2s linear;
+  a.button-secundary {
+    color: $gray-400;
+  }
+  &:hover {
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    color: $background-color-buttom-secundary;
+    font-size: $font-size-buttonsecundary;
+    border: 0;
+  }
+  &:active {
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    color: $white;
+    font-size: $font-size-buttonsecundary;
+    border: 0;
+  }
+}
+
+.button-secundary__container {
+  background: $background-color-buttom-secundary;
+  border-top: 1px solid #dadada;
+  &:hover {
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    color: white;
+  }
+  &:active {
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    color: white;
+  }
+}
+a.continuar {
+  color: $font-color-continuar;
+}

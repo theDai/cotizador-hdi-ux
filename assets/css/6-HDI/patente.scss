@@ -1,0 +1,93 @@
+/* 1-a
+-------------------------------------------------- */
+
+/* Datos de la Patente
+-------------------------------------------------- */
+
+.completado {
+  display: none;
+}
+
+a.editar-patente {
+  color: $font-color-active;
+  font-family: $font-family-base;
+  font-size: $font-size-small;
+  text-decoration: none;
+}
+a.editar-patente:hover {
+  color: $font-color-hover;
+}
+.patente_description {
+  font-family: $font-family-patente-description;
+  font-size: $font-size-small;
+  color: $font-color-disable-text;
+  border-bottom: 1px solid #dbe2e8;
+}
+
+.patente_description__editar {
+  font-family: $font-family-italic;
+  color: $font-color-disable-text;
+}
+.patente_container {
+  font-family: $font-family-italic;
+  color: $font-color-disable-text;
+}
+.patente_title {
+  color: $font-color-active-text;
+  font-family: $font-family-base;
+  font-size: $font-size-small;
+}
+
+.brand-container {
+  margin-left: 3em;
+  margin-top: 1.5em;
+}
+.continuar {
+  color: $font-color-continuar;
+  font-family: $font-family-buttoncontinuar;
+  font-size: $font-size-xs;
+  letter-spacing: $letter-spacing-regular;
+}
+.continuar:hover {
+  color: $font-color-hover;
+  font-family: $font-family-buttoncontinuar;
+  font-size: $font-size-xs;
+  letter-spacing: $letter-spacing-regular;
+}
+ul#pills-tab {
+  color: $font-color-tab;
+  font-family: $font-family-tab;
+  font-size: $font-size-small;
+  letter-spacing: $letter-spacing-regular;
+}
+.title-quecubre {
+  font-family: $font-weight-bold;
+  font-size: $font-size-base;
+  color: $font-color-tab;
+  letter-spacing: $letter-spacing-regular;
+  list-style: none;
+}
+/* Resumen Patente
+-------------------------------------------------- */
+
+p.datospatente-resumen__nombre {
+  font-family: $font-family-base;
+  color: $font-color-active;
+  margin-bottom: 0;
+}
+p.datospatente-resumen__descripcion {
+  font-family: $font-family-italic;
+  color: $font-color-active;
+}
+.pago-container {
+  padding-top: 2em;
+}
+a.badge {
+  font-size: $font-size-small;
+  font-family: $font-family-base;
+  outline: 0;
+  letter-spacing: $letter-spacing-regular;
+}
+a.badge:hover {
+  text-decoration: none;
+}

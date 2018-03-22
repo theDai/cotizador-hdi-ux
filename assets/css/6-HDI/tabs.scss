@@ -1,0 +1,85 @@
+/* Tab - Beneficios / Que Cubre
+-------------------------------------------------- */
+
+.card-beneficios {
+  letter-spacing: 0.01em;
+  font-size: 1.1em;
+  color: $gray-800;
+  font-family: $font-family-base;
+  box-shadow: $shadow-color-card-beneficios;
+  background-color: $white;
+  img.beneficios_icon {
+    background-image: linear-gradient(37deg, #50cc78 0%, #0fb660 100%);
+  }
+}
+.conteiner-card-beneficios {
+  margin-bottom: 1.3em;
+}
+.card-body {
+  padding: 0em 1.8em 1.5em 1.8em;
+  font-size: $font-size-sm;
+  letter-spacing: $letter-spacing-regular;
+}
+.card-body__resumen {
+  padding: 2em 1.8em 1.5em 1.8em;
+  font-size: $font-size-sm;
+  letter-spacing: $letter-spacing-regular;
+}
+.card-body__beneficios {
+  padding: 1em 1.5em 1em 1.5em;
+  font-size: $font-size-sm;
+  letter-spacing: $letter-spacing-regular;
+  height: 9.5em;
+}
+/* Tab - Que cubre */
+
+.tab-quecubre {
+  font-size: $font-size-xs;
+  color: $black;
+  font-family: $font-family-base;
+  letter-spacing: $letter-spacing-regular;
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+  background-color: $white;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  li.title-quecubre {
+    list-style: none;
+  }
+}
+
+a.nav-link.active.nav-link__active {
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #009c33;
+}
+a.nav-link.nav-link__noactive {
+  color: $gray-300;
+  border: none;
+}
+a.nav-link.nav-link__active {
+  color: $gray-300;
+}
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  color: $black;
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: $black;
+}
+.nav-link__noactive:hover {
+  color: $gray-300;
+}
+.info-quecubre {
+  letter-spacing: 0em !important;
+  color: $gray-300;
+}
+.info-quecubre:hover {
+  letter-spacing: 0em !important;
+  color: $gray-300;
+}
+a.nav-link.info-quecubre.active {
+  border-bottom: 2px solid $green;
+  font-size: $font-size-sm;
+  font-family: $font-family-base;
+}

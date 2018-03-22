@@ -1,0 +1,23 @@
+.nav-pills .nav-link {
+  border-bottom: solid 1px $gray-700;
+  color: $gray-800;
+  border-radius: 0em;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: $black;
+  border-bottom: solid 2px $green;
+}
+
+a#pills-profile-tab, #pills-home-tab {
+  font-size: $font-size-base;
+  letter-spacing: $letter-spacing-regular;
+  background: none;
+  &:hover {
+    color: $black;
+  }
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  border: none;
+  background: none;
+}

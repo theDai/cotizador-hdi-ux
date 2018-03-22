@@ -1,3 +1,35 @@
+/* Adjuntar */
+
+a#adjuntar-icon {
+  color: $gray-800;
+}
+
+.adjunto-mensaje {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.adjunto-mensaje {
+  color: $gray-800;
+  font-size: 1em;
+  letter-spacing: 0.04em;
+  line-height: 1.5em;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.75rem 0rem;
+}
+
+.inputfile-3 + label:focus {
+  outline: none;
+}
+.inputfile-3 + label:hover {
+  outline: none;
+}
+.inputfile-3 + label:active {
+  outline: none;
+}
 .inputfile {
   width: 0.1px;
   height: 0.1px;
@@ -6,12 +38,10 @@
   position: absolute;
   z-index: -1;
 }
-
 .inputfile + label {
   max-width: 80%;
   font-size: 1rem;
   /* 20px */
-  font-family: "hdi-gerling_sansregular";
   text-overflow: ellipsis;
   white-space: nowrap;
   cursor: pointer;
@@ -70,19 +100,19 @@
 .inputfile-2:focus + label,
 .inputfile-2.has-focus + label,
 .inputfile-2 + label:hover {
-  color: #000000;
+  color: $black;
 }
 
 /* style 3 */
 
 .inputfile-3 + label {
-  color: #848484;
+  color: $gray-700;
 }
 
 .inputfile-3:focus + label,
 .inputfile-3.has-focus + label,
 .inputfile-3 + label:hover {
-  color: #000000;
+  color: $black;
 }
 
 /* style 4 */

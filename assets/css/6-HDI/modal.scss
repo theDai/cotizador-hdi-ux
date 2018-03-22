@@ -1,0 +1,168 @@
+.modal-dialog.modal-lg {
+  -webkit-overflow-scrolling: touch;
+}
+.modal-open .modal {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Modal Lateral
+-------------------------------------------------- */
+
+.sidenav {
+  background-color: $background-color-sidenav;
+  width: 400px;
+  display: block;
+  position: fixed;
+  z-index: 2;
+  top: 25%;
+  left: 0%;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  color: $white;
+}
+.modal-title_slide {
+  font-family: $black;
+  letter-spacing: $letter-spacing-large;
+  font-size: $font-size-modalsidenav;
+  color: $white;
+}
+.modal-text {
+  letter-spacing: $letter-spacing-regular;
+  font-size: 1.1em;
+  color: $white;
+}
+.sideNav_open {
+  display: block !important;
+  left: 50%;
+  transition: 1s;
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.4);
+}
+.sidenav a:hover {
+  color: $white;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 11px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: $white;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 0.9em;
+  color: $white;
+  display: block;
+  transition: 0.3s;
+}
+
+.modal-title {
+  font-family: $font-weight-bold;
+  letter-spacing: 0.02em;
+  font-size: 1.3em;
+  color: $black;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.modal-footer {
+  font-size: 0.1em;
+  color: $gray-700;
+  border: none;
+  background: $gray-500;
+}
+
+/* Modal Infomacion
+-------------------------------------------------- */
+
+.modal-header {
+  background: $background-color-modal-header;
+}
+.modal-body {
+  background: $background-color-modal-body;
+  color: $gray-800;
+  line-height: 1.8em;
+  font-size: $font-size-sm;
+  letter-spacing: $letter-spacing-large;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.modal-subtitle {
+  color: $black;
+}
+
+.button-aceptar {
+  border-style: none;
+  color: $gray-800;
+  border: 0;
+  background: none;
+  &:hover {
+    color: $black;
+  }
+}
+.button-aceptar:active {
+  border-style: none;
+  outline: 0;
+  color: $black;
+}
+.btn:focus,
+.btn.focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(251, 251, 252, 0);
+  box-shadow: 0 0 0 0.2rem rgba(251, 251, 252, 0);
+  color: $black;
+}
+
+a.ver-mas {
+  color: $link-color;
+  font-size: $font-size-xs;
+}
+a.ver-mas:active {
+  color: $black;
+  // box-shadow: 0 0 0 0.2rem rgba(251, 251, 252, 0);
+}
+a.ver-mas:focus {
+  outline: 0;
+  color: $link-color;
+  text-decoration: none;
+}
+
+// a:focus a:hover {
+//   -webkit-box-shadow: 0 0 0 0.2rem rgba(251, 251, 252, 0);
+//   box-shadow: 0 0 0 0.2rem rgba(251, 251, 252, 0);
+// }
+
+/* Modal preguntas frecuentes
+-------------------------------------------------- */
+
+a.preguntas-frecuentes {
+  cursor: pointer;
+}
+a.preguntas-frecuentes-title {
+  text-decoration: none;
+  color: $black;
+}
+a.preguntas-frecuentes-title:hover {
+  text-decoration: none;
+  color: $black;
+}
+.item-preguntas-frecuentes {
+  border: 1px solid $gray-300;
+  padding: 1em;
+  margin: 0.5em;
+}

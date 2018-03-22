@@ -1,0 +1,93 @@
+/* Switch
+-------------------------------------------------- */
+
+.slider-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+}
+.switch input {
+  display: none;
+}
+.slider-switch {
+  position: relative;
+  cursor: pointer;
+  top: -3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $gray-400;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider-switch:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 3.5px;
+  background-color: $white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider-switch {
+  background-color: #009c33;
+}
+input:focus + .slider-switch {
+  box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider-switch:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider-switch.round {
+  border-radius: 34px;
+}
+.slider-switch.round:before {
+  border-radius: 50%;
+}
+
+/* Tabla comparativa - precios
+-------------------------------------------------- */
+td.table-hover:hover {
+  background: #eee;
+}
+.table-prices {
+  font-family: $font-family-base;
+  font-size: 0.83em;
+  letter-spacing: $letter-spacing-regular;
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-400;
+  }
+}
+.table th,
+.table td {
+  padding: 1.5em;
+}
+
+.table thead th {
+  border-bottom: 1px solid $gray-500;
+}
+.table th,
+.table td {
+  border-bottom: 1px solid $gray-500;
+}
+.table th,
+.table td {
+  border-top: 1px solid $gray-500;
+}
+td {
+  cursor: pointer;
+}

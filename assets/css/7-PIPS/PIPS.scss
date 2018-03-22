@@ -139,7 +139,7 @@
   text-align: center;
   font-size: 12px;
   opacity: 0;
-  color: #000000;
+  color: $black;
   -webkit-transition-property: opacity, top, visibility;
   transition-property: opacity, top, visibility;
   -webkit-transition-timing-function: ease-in;
@@ -310,7 +310,7 @@
         the new label colours shown */
 .ui-slider-pips [class*="ui-slider-pip-initial"] {
   font-weight: bold;
-  color: #000000;
+  color: $black;
 }
 
 .ui-slider-pips .ui-slider-pip-initial-2 {
@@ -319,7 +319,7 @@
 
 .ui-slider-pips [class*="ui-slider-pip-selected"] {
   font-weight: bold;
-  color: #000000;
+  color: $black;
 }
 
 .ui-slider-pips .ui-slider-pip-inrange {

@@ -1,33 +1,51 @@
 //====================================
 // Global Imports
 //====================================
-
-// 1- Import bootstrap framework
-@import "1-frameworks/index";
-
-// 2 - Import plugins
-@import "2-plugins/index";
-
+// 1- Variables HDI
+@import "1-variables/HDI-variables";
+// 2- Import bootstrap framework
+@import "2-frameworks/bootstrap";
 // 3 - Import base style, custom variables and mixins
 @import "3-base/index";
-
 // 4 - Import modules
 @import "4-modules/index";
-
 // 5 - Import layout  styles
 @import "5-layout/index";
-
-// 6 - Import hdi styles
+// 6 - Import HDI styles
 @import "6-HDI/hdi";
+@import "6-HDI/home";
+@import "6-HDI/footer";
+@import "6-HDI/radiobutton";
+@import "6-HDI/alert";
+@import "6-HDI/modal";
+@import "6-HDI/tooltips";
+@import "6-HDI/loading";
+@import "6-HDI/exito";
+@import "6-HDI/menu";
+@import "6-HDI/card";
+@import "6-HDI/card-planes";
+@import "6-HDI/form";
+@import "6-HDI/slider";
+@import "6-HDI/nav";
+@import "6-HDI/tabs";
+@import "6-HDI/button";
+@import "6-HDI/tabla-precios";
+@import "6-HDI/cardcollapse-prototipo";
 
 // 7 - Import PIPS styles
 @import "7-PIPS/PIPS";
-
 // 8 - Import jqueryUI styles
 @import "8-jqueryUI/jqueryUI-v1.10.4";
-
 // 9 - Choose Folder Input
-@import "9-Adjuntar/adjuntar";
-
+@import "9-adjuntar/adjuntar";
 // 10 - Slick slider
 @import "10-slick/slick";
+// 10 - Propeller - Input, Select, Date
+@import "11-propeller/select2.min";
+@import "11-propeller/select2-bootstrap";
+@import "11-propeller/textfield";
+@import "11-propeller/pmd-select2";
+@import "11-propeller/google-icons";
+@import "11-propeller/bootstrap-datetimepicker";
+@import "11-propeller/pmd-datetimepicker";
+@import "http://fonts.googleapis.com/icon?family=Material+Icons";

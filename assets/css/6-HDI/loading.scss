@@ -1,0 +1,44 @@
+#loadingImg {
+  display: none;
+}
+
+#404Img {
+  display: block !important;
+}
+
+.loadingImg {
+  display: block !important;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background-loading {
+  background: rgba(0, 0, 0, 0.85);
+  font-size: 1.6em;
+  color: $white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+}
+
+.background-loading__404 {
+  background: rgba(0, 0, 0, 0.85);
+  font-size: 1.2em;
+  line-height: 1.6em;
+  color: $white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+}
+.container-mensaje {
+    width: 80%;
+  .mensaje-loading {
+    padding-left: 0.5em;
+  }
+}
+
+

@@ -1,0 +1,58 @@
+/* Card
+-------------------------------------------------- */
+.card {
+  border: 0;
+  background-color: $white;
+}
+.card-open__shadow {
+  box-shadow: $shadow-color-card-open;
+}
+.card-closed__shadow {
+  box-shadow: $shadow-color-card-close;
+}
+.container-title {
+  background: $background-color-container-title-section;
+  padding-top: 1em;
+  padding-left: 1.8em;
+  padding-right: 1.8em;
+  padding-bottom: 1em;
+}
+.container-title__close {
+  background: $white;
+  padding-top: 1em;
+  padding-left: 1.8em;
+  padding-right: 1.8em;
+  padding-bottom: 1em;
+}
+.card_title__close {
+  letter-spacing: $letter-spacing-regular;
+  margin-bottom: 0;
+  align-self: center;
+  color: $gray-300;
+  transition: 400ms;
+}
+.card_title__open {
+  letter-spacing: $letter-spacing-regular;
+  margin-bottom: 0;
+  color: $gray-900;
+  transition: 400ms;
+}
+h3.card-title {
+  margin-bottom: 0;
+}
+h4.subtitle {
+  border-bottom: 1px solid rgba(0, 156, 51, 0.3);
+}
+.parametros-title {
+  font-size: $font-size-lg;
+  letter-spacing: $letter-spacing-small;
+  font-family: hdi-gerling_sansbold;
+  color: $gray-800;
+  font-size: 1.2em;
+  letter-spacing: 0.04em;
+}
+.parametros-container {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  
+}

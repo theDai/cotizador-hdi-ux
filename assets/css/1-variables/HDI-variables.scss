@@ -1,0 +1,163 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1300px
+) !default;
+
+/* Colors */
+
+$white: #fff !default;
+$gray-300: #dee1e8 !default;
+$gray-400: #cccccc !default;
+$gray-500: #eeeeee !default;
+$gray-600: #9b9b9b !default;
+$gray-700: #848484 !default;
+$gray-800: #525c65 !default;
+$gray-900: #353535 !default;
+$black: #000 !default;
+
+$green: #009c33 !default;
+$orange: #fb6f2e !default;
+$yellow: #ffcd54 !default;
+$red: #f02318;
+$link-color: #006eff !default;
+$link-hover-decoration: underline !default;
+$blue: #006eff;
+$modal: #2c2a3c;
+$body-bg: #f9fafc !default;
+$body-color: $gray-900 !default;
+
+/* Font family */
+
+$font-family-sans-serif: -apple-system, hdi-gerling_sansregular !default;
+$font-family-base: $font-family-sans-serif !default;
+$font-weight-light: hdi-gerling_sanslight !default;
+$font-weight-bold: hdi-gerling_sansbold !default;
+$font-family-italic: hdi-gerling_sanslight_italic;
+
+/* Font Size */
+
+$font-size-base: 1rem !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-xxl: ($font-size-base * 1.6) !default;
+$font-size-xl: ($font-size-base * 1.3) !default;
+$font-size-lg: ($font-size-base * 1.2) !default;
+$font-size-sm: ($font-size-base * 0.9) !default;
+$font-size-xs: ($font-size-base * 0.8) !default;
+
+/* h1,h2,h3,h4,h5,h6 */
+
+$h1-font-size: 3.8em !default;
+$h2-font-size: 1.5em !default;
+$h3-font-size: 1.3em !default;
+$h4-font-size: 1.2em !default;
+$h5-font-size: 1.2em !default;
+$h6-font-size: 0.9em !default;
+
+/* letter spacing */
+
+$letter-spacing-h1: -0.03em;
+$letter-spacing-xsmall: -0.02em;
+$letter-spacing-small: 0em;
+$letter-spacing-regular: 0.04em;
+$letter-spacing-large: 0.02em;
+$letter-spacing-button: 0.18em;
+
+/* Background color */
+
+$background-color-left: #f9f9f9;
+$background-color-right: #f9f9f9;
+$background-color-card-resumen: linear-gradient(
+  37deg,
+  rgb(0, 156, 51) 0%,
+  rgba(0, 156, 51, 0.5) 100%
+);
+
+/* Card */
+
+$background-color-container-title-section: #fafafa;
+$background-color-card-beneficios-header: linear-gradient(
+  to top,
+  #0ba360 0%,
+  #3cba92 100%
+);
+$background-color-giftcard-resumen: #007bff;
+$shadow-color-giftcard-resumen: 0 15px 30px rgba(0, 0, 0, 0.22);
+$background-color-resumeninfo: rgba(0, 0, 0, 0.1);
+
+/* Alert color */
+
+$alert-success: #0dff92;
+$alert-success-color: #15c26b;
+
+/* Mensaje de Exito  */
+
+$font-size-exito: 3.2em;
+
+/* Shadow card open, close - color */
+
+$shadow-color-card-open: 0 2px 30px 0 rgb(224, 229, 240);
+$shadow-color-card-close: 0px 6px 8px 2px rgba(0, 0, 0, 0.03);
+
+/* Button primary */
+
+$background-color-buttom-primary: linear-gradient(
+  -60deg,
+  #ff5858 0%,
+  #f09819 100%
+);
+$font-color-buttom-primary-disable: #dadada;
+$shadow-color-buttom-primary: 0px 15px 20px rgba(251, 111, 46, 0.34);
+$shadow-color-buttom-primary-hover: 0 3px 6px rgba(255, 111, 46, 0.3),
+  0 3px 6px rgba(255, 111, 46, 0.43);
+$letter-spacing-button: 0.18em;
+
+/* Button back */
+
+$background-color-buttom-back: rgba(248, 249, 250, 0.012);
+$font-buttom-color: #848484;
+$font-buttom-primary: hdi-gerling_sansregular;
+$font-size-buttonback: 1em;
+
+/* Button secundary */
+
+$background-color-buttom-secundary: #ffffff;
+$font-color-continuar: #fb6f2e;
+$font-size-buttonsecundary: 0.8em;
+
+/* Card planes */
+
+$shadow-color-card-planes-sugeridos: 0 1px 3px rgba(0, 0, 0, 0.12),
+  0 1px 2px rgba(0, 0, 0, 0.24);
+
+/* Card  */
+
+$letter-spacing-cardtitle: 0.07em;
+
+/* Footer color */
+
+$background-footer-condiciones: rgba(0, 0, 0, 0.7);
+
+/*Menu*/
+
+$background-color-navbar: #f9fafc;
+
+/*Modal*/
+
+$background-color-modal-header: #f9fafc;
+$background-color-modal-body: #f9fafc;
+
+/*Sidenav*/
+
+$background-color-sidenav: #2c2a3c;
+$font-size-modalsidenav: 1.3em;
+
+/*Tab*/
+
+$shadow-color-card-beneficios: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+
+/* Tooltips*/
+
+$background-color-tooltips: #2c2a3c;

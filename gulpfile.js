@@ -20,6 +20,14 @@ gulp.task("concatScripts", function() {
       "assets/js/vendor/bootstrap.min.js",
       "assets/js/vendor/jqueryUI-V1.11.1.js",
       "assets/js/vendor/jquery_pips.js",
+      "assets/js/vendor/global.js",
+      "assets/js/vendor/textfield.js",
+      "assets/js/vendor/moment-with-locales.js",
+      "assets/js/vendor/bootstrap-datetimepicker.js",
+      "assets/js/vendor/wNumb.js",
+      "assets/js/vendor/nouislider.js",
+      "assets/js/vendor/select2.full.js",
+      "assets/js/vendor/pmd-select2.js",
       "assets/js/slick.min.js",
       "assets/js/functions.js"
     ])
@@ -43,7 +51,11 @@ gulp.task("compileSass", function() {
     .src("assets/css/main.scss")
     .pipe(maps.init())
     .pipe(sass().on("error", sass.logError))
-    .pipe(autoprefixer())
+     .pipe(
+      autoprefixer({
+        browsers: ["last 3 versions", "android 4", "opera 12", "ie 10"]
+      })
+    )
     .pipe(maps.write("./"))
     .pipe(gulp.dest("assets/css"))
     .pipe(browserSync.stream());

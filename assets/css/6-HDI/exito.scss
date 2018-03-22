@@ -1,0 +1,101 @@
+/* Layout - Mensaje de exito de contratación
+-------------------------------------------------- */
+.layout-container__home { 
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  .left-container__exito {
+    background: $background-color-left;
+    height: 100vh;
+    padding: 0;
+    overflow: scroll;
+    z-index: 3;
+  }
+  .right-container__exito {
+    height: 100vh;
+    padding: 0;
+    overflow: scroll;
+    z-index: 1;
+  }
+}
+
+.background-exito {
+  background: url("../img/exito_67053867_xl-2015.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.background-exito_option1 {
+  background: url("../img/exito-option1_30003931_xl-2015.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.referencia-exito {
+  font-family: $font-weight-bold;
+  color: $green;
+  font-size: $h2-font-size;
+  letter-spacing: $letter-spacing-large;
+  margin-top: 2.5em;
+  width: 90%;
+}
+
+.referencia-exito__option1 {
+  margin-top: 1.5em;
+  width: 90%;
+}
+.referencia-error {
+  font-family: $font-weight-bold;
+  color: $red;
+  font-size: $h2-font-size;
+  letter-spacing: $letter-spacing-large;
+  margin-top: 2.5em;
+}
+
+.exito-title {
+  font-family: $font-weight-bold;
+  color: $green;
+  font-size: $font-size-exito;
+  letter-spacing: $letter-spacing-h1;
+  line-height: 1.12em;
+  margin-top: 1.5em;
+  // width: 72%;
+}
+.exito-title__option1 {
+  font-family: $font-weight-bold;
+  color: $green;
+  font-size: $font-size-exito;
+  letter-spacing: $letter-spacing-h1;
+  line-height: 1.12em;
+  margin-top: 0.5em;
+  // width: 82%;
+}
+
+.buttom-ir_HDI {
+  color: $link-color;
+}
+.buttom-ir_HDI:hover {
+  color: $black;
+}
+.texto-option1_1 {
+  font-family: $font-weight-bold;
+  font-size: $h4-font-size;
+  letter-spacing: $letter-spacing-small;
+  color: $black;
+}
+.texto-option1_2 {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $gray-800;
+  letter-spacing: $letter-spacing-xsmall;
+  width: 90%;
+}
+.texto-option1_3 {
+  font-size: $font-size-sm;
+  color: $gray-800;
+  letter-spacing: $letter-spacing-small;
+  font-family: $font-family-base;
+  width: 90%;
+}
