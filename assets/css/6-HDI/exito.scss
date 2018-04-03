@@ -1,6 +1,6 @@
 /* Layout - Mensaje de exito de contratación
 -------------------------------------------------- */
-.layout-container__home { 
+.layout-container__home {
   overflow: hidden;
   margin: 0;
   padding: 0;
@@ -45,6 +45,7 @@
 .referencia-exito__option1 {
   margin-top: 1.5em;
   width: 90%;
+  display: flex;
 }
 .referencia-error {
   font-family: $font-weight-bold;
@@ -79,11 +80,14 @@
 .buttom-ir_HDI:hover {
   color: $black;
 }
+p.texto-option1-titulo {
+  font-family: $font-weight-bold;
+}
 .texto-option1_1 {
   font-family: $font-weight-bold;
   font-size: $h4-font-size;
   letter-spacing: $letter-spacing-small;
-  color: $black;
+  color: $gray-800;
 }
 .texto-option1_2 {
   font-family: $font-family-base;

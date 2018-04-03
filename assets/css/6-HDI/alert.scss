@@ -29,21 +29,17 @@
   border-right-color: #fefefe;
 }
 
-// .alert-info__exitoso {
-//   background: #2c2a3c;
-//   font-family: hdi-gerling_sanslight;
-//   letter-spacing: 0.03em;
-//   font-size: 1.1em;
-//   color: $gray-600;
-//   border-radius: 0;
-//   border: none;
-//   h4.alert-heading {
-//     color: $white;
-//     font-family: hdi-gerling_sansbold;
-//     letter-spacing: 0.03em;
-//     font-size: 1em;
-//   }
-// }
+.alert-info__exitoso {
+  background: rgba(0, 156, 51, 0.141);
+  letter-spacing: $letter-spacing-regular;
+  font-size: $font-size-sm;
+  color: $green;
+  border-radius: 0;
+  border: none;
+  h4.alert-heading {
+    color: $white;
+  }
+}
 .alert-dismissible .close {
   padding: 1.1rem 1.25rem;
 }

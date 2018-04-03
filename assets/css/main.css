@@ -7802,6 +7802,10 @@ hr {
   margin-left: 2em;
   margin-top: 8em; }
 
+.container.intro__exito {
+  margin-left: 2em;
+  margin-top: 6em; }
+
 .referencia-home {
   font-family: -apple-system, hdi-gerling_sansregular;
   font-size: 1.2rem;
@@ -8612,6 +8616,16 @@ input[type="radio"]:checked ~ label {
   border-left-color: #fefefe;
   border-right-color: #fefefe; }
 
+.alert-info__exitoso {
+  background: rgba(0, 156, 51, 0.141);
+  letter-spacing: 0.04em;
+  font-size: 0.9rem;
+  color: #009c33;
+  border-radius: 0;
+  border: none; }
+  .alert-info__exitoso h4.alert-heading {
+    color: #fff; }
+
 .alert-dismissible .close {
   padding: 1.1rem 1.25rem; }
 
@@ -8928,7 +8942,10 @@ a.inspeccion-vehiculo__autoinspeccion:active {
 
 .referencia-exito__option1 {
   margin-top: 1.5em;
-  width: 90%; }
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .referencia-error {
   font-family: hdi-gerling_sansbold;
@@ -8959,11 +8976,14 @@ a.inspeccion-vehiculo__autoinspeccion:active {
 .buttom-ir_HDI:hover {
   color: #000; }
 
+p.texto-option1-titulo {
+  font-family: hdi-gerling_sansbold; }
+
 .texto-option1_1 {
   font-family: hdi-gerling_sansbold;
   font-size: 1.2em;
   letter-spacing: 0em;
-  color: #000; }
+  color: #525c65; }
 
 .texto-option1_2 {
   font-family: -apple-system, hdi-gerling_sansregular;
