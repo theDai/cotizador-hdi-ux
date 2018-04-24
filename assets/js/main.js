@@ -28760,46 +28760,66 @@ $("#seleccionPlan1__sinpatente").click(function() {
   $(".seguro-incluye_infomas").show();
   if ($("#plan-sugerido2_sinpatente").hasClass("plan-sugerido-active__1"))
     $("#plan-sugerido2_sinpatente")
-      .addClass("plan-sugerido__2")
+      .addClass("plan-sugerido2__opacity")
       .removeClass("plan-sugerido-active__1");
-  if ($("#plan-sugerido3_sinpatente").hasClass("plan-sugerido-active__1"))
-    $("#plan-sugerido3_sinpatente")
-      .addClass("plan-sugerido__3")
-      .removeClass("plan-sugerido-active__1");
+  else {
+    $("#plan-sugerido2_sinpatente").addClass("plan-sugerido2__opacity");
 
-  $("#plan-sugerido1_sinpatente")
-    .removeClass("plan-sugerido__1")
-    .addClass("plan-sugerido-active__1");
+    if ($("#plan-sugerido3_sinpatente").hasClass("plan-sugerido-active__1"))
+      $("#plan-sugerido3_sinpatente")
+        .addClass("plan-sugerido3__opacity")
+        .removeClass("plan-sugerido-active__1");
+    else {
+      $("#plan-sugerido3_sinpatente").addClass("plan-sugerido3__opacity");
+    }
+    $("#plan-sugerido1_sinpatente")
+      .removeClass("plan-sugerido1__opacity")
+      .addClass("plan-sugerido-active__1");
+  }
 });
 
 $("#seleccionPlan2__sinpatente").click(function() {
   $(".seguro-incluye_infomas").show();
   if ($("#plan-sugerido1_sinpatente").hasClass("plan-sugerido-active__1"))
     $("#plan-sugerido1_sinpatente")
-      .addClass("plan-sugerido__2")
+      .addClass("plan-sugerido1__opacity")
       .removeClass("plan-sugerido-active__1");
-  if ($("#plan-sugerido3_sinpatente").hasClass("plan-sugerido-active__1"))
-    $("#plan-sugerido3_sinpatente")
-      .addClass("plan-sugerido__3")
-      .removeClass("plan-sugerido-active__1");
-  $("#plan-sugerido2_sinpatente")
-    .removeClass("plan-sugerido__2")
-    .addClass("plan-sugerido-active__1");
+  else {
+    $("#plan-sugerido1_sinpatente").addClass("plan-sugerido1__opacity");
+
+    if ($("#plan-sugerido3_sinpatente").hasClass("plan-sugerido-active__1"))
+      $("#plan-sugerido3_sinpatente")
+        .addClass("plan-sugerido3__opacity")
+        .removeClass("plan-sugerido-active__1");
+    else {
+      $("#plan-sugerido3_sinpatente").addClass("plan-sugerido3__opacity");
+    }
+    $("#plan-sugerido2_sinpatente")
+      .removeClass("plan-sugerido2__opacity")
+      .addClass("plan-sugerido-active__1");
+  }
 });
 
 $("#seleccionPlan3__sinpatente").click(function() {
   $(".seguro-incluye_infomas").show();
   if ($("#plan-sugerido1_sinpatente").hasClass("plan-sugerido-active__1"))
     $("#plan-sugerido1_sinpatente")
-      .addClass("plan-sugerido__1")
+      .addClass("plan-sugerido1__opacity")
       .removeClass("plan-sugerido-active__1");
-  if ($("#plan-sugerido2_sinpatente").hasClass("plan-sugerido-active__1"))
-    $("#plan-sugerido2_sinpatente")
-      .addClass("plan-sugerido__2")
-      .removeClass("plan-sugerido-active__1");
-  $("#plan-sugerido3_sinpatente")
-    .removeClass("plan-sugerido__2")
-    .addClass("plan-sugerido-active__1");
+  else {
+    $("#plan-sugerido1_sinpatente").addClass("plan-sugerido1__opacity");
+
+    if ($("#plan-sugerido2_sinpatente").hasClass("plan-sugerido-active__1"))
+      $("#plan-sugerido2_sinpatente")
+        .addClass("plan-sugerido2__opacity")
+        .removeClass("plan-sugerido-active__1");
+    else {
+      $("#plan-sugerido2_sinpatente").addClass("plan-sugerido2__opacity");
+    }
+    $("#plan-sugerido3_sinpatente")
+      .removeClass("plan-sugerido3__opacity")
+      .addClass("plan-sugerido-active__1");
+  }
 });
 
 $("#editar_plan__sinpatente").click(function() {
@@ -29246,7 +29266,7 @@ $(document).ready(function() {
       $("#deducibleRight").text(+deducibles[ui.value] + " UF");
     });
 
-  $(".slider-edad")
+  /*$(".slider-edad")
     .slider({
       min: 0,
       max: sliderEdades.length - 1,

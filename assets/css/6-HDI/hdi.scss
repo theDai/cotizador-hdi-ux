@@ -397,7 +397,6 @@ a.ver-mas__info:focus {
   #modal-lateral {
     display: block;
   }
-
   #notificacion-envioCorreo-responsive {
     display: block;
   }
@@ -539,6 +538,18 @@ a.ver-mas__info:focus {
     margin-top: 7em;
     margin-left: 4em;
   }
+  #modal-lateral {
+    display: none;
+  }
+  #notificacion-envioCorreo {
+    display: none;
+  }
+  .sidenav-responsive {
+    z-index: 50 !important;
+    left: 34% !important;
+    top: 47% !important;
+    border-radius: 2em !important;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -548,12 +559,6 @@ a.ver-mas__info:focus {
       margin-left: 1.3em;
       margin-top: 0.5em;
     }
-  }
-  .sidenav-responsive {
-    z-index: 50 !important;
-    left: 20% !important;
-    top: 40% !important;
-    border-radius: 2em !important;
   }
   .navbar-brandhome {
     margin-top: 2.3em;
@@ -627,6 +632,12 @@ a.ver-mas__info:focus {
   #notificacion-envioCorreo {
     display: none;
   }
+  .sidenav-responsive {
+    z-index: 50 !important;
+    left: 25% !important;
+    top: 50% !important;
+    border-radius: 2em !important;
+  }
 }
 @media (max-width: 575.98px) {
   .layout-container .left-container {
@@ -635,13 +646,6 @@ a.ver-mas__info:focus {
       margin-left: 1.3em;
       margin-top: 0.5em;
     }
-  }
-  .sidenav-responsive {
-    z-index: 50 !important;
-    left: 10% !important;
-    top: 40% !important;
-    border-radius: 2em !important;
-    width: 300px !important;
   }
   .modal-title_slide {
     font-size: $font-size-base !important;
@@ -688,12 +692,6 @@ a.ver-mas__info:focus {
     font-size: 0.8em;
     height: 80px;
     bottom: 12.5em;
-  }
-  #modal-lateral {
-    display: none;
-  }
-  #notificacion-envioCorreo {
-    display: none;
   }
   .alert-info {
     font-size: 0.8em;
@@ -901,6 +899,19 @@ a.ver-mas__info:focus {
   }
   .referencia-error {
     margin-right: 1em;
+  }
+  #modal-lateral {
+    display: none;
+  }
+  #notificacion-envioCorreo {
+    display: none;
+  }
+  .sidenav-responsive {
+    z-index: 50 !important;
+    left: 10% !important;
+    top: 40% !important;
+    border-radius: 2em !important;
+    width: 300px !important;
   }
 }
 

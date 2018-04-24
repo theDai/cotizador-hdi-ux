@@ -7478,7 +7478,16 @@ a.ver-mas__info:focus {
     margin-left: 4em; }
   .container.error {
     margin-top: 7em;
-    margin-left: 4em; } }
+    margin-left: 4em; }
+  #modal-lateral {
+    display: none; }
+  #notificacion-envioCorreo {
+    display: none; }
+  .sidenav-responsive {
+    z-index: 50 !important;
+    left: 34% !important;
+    top: 47% !important;
+    border-radius: 2em !important; } }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .layout-container .left-container {
@@ -7486,11 +7495,6 @@ a.ver-mas__info:focus {
     .layout-container .left-container .navbar-brand {
       margin-left: 1.3em;
       margin-top: 0.5em; }
-  .sidenav-responsive {
-    z-index: 50 !important;
-    left: 20% !important;
-    top: 40% !important;
-    border-radius: 2em !important; }
   .navbar-brandhome {
     margin-top: 2.3em;
     margin-left: 2.4em; }
@@ -7545,7 +7549,12 @@ a.ver-mas__info:focus {
   #modal-lateral {
     display: none; }
   #notificacion-envioCorreo {
-    display: none; } }
+    display: none; }
+  .sidenav-responsive {
+    z-index: 50 !important;
+    left: 25% !important;
+    top: 50% !important;
+    border-radius: 2em !important; } }
 
 @media (max-width: 575.98px) {
   .layout-container .left-container {
@@ -7553,12 +7562,6 @@ a.ver-mas__info:focus {
     .layout-container .left-container .navbar-brand {
       margin-left: 1.3em;
       margin-top: 0.5em; }
-  .sidenav-responsive {
-    z-index: 50 !important;
-    left: 10% !important;
-    top: 40% !important;
-    border-radius: 2em !important;
-    width: 300px !important; }
   .modal-title_slide {
     font-size: 1rem !important; }
   .modal-text {
@@ -7591,10 +7594,6 @@ a.ver-mas__info:focus {
     font-size: 0.8em;
     height: 80px;
     bottom: 12.5em; }
-  #modal-lateral {
-    display: none; }
-  #notificacion-envioCorreo {
-    display: none; }
   .alert-info {
     font-size: 0.8em; }
   .button-home {
@@ -7746,7 +7745,17 @@ a.ver-mas__info:focus {
   .exito-title__option1 {
     margin-right: 0.5em; }
   .referencia-error {
-    margin-right: 1em; } }
+    margin-right: 1em; }
+  #modal-lateral {
+    display: none; }
+  #notificacion-envioCorreo {
+    display: none; }
+  .sidenav-responsive {
+    z-index: 50 !important;
+    left: 10% !important;
+    top: 40% !important;
+    border-radius: 2em !important;
+    width: 300px !important; } }
 
 /* Internet Explorer 
 -------------------------------------------------- */
@@ -8587,6 +8596,82 @@ input[type="radio"]:checked ~ .check4::before {
 input[type="radio"]:checked ~ label {
   color: #009c33; }
 
+/* Radio Button 5 - Edad del conductor */
+ul.list-radio5 {
+  margin-left: -2em; }
+
+.container ul.list-radio5 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto; }
+
+ul.list-radio5 li {
+  color: #9b9b9b;
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 10%; }
+
+ul.list-radio5 li input[type="radio"] {
+  position: absolute;
+  visibility: hidden; }
+
+ul.list-radio5 li label {
+  display: block;
+  position: relative;
+  font-size: 1em;
+  padding: 16px 41px 13px 38px;
+  margin: 10px auto;
+  height: 10px;
+  z-index: 9;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear; }
+
+ul.list-radio5 li:hover label {
+  color: #000; }
+
+ul.list-radio5 li .check5 {
+  display: block;
+  position: absolute;
+  border: 2px solid #9b9b9b;
+  border-radius: 100%;
+  height: 16px;
+  width: 16px;
+  top: 30px;
+  left: 3px;
+  z-index: 5;
+  -o-transition: border 0.25s linear;
+  transition: border 0.25s linear;
+  -webkit-transition: border 0.25s linear; }
+
+ul.list-radio5 li:hover .check5 {
+  border: 2px solid #009c33; }
+
+ul.list-radio5 li .check5::before {
+  display: block;
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  height: 7px;
+  width: 7px;
+  top: 2px;
+  left: 2px;
+  margin: auto;
+  -o-transition: background 0.25s linear;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear; }
+
+input[type="radio"]:checked ~ .check5 {
+  border: 2px solid #009c33; }
+
+input[type="radio"]:checked ~ .check5::before {
+  background: #009c33; }
+
+input[type="radio"]:checked ~ label {
+  color: #009c33; }
+
 /* Alert */
 .alert {
   -webkit-box-sizing: border-box;
@@ -9222,6 +9307,55 @@ h4.subtitle {
     color: #cccccc; }
     .plan-sugerido__2 .button-secundary__container .button-secundary:hover,
     .plan-sugerido__3 .button-secundary__container .button-secundary:hover {
+      color: #fff;
+      background: none; }
+
+.plan-sugerido1__opacity,
+.plan-sugerido2__opacity,
+.plan-sugerido3__opacity {
+  opacity: 0.5;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  top: 0em; }
+  .plan-sugerido1__opacity .card-header,
+  .plan-sugerido2__opacity .card-header,
+  .plan-sugerido3__opacity .card-header {
+    background: rgba(0, 156, 51, 0.51);
+    color: #fff;
+    font-family: hdi-gerling_sansbold;
+    font-size: 1.1em;
+    border-radius: 5px 5px 0 0;
+    letter-spacing: 0.04em;
+    opacity: 10%; }
+  .plan-sugerido1__opacity .card-gift,
+  .plan-sugerido2__opacity .card-gift,
+  .plan-sugerido3__opacity .card-gift {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: rgba(0, 156, 51, 0.51);
+    color: #fff;
+    width: 80%;
+    font-family: hdi-gerling_sansbold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    position: absolute;
+    z-index: 99; }
+  .plan-sugerido1__opacity a.detalle-planes,
+  .plan-sugerido2__opacity a.detalle-planes,
+  .plan-sugerido3__opacity a.detalle-planes {
+    color: #006eff; }
+  .plan-sugerido1__opacity .button-secundary__container .button-secundary,
+  .plan-sugerido2__opacity .button-secundary__container .button-secundary,
+  .plan-sugerido3__opacity .button-secundary__container .button-secundary {
+    background: none;
+    color: #cccccc; }
+    .plan-sugerido1__opacity .button-secundary__container .button-secundary:hover,
+    .plan-sugerido2__opacity .button-secundary__container .button-secundary:hover,
+    .plan-sugerido3__opacity .button-secundary__container .button-secundary:hover {
       color: #fff;
       background: none; }
 

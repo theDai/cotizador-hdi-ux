@@ -68,7 +68,7 @@
       <!-- Conteiner izquierdo -->
       <div class="col-xl-6 col-lg-12 left-container">
         <a class="navbar-brand" href="https://www.hdi.cl/">
-          <img src="./assets/img/LOGO_COLOR(RGB)_HDI.png" width="75" height="65" alt="Cotiza tu seguro automotriz online" class="d-inline-block align-top">
+          <img src="./assets/img/LOGO_COLOR(RGB)_HDI.png" width="120" height="100" alt="Cotiza tu seguro automotriz online" class="d-inline-block align-top">
         </a>
         <!-- Nav principal -->
         <nav class="navbar navbar-expand-lg sticky-top nav-principal justify-content-center">
@@ -104,7 +104,8 @@
             <div class="d-flex justify-content-between container-title">
               <h3 class="card-title card_title__open">1.1 Datos del vehículo</h3>
               <a class="btn editar completado6" id="editar_sinpatente">
-                <img src="assets/img/check-green-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> completado
+                <img src="assets/img/check-green-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> completado [+]
+                <!-- <img src="assets/img/plus.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> -->
               </a>
             </div>
             <div class="card-body datos-vehiculo__sinpatente">
@@ -181,7 +182,7 @@
             <div class="d-flex justify-content-between container-title">
               <h3 id="titleDatosContratante2" class="card-title card_title__close">1.2 Completar datos del contratante</h3>
               <a class="btn editar completado7" id="editarcontratante_sinpatente">
-                <img src="assets/img/check-green-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> completado
+                <img src="assets/img/check-green-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image"> completado [+]
               </a>
             </div>
             <div class="card-body datos-contratante__sinpatente">
@@ -217,7 +218,7 @@
                   </div>
                 </div>
                 <div class="container-inputitem pb-3">
-                  <div class="parametros-title">Edad del menor conductor
+                  <div class="parametros-title pb-2">Edad del menor conductor
                     <a href="" class="showTooltip">
                       <img src="./assets/img/informacion-icon.svg" width="20" height="20" class="img-fluid" id="info" alt="Responsive image">
                       <span id="some-element">
@@ -228,7 +229,7 @@
                       </span>
                     </a>
                   </div>
-                  <div class="row mt-2">
+                  <!-- <div class="row mt-2">
                     <div class="col-lg-7 mt-2">
                       <div class="slider-edad mt-4 ml-2" id="double-label-slider"></div>
                     </div>
@@ -236,12 +237,80 @@
                       <div id="edadConductor" class="panel callout radius text-center">El conductor tiene entre
                         <br>18 años y 23 años</div>
                     </div>
-                  </div>
+                  </div> -->
+                  <fieldset class="form-group">
+                    <div class="row">
+                      <div class="col-12">
+                        <ul class="list-radio5">
+                          <li>
+                            <input type="radio" class="form-check-input usado-check" name="optionsRadios3" id="g-option" value="option1" checked onclick="show9()">
+                            <label for="g-option" class="form-check-label">18 años</label>
+                            <div class="check5">
+                              <div class="inside2"></div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-12">
+                        <ul class="list-radio5">
+                          <li>
+                            <input type="radio" class="form-check-input nuevo-check" name="optionsRadios3" id="f-option" value="option2" onclick="show10()">
+                            <label for="f-option" class="form-check-label">23 años</label>
+                            <div class="check5"></div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-12">
+                        <ul class="list-radio5">
+                          <li>
+                            <input type="radio" class="form-check-input usado-check" name="optionsRadios3" id="h-option" value="option3" onclick="show11()">
+                            <label for="h-option" class="form-check-label">28 años</label>
+                            <div class="check5">
+                              <div class="inside2"></div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- <div class="row">
+                      <div class="col-12">
+                        <ul class="list-radio5">
+                          <li>
+                            <input type="radio" class="form-check-input 18-check" name="optionsRadios3" id="k-option" value="option2" checked onclick="show9()">
+                            <label for="i-option" class="form-check-label">18 años</label>
+                            <div class="check5"></div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-12">
+                        <ul class="list-radio5">
+                          <li>
+                            <input type="radio" class="form-check-input 23-check" name="optionsRadios3" id="l-option" value="option2" onclick="show10()">
+                            <label for="j-option" class="form-check-label">23 años</label>
+                            <div class="check5">
+                              <div class="inside"></div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-12">
+                        <ul class="list-radio5">
+                          <li>
+                            <input type="radio" class="form-check-input 28-check" name="optionsRadios3" id="m-option" value="option3" onclick="show11()">
+                            <label for="k-option" class="form-check-label">28 años</label>
+                            <div class="check5">
+                              <div class="inside"></div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div> -->
+                  </fieldset>
                 </div>
                 <div class="button-container__edicion d-flex justify-content-end mt-3">
-                    <a href="#" class="card-link continuar text-uppercase mr-2" id="continuar_datoscontratante">Continuar</a>
-                    <img src="./assets/img/continuar-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image">
-                  </div>
+                  <a href="#" class="card-link continuar text-uppercase mr-2" id="continuar_datoscontratante">Continuar</a>
+                  <img src="./assets/img/continuar-icon.svg" width="15" height="15" class="img-fluid" alt="Responsive image">
+                </div>
               </div>
             </div>
           </div>
