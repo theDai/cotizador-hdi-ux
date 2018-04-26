@@ -7563,7 +7563,7 @@ a.ver-mas__info:focus {
       margin-left: 1.3em;
       margin-top: 0.5em; }
   .modal-title_slide {
-    font-size: 1rem !important; }
+    font-size: 0.9rem !important; }
   .modal-text {
     font-size: 0.9rem !important; }
   .navbar-brandhome {
@@ -7594,8 +7594,6 @@ a.ver-mas__info:focus {
     font-size: 0.8em;
     height: 80px;
     bottom: 12.5em; }
-  .alert-info {
-    font-size: 0.8em; }
   .button-home {
     padding: 16px 40px;
     font-size: 0.7em; }
@@ -7604,15 +7602,15 @@ a.ver-mas__info:focus {
     font-size: 0.7em; }
   .referencia-home {
     padding-left: 0;
-    font-size: 1em; }
+    font-size: 1em !important; }
   hr {
     width: 90%; }
   h1 {
-    font-size: 2.4em; }
+    font-size: 2.8em; }
   h2 {
     font-size: 1.25em; }
   h3 {
-    font-size: 1.2em; }
+    font-size: 0.9em; }
   h4 {
     font-size: 1.1em; }
   h6 {
@@ -7688,7 +7686,7 @@ a.ver-mas__info:focus {
     margin-bottom: 14em; }
   .precio {
     font-size: 1.3em;
-    padding: 1em 2.5em;
+    padding: 1em 2em;
     white-space: nowrap; }
   .ver-detalle__planresumen {
     padding-right: 0; }
@@ -7720,7 +7718,7 @@ a.ver-mas__info:focus {
   .exito-mensaje_option1 {
     margin-bottom: 5em; }
   .referencia-exito {
-    font-size: 1.2em; }
+    font-size: 1.1em; }
   .referencia-error {
     font-size: 1.2em; }
   .error-mensaje {
@@ -7755,7 +7753,32 @@ a.ver-mas__info:focus {
     left: 10% !important;
     top: 40% !important;
     border-radius: 2em !important;
-    width: 300px !important; } }
+    width: 265px !important; }
+  a.editar {
+    font-size: 0.8em; }
+  .alert-instrucción {
+    font-size: 0.9rem !important; }
+  .alert-info {
+    font-size: 0.8em !important; }
+  .container.tab-container {
+    margin-bottom: 16em; }
+  .exito-title {
+    font-size: 2.5em !important; }
+  .logo-hdi {
+    width: 60px;
+    height: 50px; }
+  .button-primary {
+    padding: 13px 26px; } }
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .footer-condiciones {
+    bottom: 200px !important; }
+  .seguro-incluye_info {
+    margin-bottom: 5em !important;
+    margin-top: 2em !important; }
+  .nav-principal .nav-link {
+    padding: 0.5em 0.5em 0.5em 1em !important;
+    font-size: 1.1em !important; } }
 
 /* Internet Explorer 
 -------------------------------------------------- */
@@ -8654,8 +8677,8 @@ ul.list-radio5 li .check5::before {
   position: absolute;
   content: "";
   border-radius: 100%;
-  height: 7px;
-  width: 7px;
+  height: 8px;
+  width: 8px;
   top: 2px;
   left: 2px;
   margin: auto;
@@ -9093,14 +9116,14 @@ p.texto-option1-titulo {
 .nav-principal {
   background-color: #f9fafc;
   -webkit-box-shadow: 0px 15px 35px -15px rgba(134, 142, 150, 0.6);
-          box-shadow: 0px 15px 35px -15px rgba(134, 142, 150, 0.6);
-  font-size: 1.3em; }
+          box-shadow: 0px 15px 35px -15px rgba(134, 142, 150, 0.6); }
   .nav-principal .nav-item {
     letter-spacing: 0.04em;
     font-family: hdi-gerling_sansbold; }
   .nav-principal .nav-link {
-    font-size: 1.3rem;
-    color: #000; }
+    padding: 0.5em 0.5em 0.5em 1em;
+    color: #000;
+    font-size: 1.3em; }
 
 li.nav-item.nav-link.active-completado {
   color: #009c33; }

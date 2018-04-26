@@ -648,7 +648,7 @@ a.ver-mas__info:focus {
     }
   }
   .modal-title_slide {
-    font-size: $font-size-base !important;
+    font-size: $font-size-sm !important;
   }
   .modal-text {
     font-size: $font-size-sm !important;
@@ -661,7 +661,6 @@ a.ver-mas__info:focus {
     margin-bottom: 3em !important;
     margin-top: 0em !important;
   }
-
   h1 {
     font-size: 2.2em;
   }
@@ -678,7 +677,6 @@ a.ver-mas__info:focus {
     padding: 0;
     margin: 0;
   }
-
   a.navbar-brand.navbar-brand__home.error {
     margin-left: 2em;
   }
@@ -693,9 +691,6 @@ a.ver-mas__info:focus {
     height: 80px;
     bottom: 12.5em;
   }
-  .alert-info {
-    font-size: 0.8em;
-  }
   .button-home {
     padding: 16px 40px;
     font-size: 0.7em;
@@ -706,19 +701,19 @@ a.ver-mas__info:focus {
   }
   .referencia-home {
     padding-left: 0;
-    font-size: 1em;
+    font-size: 1em !important;
   }
   hr {
     width: 90%;
   }
   h1 {
-    font-size: 2.4em;
+    font-size: 2.8em;
   }
   h2 {
     font-size: 1.25em;
   }
   h3 {
-    font-size: 1.2em;
+    font-size: 0.9em;
   }
   h4 {
     font-size: 1.1em;
@@ -817,7 +812,7 @@ a.ver-mas__info:focus {
   }
   .precio {
     font-size: 1.3em;
-    padding: 1em 2.5em;
+    padding: 1em 2em;
     white-space: nowrap;
   }
   .ver-detalle__planresumen {
@@ -861,7 +856,7 @@ a.ver-mas__info:focus {
     margin-bottom: 5em;
   }
   .referencia-exito {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   .referencia-error {
     font-size: 1.2em;
@@ -911,7 +906,43 @@ a.ver-mas__info:focus {
     left: 10% !important;
     top: 40% !important;
     border-radius: 2em !important;
-    width: 300px !important;
+    width: 265px !important;
+  }
+  a.editar {
+    font-size: 0.8em;
+  }
+  .alert-instrucción {
+    font-size: 0.9rem !important;
+  }
+  .alert-info {
+    font-size: 0.8em !important;
+  }
+  .container.tab-container {
+    margin-bottom: 16em;
+  }
+  .exito-title {
+    font-size: 2.5em !important;
+  }
+  .logo-hdi {
+    width: 60px;
+    height: 50px;
+  }
+  .button-primary {
+    padding: 13px 26px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .footer-condiciones {
+    bottom: 200px !important;
+  }
+  .seguro-incluye_info {
+    margin-bottom: 5em !important;
+    margin-top: 2em !important;
+  }
+  .nav-principal .nav-link {
+    padding: 0.5em 0.5em 0.5em 1em !important;
+    font-size: 1.1em !important;
   }
 }
 
