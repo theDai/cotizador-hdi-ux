@@ -336,8 +336,6 @@ a.ver-mas__info:focus {
 -------------------------------------------------- */
 
 @media (min-width: 1800px) {
-  .nav-tabs .nav-item {
-  }
   .container.intro {
     padding-left: 35px;
     margin-left: 2em;
@@ -390,6 +388,9 @@ a.ver-mas__info:focus {
   }
   .card-gift {
     margin-top: 1em;
+  }
+  h1 {
+    font-size: 4.8em !important;
   }
 }
 
@@ -688,12 +689,12 @@ a.ver-mas__info:focus {
   }
   .Modern-Slider .item h5 {
     font-size: 0.8em;
-    height: 80px;
+    height: 100px;
     bottom: 12.5em;
   }
   .button-home {
-    padding: 16px 40px;
-    font-size: 0.7em;
+    padding: 15px 35px !important;
+    font-size: 0.8em !important;
   }
   .button-primary__desactivado {
     padding: 16px 40px;
@@ -757,7 +758,7 @@ a.ver-mas__info:focus {
   .footer-condiciones {
     bottom: 182px !important;
     font-size: 0.7em !important;
-    padding-bottom: 2.2em !important;
+    padding-bottom: 4.2em !important;
   }
   .iconoInfo-container {
     padding-left: 1em;
@@ -930,6 +931,15 @@ a.ver-mas__info:focus {
   .button-primary {
     padding: 13px 26px;
   }
+  ul.list-radio3 li label {
+    padding: 17px 25px 33px 47px !important;
+  }
+  ul.list-radio4 li label {
+    padding: 15px 48px 54px 33px !important;
+  }
+  .card-textplanes__textdinamicos {
+    font-size: 1.2em !important;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 375px) {
@@ -943,6 +953,10 @@ a.ver-mas__info:focus {
   .nav-principal .nav-link {
     padding: 0.5em 0.5em 0.5em 1em !important;
     font-size: 1.1em !important;
+  }
+  .Modern-Slider .item h5 {
+    height: 100px !important;
+    bottom: 12.5em !important;
   }
 }
 
