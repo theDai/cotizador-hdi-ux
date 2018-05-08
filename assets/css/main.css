@@ -7787,7 +7787,7 @@ a.ver-mas__info:focus {
 
 @media (min-width: 320px) and (max-width: 568px) {
   .seguro-incluye_info {
-    margin-bottom: 5em !important;
+    margin-bottom: 7.5em !important;
     margin-top: 2em !important; }
   .nav-principal .nav-link {
     padding: 0.5em 0.5em 0.5em 1em !important;
@@ -7802,9 +7802,13 @@ a.ver-mas__info:focus {
   .iconoInfo-container {
     width: 80% !important; }
   .footer-condiciones {
-    bottom: 195px !important;
+    bottom: 200px !important;
     font-size: 0.7em !important;
-    padding-bottom: 3.5em !important; } }
+    padding-bottom: 5em !important; }
+  #condiciones {
+    padding-top: 0.5em !important; }
+  ul.footer-info {
+    -webkit-padding-start: 30px; } }
 
 /* Internet Explorer 
 -------------------------------------------------- */
