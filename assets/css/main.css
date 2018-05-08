@@ -7352,8 +7352,6 @@ a.ver-mas__info:focus {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     text-align: center; }
-  .footer-condiciones {
-    bottom: 5px; }
   .card-textplanes__textdinamicos {
     font-size: 2em; }
   .container-list-paramentros {
@@ -7644,10 +7642,6 @@ a.ver-mas__info:focus {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     text-align: center; }
-  .footer-condiciones {
-    bottom: 182px !important;
-    font-size: 0.7em !important;
-    padding-bottom: 4.2em !important; }
   .iconoInfo-container {
     padding-left: 1em; }
   .necesitas-ayuda_telefonica {
@@ -7776,11 +7770,22 @@ a.ver-mas__info:focus {
   ul.list-radio4 li label {
     padding: 15px 48px 54px 33px !important; }
   .card-textplanes__textdinamicos {
-    font-size: 1.2em !important; } }
-
-@media (min-width: 320px) and (max-width: 375px) {
+    font-size: 1.2em !important; }
   .footer-condiciones {
-    bottom: 200px !important; }
+    bottom: 156px !important;
+    font-size: 0.7em !important;
+    padding-bottom: 3.5em !important; }
+  img.alert-icon,
+  img.info-icon {
+    height: auto;
+    width: 7%; }
+  img.promocion-icon {
+    width: 90%; }
+  .promo-container {
+    padding-left: 0;
+    padding-right: 0; } }
+
+@media (min-width: 320px) and (max-width: 568px) {
   .seguro-incluye_info {
     margin-bottom: 5em !important;
     margin-top: 2em !important; }
@@ -7791,7 +7796,15 @@ a.ver-mas__info:focus {
     height: 100px !important;
     bottom: 12.5em !important; }
   .Modern-Slider .item h3 {
-    margin-bottom: 0.3em !important; } }
+    margin-bottom: 0.3em !important; }
+  .ver-mas {
+    white-space: nowrap; }
+  .iconoInfo-container {
+    width: 80% !important; }
+  .footer-condiciones {
+    bottom: 195px !important;
+    font-size: 0.7em !important;
+    padding-bottom: 3.5em !important; } }
 
 /* Internet Explorer 
 -------------------------------------------------- */
