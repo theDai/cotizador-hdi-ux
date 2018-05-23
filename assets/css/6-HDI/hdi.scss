@@ -289,9 +289,9 @@ a.ver-mas__info:focus {
       height: 70%;
     }
   }
-  .titulo-resumenbeneficio {
-    font-family: $font-weight-bold;
-  }
+}
+.titulo-resumenbeneficio {
+  font-family: $font-weight-bold;
 }
 .precio {
   background: rgba(53, 53, 53, 0.34);
@@ -564,6 +564,10 @@ a.ver-mas__info:focus {
     top: 47% !important;
     border-radius: 2em !important;
   }
+  .margin-responsive {
+    margin-bottom: 4em;
+  }
+
   .footer .col-lg-3, .footer .col-lg-2 {
     line-height: 20px;
     padding: 7px 0;
@@ -1013,6 +1017,24 @@ a.ver-mas__info:focus {
   }
   ul.footer-info {
     -webkit-padding-start: 30px;
+  }
+  #auto-icon-explorer {
+    height: 30%;
+  }
+  #respon-icon-explorer {
+    height: 30%;
+  }
+  #dedu-icon-explorer {
+    height: 30%;
+  }
+  #taller-icon-explorer {
+    height: 40%;
+  }
+  .titulo-resumenbeneficio {
+    font-size: 0.9em;
+  }
+  .margin-responsive {
+    margin-bottom: 12em;
   }
 }
 

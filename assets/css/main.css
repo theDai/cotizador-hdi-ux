@@ -7291,8 +7291,9 @@ a.ver-mas__info:focus {
     height: 55%; }
     .card.card-seguro_incluye .taller_marca img.taller-icon {
       height: 70%; }
-  .card.card-seguro_incluye .titulo-resumenbeneficio {
-    font-family: hdi-gerling_sansbold; }
+
+.titulo-resumenbeneficio {
+  font-family: hdi-gerling_sansbold; }
 
 .precio {
   background: rgba(53, 53, 53, 0.34);
@@ -7497,6 +7498,8 @@ a.ver-mas__info:focus {
     left: 50% !important;
     top: 47% !important;
     border-radius: 2em !important; }
+  .margin-responsive {
+    margin-bottom: 4em; }
   .footer .col-lg-3, .footer .col-lg-2 {
     line-height: 20px;
     padding: 7px 0; } }
@@ -7822,7 +7825,19 @@ a.ver-mas__info:focus {
   #condiciones {
     padding-top: 0.5em !important; }
   ul.footer-info {
-    -webkit-padding-start: 30px; } }
+    -webkit-padding-start: 30px; }
+  #auto-icon-explorer {
+    height: 30%; }
+  #respon-icon-explorer {
+    height: 30%; }
+  #dedu-icon-explorer {
+    height: 30%; }
+  #taller-icon-explorer {
+    height: 40%; }
+  .titulo-resumenbeneficio {
+    font-size: 0.9em; }
+  .margin-responsive {
+    margin-bottom: 12em; } }
 
 /* Internet Explorer 
 -------------------------------------------------- */
