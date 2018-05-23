@@ -7822,7 +7822,8 @@ a.ver-mas__info:focus {
   .iconoInfo-container {
     width: 80% !important; }
   .footer-condiciones {
-    bottom: 196px !important; }
+    bottom: 196px !important;
+    padding-bottom: 3em !important; }
   #condiciones {
     padding-top: 0.5em !important; }
   ul.footer-info {
