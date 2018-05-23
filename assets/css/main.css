@@ -7017,7 +7017,7 @@ a.text-dark:hover, a.text-dark:focus {
     -webkit-box-shadow: inset 13px 0px 58px -7px #e0e5f0, 5px 5px 5px 1px #dddddd;
             box-shadow: inset 13px 0px 58px -7px #e0e5f0, 5px 5px 5px 1px #dddddd;
     padding: 0;
-    overflow: scroll;
+    /*    overflow: scroll; */
     z-index: 1; }
 
 /* Generales 
@@ -7309,9 +7309,12 @@ a.ver-mas__info:focus {
   height: 200px;
   width: 100%; }
 
+.big {
+  width: 40%; }
+
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 4px; }
+  /*  width: 4px; <-no lo veo necesario ahora // Dai */ }
 
 /* Track */
 ::-webkit-scrollbar-track {
@@ -7364,7 +7367,9 @@ a.ver-mas__info:focus {
   .card-gift {
     margin-top: 1em; }
   h1 {
-    font-size: 4.8em !important; } }
+    font-size: 4.8em !important; }
+  .footer-condiciones {
+    padding-bottom: 0.5em !important; } }
 
 @media (max-width: 1370px) {
   #modal-lateral {
@@ -7399,7 +7404,7 @@ a.ver-mas__info:focus {
   .margin-bottom {
     margin-bottom: 2em !important; } }
 
-@media (max-width: 1200px) {
+@media (max-width: 1299px) {
   h1 {
     font-size: 3.2em;
     margin-top: 0em; }
@@ -7424,7 +7429,8 @@ a.ver-mas__info:focus {
     margin-left: 2em !important; }
   .footer {
     height: auto;
-    line-height: 17px; }
+    line-height: 17px;
+    min-height: 54px; }
   .footer-content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -7437,7 +7443,8 @@ a.ver-mas__info:focus {
             align-items: center;
     text-align: center; }
   .footer-condiciones {
-    bottom: 44px; }
+    bottom: 54px !important;
+    padding-bottom: 0.5em; }
   .necesitas-ayuda_telefonica {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -7485,9 +7492,27 @@ a.ver-mas__info:focus {
     display: none; }
   .sidenav-responsive {
     z-index: 50 !important;
-    left: 34% !important;
+    /*    left: 34% !important;*/
+    margin-left: -200px;
+    left: 50% !important;
     top: 47% !important;
-    border-radius: 2em !important; } }
+    border-radius: 2em !important; }
+  .footer .col-lg-3, .footer .col-lg-2 {
+    line-height: 20px;
+    padding: 7px 0; } }
+
+/*  Estilos para correcciones en tablet // Dai */
+@media (max-width: 992px) {
+  .container-info-carousel {
+    margin-bottom: 16em; }
+  .card.card-planes {
+    margin-bottom: 2em; }
+  .plan-sugerido__1 {
+    top: 0em !important; }
+  .footer-condiciones {
+    bottom: 170px !important; }
+  .planes-container {
+    margin-bottom: 12em; } }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .layout-container .left-container {
@@ -7498,8 +7523,6 @@ a.ver-mas__info:focus {
   .navbar-brandhome {
     margin-top: 2.3em;
     margin-left: 2.4em; }
-  .container-info-carousel {
-    margin-bottom: 16em; }
   .container.intro {
     padding-left: 0;
     margin-left: 1em;
@@ -7515,6 +7538,8 @@ a.ver-mas__info:focus {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     text-align: center; }
+  .footer-condiciones {
+    font-size: 0.7em !important; }
   .necesitas-ayuda_telefonica {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -7523,8 +7548,6 @@ a.ver-mas__info:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .card.card-planes {
-    margin-bottom: 2em; }
   .planes-container {
     margin-bottom: 12em; }
   ul.list-radio4 li label {
@@ -7549,12 +7572,7 @@ a.ver-mas__info:focus {
   #modal-lateral {
     display: none; }
   #notificacion-envioCorreo {
-    display: none; }
-  .sidenav-responsive {
-    z-index: 50 !important;
-    left: 25% !important;
-    top: 50% !important;
-    border-radius: 2em !important; } }
+    display: none; } }
 
 @media (max-width: 575.98px) {
   .layout-container .left-container {
@@ -7745,11 +7763,10 @@ a.ver-mas__info:focus {
   #notificacion-envioCorreo {
     display: none; }
   .sidenav-responsive {
-    z-index: 50 !important;
-    left: 10% !important;
     top: 40% !important;
     border-radius: 2em !important;
-    width: 265px !important; }
+    width: 260px !important;
+    margin-left: -130px; }
   a.editar {
     font-size: 0.8em; }
   .alert-instrucción {
@@ -7773,8 +7790,7 @@ a.ver-mas__info:focus {
     font-size: 1.2em !important; }
   .footer-condiciones {
     bottom: 156px !important;
-    font-size: 0.7em !important;
-    padding-bottom: 3.5em !important; }
+    font-size: 0.7em !important; }
   img.alert-icon,
   img.info-icon {
     height: auto;
@@ -7802,9 +7818,7 @@ a.ver-mas__info:focus {
   .iconoInfo-container {
     width: 80% !important; }
   .footer-condiciones {
-    bottom: 200px !important;
-    font-size: 0.7em !important;
-    padding-bottom: 5em !important; }
+    bottom: 196px !important; }
   #condiciones {
     padding-top: 0.5em !important; }
   ul.footer-info {
@@ -8302,8 +8316,9 @@ a.condiciones-footer:hover {
   -o-transition: all 1s;
   transition: all 1s;
   width: 100%;
-  bottom: 18px;
-  padding-bottom: 0.5em; }
+  bottom: 35px;
+  overflow: hidden;
+  /*  padding-bottom: 0.5em; */ }
   .footer-condiciones .ver-detalle--button {
     border: 0;
     outline: 0;
@@ -8338,8 +8353,9 @@ a.condiciones-footer:hover {
     margin-top: 0; }
 
 #condiciones {
-  display: none;
-  max-height: 200px;
+  display: block;
+  overflow: hidden;
+  /*  max-height: 200px;
   width: 100%;
   padding-top: 1.5em;
   /* Set our transitions up. */
@@ -8348,7 +8364,17 @@ a.condiciones-footer:hover {
   transition: max-height 0.8s; }
 
 #condiciones:active {
-  max-height: 400px; }
+  /*  max-height: 400px; */ }
+
+#condiciones.inactiveCondiciones {
+  max-height: 0px; }
+
+#condiciones.activeCondiciones {
+  height: auto;
+  max-height: 300px;
+  -webkit-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s; }
 
 /* Radio button - Elige Plan */
 .container ul.list-radio {
@@ -10063,10 +10089,10 @@ td {
 .continuar-datosvehiculos__patente {
   padding: 1em; }
 
-.completar-datos__vehículo {
+.completar-datos__vehiculo {
   display: none; }
 
-.completar-datos__vehículo__sinpatente {
+.completar-datos__vehiculo__sinpatente {
   display: none; }
 
 .completar-datos-direccion__planes {

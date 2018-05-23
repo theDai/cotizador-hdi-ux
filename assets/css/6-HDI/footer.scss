@@ -31,8 +31,9 @@ a.condiciones-footer:hover {
   position: absolute;
   transition: all 1s;
   width: 100%;
-  bottom: 18px;
-  padding-bottom: 0.5em;
+  bottom: 35px;
+  overflow: hidden;
+/*  padding-bottom: 0.5em; */
   .ver-detalle--button {
     border: 0;
     outline: 0;
@@ -65,13 +66,27 @@ a.condiciones-footer:hover {
 }
 
 #condiciones {
-  display: none;
-  max-height: 200px;
+  display: block;
+  overflow: hidden;
+/*  max-height: 200px;
   width: 100%;
   padding-top: 1.5em;
   /* Set our transitions up. */
   transition: max-height 0.8s;
 }
 #condiciones:active {
-  max-height: 400px;
+/*  max-height: 400px; */
+}
+
+#condiciones.inactiveCondiciones{
+  max-height: 0px;
+}
+#condiciones.activeCondiciones{
+  height: auto;
+  max-height: 300px;
+  -webkit-transition: max-height 1s; 
+  -moz-transition: max-height 1s; 
+  -ms-transition: max-height 1s; 
+  -o-transition: max-height 1s; 
+  transition: max-height 1s;
 }
