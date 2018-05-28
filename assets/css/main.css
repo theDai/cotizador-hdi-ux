@@ -10106,9 +10106,11 @@ td {
 .continuar-datosvehiculos__patente {
   padding: 1em; }
 
+/*
 .completar-datos__vehiculo {
-  display: none; }
-
+  display: none;
+}
+*/
 .completar-datos__vehiculo__sinpatente {
   display: none; }
 

@@ -218,6 +218,7 @@ $("#editar_sinpatente").click(function() {
         .removeClass("card-open__shadow")
         .addClass("card-closed__shadow");
     });
+    $(".completado6").toggle();
   });
 });
 $("#continuar_datoscontratante").click(function() {
@@ -251,6 +252,7 @@ $("#editarcontratante_sinpatente").click(function() {
         .removeClass("card-open__shadow")
         .addClass("card-closed__shadow");
     });
+    $(".completado7").toggle();
   });
 });
 
@@ -441,12 +443,16 @@ $("#editar_plan__sinpatente").click(function() {
       .removeClass("card-closed__shadow")
       .addClass("card-open__shadow");
     // $(".completado8").toggle();
-    $(".completar-datos__vehiculo").slideUp(function(cb) {
-      $("#completar-datos-vehiculo__planes")
+    $(".completar-datos__vehiculo__sinpatente").slideUp(function(cb) {
+      $("#completar-datos-datos__vehiculo__sinpatente")
         .removeClass("card-open__shadow")
         .addClass("card-closed__shadow");
     });
+    $("#titleDatosContratante5")
+      .removeClass("card_title__open")
+      .addClass("card_title__close");
   });
+  $(".completado8").toggle();
 });
 
 /* Close and change card-shadow show - hide  / Datos del vehiculo */
@@ -459,13 +465,13 @@ $("#continuar_eligeplan").click(function() {
     $("#titleDatosContratante5")
       .removeClass("card_title__close")
       .addClass("card_title__open");
-    $(".completado8").toggle();
     $(".completar-datos__vehiculo__sinpatente").slideDown(function(cb) {
       $("#completar-datos-vehiculo__sinpatente")
         .removeClass("card-closed__shadow")
         .addClass("card-open__shadow");
     });
   });
+  $(".completado8").toggle();
 });
 
 // $("#editar-datos-vehiculos__planes").click(function() {
@@ -517,7 +523,7 @@ $("#continuar_completar-datos-vehiculo__sinpatente").click(function() {
     $("#completar-datos-vehiculo__sinpatente")
       .removeClass("card-open__shadow")
       .addClass("card-closed__shadow");
-    $(".completado9").toggle();
+    // $(".completado9").toggle();
     $(".completar-datos-personales__sinpatente").slideDown(function(cb) {
       $("#completar-datos-direccion__sinpatente")
         .removeClass("card-closed__shadow")
@@ -527,6 +533,7 @@ $("#continuar_completar-datos-vehiculo__sinpatente").click(function() {
         .addClass("card_title__open");
     });
   });
+  $(".completado9").toggle();
 });
 
 $("#editar-datos-vehiculos__sinpatente").click(function() {
@@ -539,6 +546,7 @@ $("#editar-datos-vehiculos__sinpatente").click(function() {
         .removeClass("card-open__shadow")
         .addClass("card-closed__shadow");
     });
+    $(".completado9").toggle();
   });
 });
 
@@ -606,6 +614,7 @@ $("#editar_datos-direccion__sinpatente").click(function() {
         .removeClass("card_title__close")
         .addClass("card_title__open");
     });
+    $(".completado10").toggle();
   });
 });
 
@@ -627,6 +636,7 @@ $("#editar-inspeccion__planes").click(function() {
       .removeClass("card-closed__shadow")
       .addClass("card-open__shadow");
   });
+  $(".completado11").toggle();
 });
 
 // $("#contratar").click(function() {
